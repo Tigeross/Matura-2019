@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zadanie 12 - Rozwiązanie i Wyjaśnienie | Matura z Matematyki</title>
+    <title>Zadanie 12 - Rozwiązanie i Wyjaśnienie | Matura z Matematyki 2019</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +13,7 @@
         MathJax = {
             tex: {
                 inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
                 processEscapes: true
             },
             svg: {
@@ -61,27 +62,30 @@
         }
 
         .container {
-            max-width: 900px;
+            max-width: 950px;
             margin: 0 auto;
             display: flex;
             flex-direction: column;
             gap: 2rem;
         }
 
-        /* Top Navigation between tasks */
         .task-nav {
             display: flex;
-            justify-content: center;
-            gap: 0.5rem;
-            margin-bottom: -0.5rem;
             flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.4rem;
+            margin-bottom: -0.5rem;
+            background: rgba(15, 23, 42, 0.6);
+            padding: 1rem;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
         }
 
         .task-nav-link {
             background: rgba(255, 255, 255, 0.04);
             border: 1px solid var(--border-color);
             color: var(--text-muted);
-            padding: 0.5rem 0.9rem;
+            padding: 0.4rem 0.8rem;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
@@ -102,7 +106,6 @@
             box-shadow: 0 4px 12px var(--accent-glow);
         }
 
-        /* Header */
         header {
             text-align: center;
             padding: 2rem 1rem;
@@ -129,7 +132,7 @@
 
         h1 {
             font-family: var(--font-heading);
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             font-weight: 800;
             background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
             -webkit-background-clip: text;
@@ -142,14 +145,17 @@
             font-size: 1.1rem;
         }
 
-        /* Card Styles */
         .card {
             background-color: var(--bg-card);
             border: 1px solid var(--border-color);
             border-radius: 20px;
             padding: 2rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: rgba(99, 102, 241, 0.4);
         }
 
         .card-header {
@@ -170,8 +176,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 1.25rem;
             font-weight: 700;
-            font-size: 1.1rem;
         }
 
         .card-title {
@@ -182,17 +188,17 @@
         }
 
         .task-box {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--border-color);
-            border-radius: 14px;
+            background-color: rgba(15, 23, 42, 0.6);
+            border-left: 4px solid var(--accent-primary);
             padding: 1.5rem;
-            font-size: 1.15rem;
-            line-height: 1.8;
+            border-radius: 0 12px 12px 0;
             margin-bottom: 1.5rem;
+            font-size: 1.15rem;
         }
 
         .task-image-preview {
             margin-top: 1rem;
+            margin-bottom: 1.5rem;
             text-align: center;
         }
 
@@ -203,10 +209,9 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.4);
         }
 
-        /* Options Grid */
         .options-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1rem;
             margin-top: 1.5rem;
         }
@@ -226,6 +231,7 @@
             transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
+            text-align: left;
         }
 
         .option-btn:hover {
@@ -244,36 +250,37 @@
             justify-content: center;
             font-family: var(--font-heading);
             font-weight: 700;
+            flex-shrink: 0;
         }
 
         .option-btn.correct {
             background: var(--correct-bg) !important;
             border-color: var(--correct-green) !important;
-            color: #ecfdf5 !important;
+            color: #34d399 !important;
         }
 
         .option-btn.correct .option-letter {
-            background: var(--correct-green);
-            color: white;
+            background: var(--correct-green) !important;
+            color: white !important;
         }
 
         .option-btn.wrong {
             background: var(--wrong-bg) !important;
             border-color: var(--wrong-red) !important;
-            color: #fef2f2 !important;
+            color: #f87171 !important;
         }
 
         .option-btn.wrong .option-letter {
-            background: var(--wrong-red);
-            color: white;
+            background: var(--wrong-red) !important;
+            color: white !important;
         }
 
         .feedback-box {
             margin-top: 1.5rem;
-            padding: 1rem 1.25rem;
-            border-radius: 12px;
-            font-weight: 500;
+            padding: 1.25rem;
+            border-radius: 14px;
             display: none;
+            font-size: 1.05rem;
             animation: fadeIn 0.3s ease;
         }
 
@@ -284,120 +291,201 @@
         .feedback-box.correct {
             background: var(--correct-bg);
             border: 1px solid var(--correct-green);
-            color: #6ee7b7;
+            color: #a7f3d0;
         }
 
         .feedback-box.wrong {
             background: var(--wrong-bg);
             border: 1px solid var(--wrong-red);
-            color: #fca5a5;
+            color: #fecaca;
         }
 
-        /* Step List */
+        .tabs-nav {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            overflow-x: auto;
+        }
+
+        .tab-btn {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            padding: 0.6rem 1.2rem;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .tab-btn:hover {
+            color: white;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .tab-btn.active {
+            color: white;
+            background: var(--accent-primary);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
         .step-item {
             display: flex;
             gap: 1.25rem;
-            margin-bottom: 1.75rem;
+            margin-bottom: 1.5rem;
             position: relative;
         }
 
-        .step-item:not(:last-child)::after {
-            content: '';
-            position: absolute;
-            top: 45px;
-            left: 20px;
-            bottom: -20px;
-            width: 2px;
-            background: var(--border-color);
-        }
-
         .step-number {
-            width: 42px;
-            height: 42px;
+            width: 36px;
+            height: 36px;
             border-radius: 50%;
             background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
             color: white;
+            font-weight: 700;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: 700;
-            font-size: 1.1rem;
             flex-shrink: 0;
-            box-shadow: 0 4px 12px var(--accent-glow);
+            box-shadow: 0 4px 10px var(--accent-glow);
         }
 
         .step-body {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 1.25rem 1.5rem;
-            flex-grow: 1;
+            flex: 1;
         }
 
         .step-title {
             font-family: var(--font-heading);
-            font-weight: 700;
             font-size: 1.15rem;
+            font-weight: 700;
             color: var(--text-main);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.35rem;
         }
 
         .step-desc {
             color: var(--text-muted);
-            font-size: 1rem;
+            font-size: 1.02rem;
         }
 
         .math-highlight {
             background: rgba(99, 102, 241, 0.1);
-            border-left: 4px solid var(--accent-primary);
+            border-left: 3px solid var(--accent-primary);
             padding: 0.75rem 1rem;
             border-radius: 0 8px 8px 0;
-            margin: 0.75rem 0;
-            font-size: 1.1rem;
+            margin-top: 0.75rem;
+            color: var(--text-main);
         }
 
         .formulas-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 1rem;
         }
 
         .formula-card {
             background: rgba(255, 255, 255, 0.02);
             border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 1rem 1.25rem;
+            border-radius: 14px;
+            padding: 1.2rem;
         }
 
         .formula-name {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: var(--accent-secondary);
+            font-family: var(--font-heading);
             font-weight: 700;
+            color: var(--accent-primary);
             margin-bottom: 0.5rem;
+            font-size: 1.05rem;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(8px); }
-            to { opacity: 1; transform: translateY(0); }
+        .calc-form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .input-group label {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .input-group input, .input-group select {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 0.75rem 1rem;
+            color: white;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.2s ease;
+        }
+
+        .input-group input:focus, .input-group select:focus {
+            border-color: var(--accent-primary);
+        }
+
+        .calc-btn {
+            grid-column: 1 / -1;
+            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+            color: white;
+            border: none;
+            border-radius: 12px;
+            padding: 0.85rem;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 15px var(--accent-glow);
+        }
+
+        .calc-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px var(--accent-glow);
+        }
+
+        .calc-result {
+            background: rgba(15, 23, 42, 0.7);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 1.25rem;
+            font-size: 1.1rem;
+            margin-top: 1rem;
         }
 
         footer {
             text-align: center;
             color: var(--text-muted);
             font-size: 0.9rem;
-            padding: 1.5rem 0;
+            padding: 2rem 0;
             border-top: 1px solid var(--border-color);
-            margin-top: 1rem;
+            margin-top: 2rem;
         }
 
-        @media (max-width: 640px) {
-            h1 { font-size: 1.8rem; }
-            .card { padding: 1.25rem; }
-            .options-grid { grid-template-columns: 1fr; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-    
+
+
         
         /* Complete Mobile & Universal Responsive System */
         html, body {
@@ -590,8 +678,8 @@
 </head>
 <body>
     <div class="container">
-        <!-- Task Navigation -->
-                <nav class="task-nav">
+        <!-- Navigation -->
+        <nav class="task-nav">
             <a href="zadanie1.html" class="task-nav-link">Zadanie 1</a>
             <a href="zadanie2.html" class="task-nav-link">Zadanie 2</a>
             <a href="zadanie3.html" class="task-nav-link">Zadanie 3</a>
@@ -631,11 +719,11 @@
         <!-- Header -->
         <header>
             <span class="badge">Matura z Matematyki • Zadanie 12</span>
-            <h1>Iloraz Ciągu Geometrycznego</h1>
-            <p>Wyznaczanie ilorazu $q$ ciągu geometrycznego dodatniego ze stosunku wyrazów $\frac{a_5}{a_3} = \frac{1}{9}$</p>
+            <h1>Ciąg Arytmetyczny i Suma S10</h1>
+            <p>Zastosowanie wzoru na sumę $S_n$</p>
         </header>
 
-        <!-- Task Interactive Card -->
+        <!-- Task Card -->
         <div class="card">
             <div class="card-header">
                 <div class="card-icon">12</div>
@@ -643,101 +731,132 @@
             </div>
 
             <div class="task-box">
-                <strong>Zadanie 12. (0–1)</strong><br>
-                Dany jest ciąg geometryczny $(a_n)$, określony dla $n \ge 1$. Wszystkie wyrazy tego ciągu są dodatnie i spełniony jest warunek $\frac{a_5}{a_3} = \frac{1}{9}$. Iloraz tego ciągu jest równy:
+                Zadanie 12. (0–1)<br>W ciągu arytmetycznym $(a_n)$, określonym dla $n \ge 1$, dane są $a_1 = -4$ i $r = 3$. Wtedy suma $S_{10}$ dziesięciu pierwszych wyrazów tego ciągu jest równa:
             </div>
 
             <div class="task-image-preview">
-                <img src="11-13.png" alt="Zadania 11-13 z arkusza maturalnego">
+                <img src="12.png" alt="Zadanie 12 - treść i rysunek">
             </div>
 
             <div class="options-grid" id="optionsGrid">
                 <button class="option-btn" onclick="checkAnswer('A')">
                     <span class="option-letter">A</span>
-                    <span>$\frac{1}{3}$</span>
+                    <span>$95$</span>
                 </button>
                 <button class="option-btn" onclick="checkAnswer('B')">
                     <span class="option-letter">B</span>
-                    <span>$\frac{1}{\sqrt{3}}$</span>
+                    <span>$190$</span>
                 </button>
                 <button class="option-btn" onclick="checkAnswer('C')">
                     <span class="option-letter">C</span>
-                    <span>$3$</span>
+                    <span>$85$</span>
                 </button>
                 <button class="option-btn" onclick="checkAnswer('D')">
                     <span class="option-letter">D</span>
-                    <span>$\sqrt{3}$</span>
+                    <span>$100$</span>
                 </button>
             </div>
-
             <div class="feedback-box" id="feedbackBox"></div>
         </div>
 
-        <!-- Solutions Section -->
+        <!-- Solution Card -->
         <div class="card">
             <div class="card-header">
                 <div class="card-icon">💡</div>
                 <div class="card-title">Rozwiązanie Krok po Kroku</div>
             </div>
 
-            <div class="step-item">
-                <div class="step-number">1</div>
-                <div class="step-body">
-                    <div class="step-title">Zapisanie wyrazów za pomocą wyrazu pierwszego i ilorazu $q$</div>
-                    <div class="step-desc">
-                        Ogólny wzór na $n$-ty wyraz ciągu geometrycznego to $a_n = a_1 \cdot q^{n-1}$. Stąd:
-                        $$a_5 = a_1 \cdot q^4 \quad \text{oraz} \quad a_3 = a_1 \cdot q^2$$
-                    </div>
-                </div>
-            </div>
 
-            <div class="step-item">
-                <div class="step-number">2</div>
-                <div class="step-body">
-                    <div class="step-title">Uproszczenie ilorazu wyrazów $\frac{a_5}{a_3}$</div>
-                    <div class="step-desc">
-                        Podstawiamy powyższe wyrażenia do podanego w treści stosunku:
-                        $$\frac{a_5}{a_3} = \frac{a_1 \cdot q^4}{a_1 \cdot q^2} = q^{4-2} = q^2$$
-                        Otrzymujemy zatem równanie:
-                        $$q^2 = \frac{1}{9}$$
+            <div class="tabs-nav">
+                <button class="tab-btn active" onclick="switchTab('m1_12')">Metoda 1: Wzór na sumę z a1 i r (Główna)</button>
+                <button class="tab-btn" onclick="switchTab('m2_12')">Metoda 2: Wyznaczenie a10 i wzór podstawowy</button>
+            </div>
+            <div class="tab-content active" id="m1_12">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-body">
+                        <div class="step-title">Bezpośredni wzór na sumę $S_n$</div>
+                        <div class="step-desc">$$S_n = \frac{2a_1 + (n-1)r}{2} \cdot n$$</div>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-body">
+                        <div class="step-title">Podstawienie danych $a_1 = -4, r = 3, n = 10$</div>
+                        <div class="step-desc">$$S_{10} = \frac{2(-4) + 9(3)}{2} \cdot 10 = \frac{-8 + 27}{2} \cdot 10 = \frac{19}{2} \cdot 10 = 19 \cdot 5 = 95$$</div>
+                        <div class="math-highlight">$$\mathbf{S_{10} = 95} \quad \implies \quad \text{Poprawna odpowiedź to A}$$</div>
                     </div>
                 </div>
             </div>
-
-            <div class="step-item">
-                <div class="step-number">3</div>
-                <div class="step-body">
-                    <div class="step-title">Rozwiązanie równania i uwzględnienie założeń zadania</div>
-                    <div class="step-desc">
-                        Równanie $q^2 = \frac{1}{9}$ daje dwa potencjalne rozwiązania: $q = \frac{1}{3}$ lub $q = -\frac{1}{3}$.<br>
-                        Z treści zadania wiemy, że <strong>wszystkie wyrazy ciągu są dodatnie</strong>, co oznacza $q > 0$.
-                        <div class="math-highlight">
-                            $$q = \sqrt{\frac{1}{9}} = \frac{1}{3} \quad \implies \quad \text{Poprawna odpowiedź to A}$$
-                        </div>
+            <div class="tab-content" id="m2_12">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-body">
+                        <div class="step-title">Wyznaczenie dziesiątego wyrazu $a_{10}$</div>
+                        <div class="step-desc">$$a_{10} = a_1 + 9r = -4 + 9(3) = -4 + 27 = 23$$</div>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-body">
+                        <div class="step-title">Obliczenie sumy $S_{10}$</div>
+                        <div class="step-desc">$$S_{10} = \frac{a_1 + a_{10}}{2} \cdot 10 = \frac{-4 + 23}{2} \cdot 10 = 19 \cdot 5 = 95$$</div>
                     </div>
                 </div>
             </div>
+        
         </div>
 
         <!-- Traps Card -->
         <div class="card">
             <div class="card-header">
                 <div class="card-icon">⚠️</div>
-                <div class="card-title">Częste Pułapki i Wskazówki</div>
+                <div class="card-title">Częste Pułapki i Błędy na Maturze</div>
             </div>
+
 
             <div class="formulas-grid">
                 <div class="formula-card">
-                    <div class="formula-name">Zależność między wyrazami</div>
-                    <div>$$\frac{a_{n+k}}{a_n} = q^k$$</div>
-                    <div style="font-size:0.85rem; color: var(--text-muted); margin-top:0.3rem;">Między 3. a 5. wyrazem są 2 kroki, czyli mnożenie przez $q^2$. Stąd $\frac{a_5}{a_3} = q^2$.</div>
-                </div>
-
-                <div class="formula-card">
-                    <div class="formula-name" style="color:#ef4444;">Warunek dodatniości wyrazów</div>
-                    <div>Gdyby wyrazy mogły być ujemne, $q = -\frac{1}{3}$ również byłoby rzetelnym rozwiązaniem. Założenie z treści eliminuje ujemny iloraz!</div>
+                    <div class="formula-name" style="color:#ef4444;">Pułapka: Zapomnienie o dzieleniu przez 2</div>
+                    <div>Wynik $190$ (opcja B) powstaje przy pominięciu dzielenia przez 2 we wzorze na sumę. Pamiętaj: $S_n = \frac{a_1+a_n}{2} \cdot n$!</div>
                 </div>
             </div>
+        
+        </div>
+
+        <!-- Formulas Card -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon">📖</div>
+                <div class="card-title">Przydatne Wzory z Tablic Maturalnych</div>
+            </div>
+
+
+            <div class="formulas-grid">
+                <div class="formula-card">
+                    <div class="formula-name">Suma wyrazów ciągu arytmetycznego</div>
+                    <div>$$S_n = \frac{2a_1 + (n-1)r}{2} \cdot n$$</div>
+                </div>
+            </div>
+        
+        </div>
+
+        <!-- Interactive Tool Card -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon">🧮</div>
+                <div class="card-title">Interaktywne Narzędzie Pomocnicze</div>
+            </div>
+
+
+            <form class="calc-form" onsubmit="calcTask12(event)">
+                <div class="input-group"><label>a1:</label><input type="number" id="t12_a1" value="-4"></div>
+                <div class="input-group"><label>r:</label><input type="number" id="t12_r" value="3"></div>
+                <div class="input-group"><label>n:</label><input type="number" id="t12_n" value="10"></div>
+                <button type="submit" class="calc-btn">Oblicz Sumę Sn Ciągu Arytmetycznego</button>
+            </form>
+            <div class="calc-result" id="t12_res">Wprowadź dane i kliknij przycisk.</div>
+        
         </div>
 
         <!-- Footer -->
@@ -747,27 +866,47 @@
     </div>
 
     <script>
-        function checkAnswer(selectedOption) {
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+            
+            const activeBtn = Array.from(document.querySelectorAll('.tab-btn')).find(b => b.getAttribute('onclick').includes(tabId));
+            if (activeBtn) activeBtn.classList.add('active');
+            
+            const activeContent = document.getElementById(tabId);
+            if (activeContent) activeContent.classList.add('active');
+        }
+
+
+        function checkAnswer(opt) {
             const feedbackBox = document.getElementById('feedbackBox');
             const buttons = document.querySelectorAll('.option-btn');
+            buttons.forEach(b => b.classList.remove('correct', 'wrong'));
+            const selectedBtn = Array.from(buttons).find(b => b.textContent.trim().startsWith(opt));
 
-            buttons.forEach(btn => btn.classList.remove('correct', 'wrong'));
-            const selectedBtn = Array.from(buttons).find(b => b.textContent.trim().startsWith(selectedOption));
-
-            if (selectedOption === 'A') {
+            if (opt === 'A') {
                 if (selectedBtn) selectedBtn.classList.add('correct');
                 feedbackBox.className = 'feedback-box active correct';
-                feedbackBox.innerHTML = '✨ <strong>Znakomicie!</strong> Odpowiedź A ($\\frac{1}{3}$) jest prawidłowa. Ponieważ $\\frac{a_5}{a_3} = q^2 = \\frac{1}{9}$ oraz wszystkie wyrazy są dodatnie ($q > 0$), to $q = \\frac{1}{3}$.';
+                feedbackBox.innerHTML = '✨ <strong>Doskonale!</strong> Odpowiedź A ($95$) jest prawidłowa. $a_{10} = 23$, a $S_{10} = ((-4+23)/2) \\cdot 10 = 95$.';
             } else {
                 if (selectedBtn) selectedBtn.classList.add('wrong');
                 feedbackBox.className = 'feedback-box active wrong';
-                feedbackBox.innerHTML = `❌ Odpowiedź ${selectedOption} jest niepoprawna. Prawidłowa odpowiedź to <strong>A ($\\frac{1}{3}$)</strong>. Zauważ, że $\\frac{a_5}{a_3} = q^2 = \\frac{1}{9}$.`;
+                feedbackBox.innerHTML = `❌ Odpowiedź ${opt} jest niepoprawna. Prawidłowa odpowiedź to <strong>A ($95$)</strong>. Użyj wzoru na sumę $S_n$.`;
             }
-
-            if (window.MathJax) {
-                MathJax.typesetPromise([feedbackBox]);
-            }
+            if (window.MathJax) MathJax.typesetPromise([feedbackBox]);
         }
+
+        function calcTask12(e) {
+            e.preventDefault();
+            const a1 = parseFloat(document.getElementById('t12_a1').value);
+            const r = parseFloat(document.getElementById('t12_r').value);
+            const n = parseInt(document.getElementById('t12_n').value);
+            if (isNaN(a1) || isNaN(r) || isNaN(n) || n <= 0) return;
+            const an = a1 + (n - 1) * r;
+            const Sn = ((a1 + an) / 2) * n;
+            document.getElementById('t12_res').innerHTML = `<strong>Wyraz a_${n}:</strong> ${an}<br><strong>Suma S_${n}:</strong> ${Sn}`;
+        }
+        
     </script>
 </body>
 </html>

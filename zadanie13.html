@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zadanie 13 - Rozwiązanie i Wyjaśnienie | Matura z Matematyki</title>
+    <title>Zadanie 13 - Rozwiązanie i Wyjaśnienie | Matura z Matematyki 2019</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +13,7 @@
         MathJax = {
             tex: {
                 inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
                 processEscapes: true
             },
             svg: {
@@ -61,27 +62,30 @@
         }
 
         .container {
-            max-width: 900px;
+            max-width: 950px;
             margin: 0 auto;
             display: flex;
             flex-direction: column;
             gap: 2rem;
         }
 
-        /* Top Navigation between tasks */
         .task-nav {
             display: flex;
-            justify-content: center;
-            gap: 0.5rem;
-            margin-bottom: -0.5rem;
             flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.4rem;
+            margin-bottom: -0.5rem;
+            background: rgba(15, 23, 42, 0.6);
+            padding: 1rem;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
         }
 
         .task-nav-link {
             background: rgba(255, 255, 255, 0.04);
             border: 1px solid var(--border-color);
             color: var(--text-muted);
-            padding: 0.5rem 0.9rem;
+            padding: 0.4rem 0.8rem;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
@@ -102,7 +106,6 @@
             box-shadow: 0 4px 12px var(--accent-glow);
         }
 
-        /* Header */
         header {
             text-align: center;
             padding: 2rem 1rem;
@@ -129,7 +132,7 @@
 
         h1 {
             font-family: var(--font-heading);
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             font-weight: 800;
             background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
             -webkit-background-clip: text;
@@ -142,14 +145,17 @@
             font-size: 1.1rem;
         }
 
-        /* Card Styles */
         .card {
             background-color: var(--bg-card);
             border: 1px solid var(--border-color);
             border-radius: 20px;
             padding: 2rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: rgba(99, 102, 241, 0.4);
         }
 
         .card-header {
@@ -170,8 +176,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 1.25rem;
             font-weight: 700;
-            font-size: 1.1rem;
         }
 
         .card-title {
@@ -182,17 +188,17 @@
         }
 
         .task-box {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--border-color);
-            border-radius: 14px;
+            background-color: rgba(15, 23, 42, 0.6);
+            border-left: 4px solid var(--accent-primary);
             padding: 1.5rem;
-            font-size: 1.15rem;
-            line-height: 1.8;
+            border-radius: 0 12px 12px 0;
             margin-bottom: 1.5rem;
+            font-size: 1.15rem;
         }
 
         .task-image-preview {
             margin-top: 1rem;
+            margin-bottom: 1.5rem;
             text-align: center;
         }
 
@@ -203,10 +209,9 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.4);
         }
 
-        /* Options Grid */
         .options-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1rem;
             margin-top: 1.5rem;
         }
@@ -226,6 +231,7 @@
             transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
+            text-align: left;
         }
 
         .option-btn:hover {
@@ -244,36 +250,37 @@
             justify-content: center;
             font-family: var(--font-heading);
             font-weight: 700;
+            flex-shrink: 0;
         }
 
         .option-btn.correct {
             background: var(--correct-bg) !important;
             border-color: var(--correct-green) !important;
-            color: #ecfdf5 !important;
+            color: #34d399 !important;
         }
 
         .option-btn.correct .option-letter {
-            background: var(--correct-green);
-            color: white;
+            background: var(--correct-green) !important;
+            color: white !important;
         }
 
         .option-btn.wrong {
             background: var(--wrong-bg) !important;
             border-color: var(--wrong-red) !important;
-            color: #fef2f2 !important;
+            color: #f87171 !important;
         }
 
         .option-btn.wrong .option-letter {
-            background: var(--wrong-red);
-            color: white;
+            background: var(--wrong-red) !important;
+            color: white !important;
         }
 
         .feedback-box {
             margin-top: 1.5rem;
-            padding: 1rem 1.25rem;
-            border-radius: 12px;
-            font-weight: 500;
+            padding: 1.25rem;
+            border-radius: 14px;
             display: none;
+            font-size: 1.05rem;
             animation: fadeIn 0.3s ease;
         }
 
@@ -284,120 +291,201 @@
         .feedback-box.correct {
             background: var(--correct-bg);
             border: 1px solid var(--correct-green);
-            color: #6ee7b7;
+            color: #a7f3d0;
         }
 
         .feedback-box.wrong {
             background: var(--wrong-bg);
             border: 1px solid var(--wrong-red);
-            color: #fca5a5;
+            color: #fecaca;
         }
 
-        /* Step List */
+        .tabs-nav {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            overflow-x: auto;
+        }
+
+        .tab-btn {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            padding: 0.6rem 1.2rem;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .tab-btn:hover {
+            color: white;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .tab-btn.active {
+            color: white;
+            background: var(--accent-primary);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
         .step-item {
             display: flex;
             gap: 1.25rem;
-            margin-bottom: 1.75rem;
+            margin-bottom: 1.5rem;
             position: relative;
         }
 
-        .step-item:not(:last-child)::after {
-            content: '';
-            position: absolute;
-            top: 45px;
-            left: 20px;
-            bottom: -20px;
-            width: 2px;
-            background: var(--border-color);
-        }
-
         .step-number {
-            width: 42px;
-            height: 42px;
+            width: 36px;
+            height: 36px;
             border-radius: 50%;
             background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
             color: white;
+            font-weight: 700;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: 700;
-            font-size: 1.1rem;
             flex-shrink: 0;
-            box-shadow: 0 4px 12px var(--accent-glow);
+            box-shadow: 0 4px 10px var(--accent-glow);
         }
 
         .step-body {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 1.25rem 1.5rem;
-            flex-grow: 1;
+            flex: 1;
         }
 
         .step-title {
             font-family: var(--font-heading);
-            font-weight: 700;
             font-size: 1.15rem;
+            font-weight: 700;
             color: var(--text-main);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.35rem;
         }
 
         .step-desc {
             color: var(--text-muted);
-            font-size: 1rem;
+            font-size: 1.02rem;
         }
 
         .math-highlight {
             background: rgba(99, 102, 241, 0.1);
-            border-left: 4px solid var(--accent-primary);
+            border-left: 3px solid var(--accent-primary);
             padding: 0.75rem 1rem;
             border-radius: 0 8px 8px 0;
-            margin: 0.75rem 0;
-            font-size: 1.1rem;
+            margin-top: 0.75rem;
+            color: var(--text-main);
         }
 
         .formulas-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 1rem;
         }
 
         .formula-card {
             background: rgba(255, 255, 255, 0.02);
             border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 1rem 1.25rem;
+            border-radius: 14px;
+            padding: 1.2rem;
         }
 
         .formula-name {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: var(--accent-secondary);
+            font-family: var(--font-heading);
             font-weight: 700;
+            color: var(--accent-primary);
             margin-bottom: 0.5rem;
+            font-size: 1.05rem;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(8px); }
-            to { opacity: 1; transform: translateY(0); }
+        .calc-form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .input-group label {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .input-group input, .input-group select {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 0.75rem 1rem;
+            color: white;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.2s ease;
+        }
+
+        .input-group input:focus, .input-group select:focus {
+            border-color: var(--accent-primary);
+        }
+
+        .calc-btn {
+            grid-column: 1 / -1;
+            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+            color: white;
+            border: none;
+            border-radius: 12px;
+            padding: 0.85rem;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 15px var(--accent-glow);
+        }
+
+        .calc-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px var(--accent-glow);
+        }
+
+        .calc-result {
+            background: rgba(15, 23, 42, 0.7);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 1.25rem;
+            font-size: 1.1rem;
+            margin-top: 1rem;
         }
 
         footer {
             text-align: center;
             color: var(--text-muted);
             font-size: 0.9rem;
-            padding: 1.5rem 0;
+            padding: 2rem 0;
             border-top: 1px solid var(--border-color);
-            margin-top: 1rem;
+            margin-top: 2rem;
         }
 
-        @media (max-width: 640px) {
-            h1 { font-size: 1.8rem; }
-            .card { padding: 1.25rem; }
-            .options-grid { grid-template-columns: 1fr; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-    
+
+
         
         /* Complete Mobile & Universal Responsive System */
         html, body {
@@ -590,8 +678,8 @@
 </head>
 <body>
     <div class="container">
-        <!-- Task Navigation -->
-                <nav class="task-nav">
+        <!-- Navigation -->
+        <nav class="task-nav">
             <a href="zadanie1.html" class="task-nav-link">Zadanie 1</a>
             <a href="zadanie2.html" class="task-nav-link">Zadanie 2</a>
             <a href="zadanie3.html" class="task-nav-link">Zadanie 3</a>
@@ -631,11 +719,11 @@
         <!-- Header -->
         <header>
             <span class="badge">Matura z Matematyki • Zadanie 13</span>
-            <h1>Trygonometria – Obliczanie $\cos \alpha$</h1>
-            <p>Wyznaczanie wartości cosinusa kąta ostrego gdy dany jest $\sin \alpha = \frac{4}{5}$</p>
+            <h1>Jedynka Trygonometryczna</h1>
+            <p>Wyznaczanie $\cos \alpha$ dla danego $\sin \alpha = \frac{3}{5}$</p>
         </header>
 
-        <!-- Task Interactive Card -->
+        <!-- Task Card -->
         <div class="card">
             <div class="card-header">
                 <div class="card-icon">13</div>
@@ -643,117 +731,132 @@
             </div>
 
             <div class="task-box">
-                <strong>Zadanie 13. (0–1)</strong><br>
-                Sinus kąta ostrego $\alpha$ jest równy $\frac{4}{5}$. Wtedy:
+                Zadanie 13. (0–1)<br>Kąt $\alpha$ jest ostry i $\sin \alpha = \frac{3}{5}$. Wtedy $\cos \alpha$ jest równy:
             </div>
 
             <div class="task-image-preview">
-                <img src="11-13.png" alt="Zadania 11-13 z arkusza maturalnego">
+                <img src="13.png" alt="Zadanie 13 - treść i rysunek">
             </div>
 
             <div class="options-grid" id="optionsGrid">
                 <button class="option-btn" onclick="checkAnswer('A')">
                     <span class="option-letter">A</span>
-                    <span>$\cos \alpha = \frac{5}{4}$</span>
+                    <span>$\frac{4}{5}$</span>
                 </button>
                 <button class="option-btn" onclick="checkAnswer('B')">
                     <span class="option-letter">B</span>
-                    <span>$\cos \alpha = \frac{1}{5}$</span>
+                    <span>$\frac{2}{5}$</span>
                 </button>
                 <button class="option-btn" onclick="checkAnswer('C')">
                     <span class="option-letter">C</span>
-                    <span>$\cos \alpha = \frac{9}{25}$</span>
+                    <span>$\frac{1}{5}$</span>
                 </button>
                 <button class="option-btn" onclick="checkAnswer('D')">
                     <span class="option-letter">D</span>
-                    <span>$\cos \alpha = \frac{3}{5}$</span>
+                    <span>$\frac{3}{4}$</span>
                 </button>
             </div>
-
             <div class="feedback-box" id="feedbackBox"></div>
         </div>
 
-        <!-- Solutions Section -->
+        <!-- Solution Card -->
         <div class="card">
             <div class="card-header">
                 <div class="card-icon">💡</div>
                 <div class="card-title">Rozwiązanie Krok po Kroku</div>
             </div>
 
-            <div class="step-item">
-                <div class="step-number">1</div>
-                <div class="step-body">
-                    <div class="step-title">Zastosowanie tożsamości jedynki trygonometrycznej</div>
-                    <div class="step-desc">
-                        Dla każdego kąta $\alpha$ zachodzi podstawowy wzór trygonometryczny:
-                        $$\sin^2 \alpha + \cos^2 \alpha = 1$$
-                    </div>
-                </div>
-            </div>
 
-            <div class="step-item">
-                <div class="step-number">2</div>
-                <div class="step-body">
-                    <div class="step-title">Podstawienie wartości $\sin \alpha = \frac{4}{5}$</div>
-                    <div class="step-desc">
-                        Podstawiamy daną wartość sinusa i wyznaczamy $\cos^2 \alpha$:
-                        $$\left(\frac{4}{5}\right)^2 + \cos^2 \alpha = 1$$
-                        $$\frac{16}{25} + \cos^2 \alpha = 1$$
-                        $$\cos^2 \alpha = 1 - \frac{16}{25} = \frac{9}{25}$$
+            <div class="tabs-nav">
+                <button class="tab-btn active" onclick="switchTab('m1_13')">Metoda 1: Jedynka trygonometryczna (Główna)</button>
+                <button class="tab-btn" onclick="switchTab('m2_13')">Metoda 2: Trójkąt pitagorejski (3, 4, 5)</button>
+            </div>
+            <div class="tab-content active" id="m1_13">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-body">
+                        <div class="step-title">Zastosowanie wzoru na jedynkę trygonometryczną</div>
+                        <div class="step-desc">$$\sin^2 \alpha + \cos^2 \alpha = 1$$</div>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-body">
+                        <div class="step-title">Podstawienie wartości $\sin \alpha = \frac{3}{5}$</div>
+                        <div class="step-desc">$$\left(\frac{3}{5}\right)^2 + \cos^2 \alpha = 1 \implies \frac{9}{25} + \cos^2 \alpha = 1 \implies \cos^2 \alpha = 1 - \frac{9}{25} = \frac{16}{25}$$</div>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-body">
+                        <div class="step-title">Pierwiastkowanie (dla kąta ostrego $\cos \alpha > 0$)</div>
+                        <div class="step-desc">$$\cos \alpha = \sqrt{\frac{16}{25}} = \frac{4}{5}$$</div>
+                        <div class="math-highlight">$$\mathbf{\cos \alpha = \frac{4}{5}} \quad \implies \quad \text{Poprawna odpowiedź to A}$$</div>
                     </div>
                 </div>
             </div>
-
-            <div class="step-item">
-                <div class="step-number">3</div>
-                <div class="step-body">
-                    <div class="step-title">Wyciągnięcie pierwiastka dla kąta ostrego</div>
-                    <div class="step-desc">
-                        Ponieważ $\alpha$ jest kątem ostrym ($\alpha \in (0^\circ, 90^\circ)$), jego cosinus jest dodatni ($\cos \alpha > 0$):
-                        <div class="math-highlight">
-                            $$\cos \alpha = \sqrt{\frac{9}{25}} = \frac{3}{5} \quad \implies \quad \text{Poprawna odpowiedź to D}$$
-                        </div>
+            <div class="tab-content" id="m2_13">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-body">
+                        <div class="step-title">Trójkąt prostokątny o bokach 3, 4, 5</div>
+                        <div class="step-desc">$\sin \alpha = \frac{a}{c} = \frac{3}{5}$. Z twierdzenia Pitagorasa $b = \sqrt{5^2 - 3^2} = 4$.<br>
+                        Stąd $\cos \alpha = \frac{b}{c} = \frac{4}{5}$.</div>
                     </div>
                 </div>
             </div>
-
-            <div class="step-item">
-                <div class="step-number">4</div>
-                <div class="step-body">
-                    <div class="step-title">Szybka metoda geometryczna (Trójkąt Pitagorejski)</div>
-                    <div class="step-desc">
-                        W trójkącie prostokątnym o kącie ostrym $\alpha$, gdy $\sin \alpha = \frac{\text{przyprostokątna przeciwległa}}{\text{przeciwprostokątna}} = \frac{4}{5}$, przyprostokątne wynoszą $4$ i $b$, a przeciwprostokątna $5$.<br>
-                        Z twierdzenia Pitagorasa: $b = \sqrt{5^2 - 4^2} = \sqrt{9} = 3$.<br>
-                        Stąd $\cos \alpha = \frac{\text{przyprostokątna przyległa}}{\text{przeciwprostokątna}} = \frac{3}{5}$.
-                    </div>
-                </div>
-            </div>
+        
         </div>
 
         <!-- Traps Card -->
         <div class="card">
             <div class="card-header">
                 <div class="card-icon">⚠️</div>
-                <div class="card-title">Częste Pułapki i Wskazówki</div>
+                <div class="card-title">Częste Pułapki i Błędy na Maturze</div>
             </div>
+
 
             <div class="formulas-grid">
                 <div class="formula-card">
-                    <div class="formula-name">Jedynka Trygonometryczna</div>
-                    <div>$$\sin^2 \alpha + \cos^2 \alpha = 1$$</div>
-                    <div style="font-size:0.85rem; color: var(--text-muted); margin-top:0.3rem;">Podstawowa tożsamość pozwalająca przeliczać sinus na cosinus i odwrotnie.</div>
-                </div>
-
-                <div class="formula-card">
-                    <div class="formula-name" style="color:#ef4444;">Pułapka C ($\frac{9}{25}$)</div>
-                    <div>Wartość $\frac{9}{25}$ to $\cos^2 \alpha$, a nie $\cos \alpha$! Należy wyciągnąć pierwiastek kwadratowy.</div>
-                </div>
-
-                <div class="formula-card">
-                    <div class="formula-name" style="color:#ef4444;">Pułapka A ($\frac{5}{4}$)</div>
-                    <div>Cosinus i sinus kąta ostrego w trójkącie prostokątnym zawsze przyjmują wartości z przedziału $(0, 1)$. Wartość $\frac{5}{4} > 1$ jest niemożliwa!</div>
+                    <div class="formula-name" style="color:#ef4444;">Pułapka: Pomylenie cosinusa z tangensem</div>
+                    <div>Wartość $\frac{3}{4}$ (opcja D) to $\operatorname{tg} \alpha = \frac{\sin \alpha}{\cos \alpha}$. Pamiętaj, że $\cos \alpha$ ma w mianowniku przeciwprostokątną $5$!</div>
                 </div>
             </div>
+        
+        </div>
+
+        <!-- Formulas Card -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon">📖</div>
+                <div class="card-title">Przydatne Wzory z Tablic Maturalnych</div>
+            </div>
+
+
+            <div class="formulas-grid">
+                <div class="formula-card">
+                    <div class="formula-name">Jedynka trygonometryczna</div>
+                    <div>$$\sin^2 \alpha + \cos^2 \alpha = 1$$</div>
+                </div>
+            </div>
+        
+        </div>
+
+        <!-- Interactive Tool Card -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon">🧮</div>
+                <div class="card-title">Interaktywne Narzędzie Pomocnicze</div>
+            </div>
+
+
+            <form class="calc-form" onsubmit="calcTask13(event)">
+                <div class="input-group"><label>Licznik sin(α):</label><input type="number" id="t13_num" value="3"></div>
+                <div class="input-group"><label>Mianownik sin(α):</label><input type="number" id="t13_den" value="5"></div>
+                <button type="submit" class="calc-btn">Oblicz cos(α) oraz tg(α)</button>
+            </form>
+            <div class="calc-result" id="t13_res">Wprowadź dane i kliknij przycisk.</div>
+        
         </div>
 
         <!-- Footer -->
@@ -763,27 +866,47 @@
     </div>
 
     <script>
-        function checkAnswer(selectedOption) {
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+            
+            const activeBtn = Array.from(document.querySelectorAll('.tab-btn')).find(b => b.getAttribute('onclick').includes(tabId));
+            if (activeBtn) activeBtn.classList.add('active');
+            
+            const activeContent = document.getElementById(tabId);
+            if (activeContent) activeContent.classList.add('active');
+        }
+
+
+        function checkAnswer(opt) {
             const feedbackBox = document.getElementById('feedbackBox');
             const buttons = document.querySelectorAll('.option-btn');
+            buttons.forEach(b => b.classList.remove('correct', 'wrong'));
+            const selectedBtn = Array.from(buttons).find(b => b.textContent.trim().startsWith(opt));
 
-            buttons.forEach(btn => btn.classList.remove('correct', 'wrong'));
-            const selectedBtn = Array.from(buttons).find(b => b.textContent.trim().startsWith(selectedOption));
-
-            if (selectedOption === 'D') {
+            if (opt === 'A') {
                 if (selectedBtn) selectedBtn.classList.add('correct');
                 feedbackBox.className = 'feedback-box active correct';
-                feedbackBox.innerHTML = '✨ <strong>Świetnie!</strong> Odpowiedź D ($\\cos \\alpha = \\frac{3}{5}$) jest prawidłowa. Z jedynki trygonometrycznej $\\cos^2 \\alpha = 1 - (\\frac{4}{5})^2 = \\frac{9}{25}$, stąd $\\cos \\alpha = \\frac{3}{5}$.';
+                feedbackBox.innerHTML = '✨ <strong>Doskonale!</strong> Odpowiedź A ($\frac{4}{5}$) jest prawidłowa. $\cos^2 \\alpha = 1 - 9/25 = 16/25 \\implies \cos \\alpha = 4/5$.';
             } else {
                 if (selectedBtn) selectedBtn.classList.add('wrong');
                 feedbackBox.className = 'feedback-box active wrong';
-                feedbackBox.innerHTML = `❌ Odpowiedź ${selectedOption} jest niepoprawna. Prawidłowa odpowiedź to <strong>D ($\\cos \\alpha = \\frac{3}{5}$)</strong>. Zapamiętaj, że $\\cos^2 \\alpha = 1 - \\sin^2 \\alpha$.`;
+                feedbackBox.innerHTML = `❌ Odpowiedź ${opt} jest niepoprawna. Prawidłowa odpowiedź to <strong>A ($\frac{4}{5}$)</strong>. Użyj wzoru $\sin^2 \\alpha + \cos^2 \\alpha = 1$.`;
             }
-
-            if (window.MathJax) {
-                MathJax.typesetPromise([feedbackBox]);
-            }
+            if (window.MathJax) MathJax.typesetPromise([feedbackBox]);
         }
+
+        function calcTask13(e) {
+            e.preventDefault();
+            const num = parseFloat(document.getElementById('t13_num').value);
+            const den = parseFloat(document.getElementById('t13_den').value);
+            if (isNaN(num) || isNaN(den) || den <= 0 || num > den) return;
+            const sinVal = num / den;
+            const cosVal = Math.sqrt(1 - sinVal * sinVal);
+            const tgVal = sinVal / cosVal;
+            document.getElementById('t13_res').innerHTML = `<strong>sin(α):</strong> ${sinVal.toFixed(3)}<br><strong>cos(α):</strong> ${cosVal.toFixed(3)}<br><strong>tg(α):</strong> ${tgVal.toFixed(3)}`;
+        }
+        
     </script>
 </body>
 </html>

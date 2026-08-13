@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zadanie 1 - Rozwiązanie i Wyjaśnienie | Matura z Matematyki</title>
+    <title>Zadanie 1 - Rozwiązanie i Wyjaśnienie | Matura z Matematyki 2019</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,30 +62,34 @@
         }
 
         .container {
-            max-width: 900px;
+            max-width: 950px;
             margin: 0 auto;
             display: flex;
             flex-direction: column;
             gap: 2rem;
         }
 
-        /* Top Navigation between tasks */
         .task-nav {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
-            gap: 1rem;
+            gap: 0.4rem;
             margin-bottom: -0.5rem;
+            background: rgba(15, 23, 42, 0.6);
+            padding: 1rem;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
         }
 
         .task-nav-link {
             background: rgba(255, 255, 255, 0.04);
             border: 1px solid var(--border-color);
             color: var(--text-muted);
-            padding: 0.6rem 1.25rem;
+            padding: 0.4rem 0.8rem;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             transition: all 0.25s ease;
         }
 
@@ -102,7 +106,6 @@
             box-shadow: 0 4px 12px var(--accent-glow);
         }
 
-        /* Header */
         header {
             text-align: center;
             padding: 2rem 1rem;
@@ -129,7 +132,7 @@
 
         h1 {
             font-family: var(--font-heading);
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             font-weight: 800;
             background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
             -webkit-background-clip: text;
@@ -142,7 +145,6 @@
             font-size: 1.1rem;
         }
 
-        /* Card Styles */
         .card {
             background-color: var(--bg-card);
             border: 1px solid var(--border-color);
@@ -185,18 +187,18 @@
             color: var(--text-main);
         }
 
-        /* Task Content */
         .task-box {
             background-color: rgba(15, 23, 42, 0.6);
             border-left: 4px solid var(--accent-primary);
             padding: 1.5rem;
             border-radius: 0 12px 12px 0;
             margin-bottom: 1.5rem;
-            font-size: 1.2rem;
+            font-size: 1.15rem;
         }
 
         .task-image-preview {
             margin-top: 1rem;
+            margin-bottom: 1.5rem;
             text-align: center;
         }
 
@@ -207,10 +209,9 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.4);
         }
 
-        /* Options Grid */
         .options-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1rem;
             margin-top: 1.5rem;
         }
@@ -230,6 +231,7 @@
             transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
+            text-align: left;
         }
 
         .option-btn:hover {
@@ -248,36 +250,37 @@
             justify-content: center;
             font-family: var(--font-heading);
             font-weight: 700;
+            flex-shrink: 0;
         }
 
         .option-btn.correct {
             background: var(--correct-bg) !important;
             border-color: var(--correct-green) !important;
-            color: #ecfdf5 !important;
+            color: #34d399 !important;
         }
 
         .option-btn.correct .option-letter {
-            background: var(--correct-green);
-            color: white;
+            background: var(--correct-green) !important;
+            color: white !important;
         }
 
         .option-btn.wrong {
             background: var(--wrong-bg) !important;
             border-color: var(--wrong-red) !important;
-            color: #fef2f2 !important;
+            color: #f87171 !important;
         }
 
         .option-btn.wrong .option-letter {
-            background: var(--wrong-red);
-            color: white;
+            background: var(--wrong-red) !important;
+            color: white !important;
         }
 
         .feedback-box {
             margin-top: 1.5rem;
-            padding: 1rem 1.25rem;
-            border-radius: 12px;
-            font-weight: 500;
+            padding: 1.25rem;
+            border-radius: 14px;
             display: none;
+            font-size: 1.05rem;
             animation: fadeIn 0.3s ease;
         }
 
@@ -288,82 +291,75 @@
         .feedback-box.correct {
             background: var(--correct-bg);
             border: 1px solid var(--correct-green);
-            color: #6ee7b7;
+            color: #a7f3d0;
         }
 
         .feedback-box.wrong {
             background: var(--wrong-bg);
             border: 1px solid var(--wrong-red);
-            color: #fca5a5;
+            color: #fecaca;
         }
 
-        /* Tabs for Solution Steps */
         .tabs-nav {
             display: flex;
             gap: 0.5rem;
-            border-bottom: 1px solid var(--border-color);
             margin-bottom: 1.5rem;
-            overflow-x: auto;
+            border-bottom: 1px solid var(--border-color);
             padding-bottom: 0.5rem;
+            overflow-x: auto;
         }
 
         .tab-btn {
-            background: transparent;
+            background: none;
             border: none;
             color: var(--text-muted);
-            padding: 0.75rem 1.25rem;
-            font-size: 0.95rem;
+            padding: 0.6rem 1.2rem;
             font-weight: 600;
+            font-size: 0.95rem;
             cursor: pointer;
-            border-radius: 10px;
+            border-radius: 8px;
             transition: all 0.2s ease;
             white-space: nowrap;
         }
 
         .tab-btn:hover {
-            color: var(--text-main);
-            background: rgba(255, 255, 255, 0.04);
+            color: white;
+            background: rgba(255, 255, 255, 0.05);
         }
 
         .tab-btn.active {
             color: white;
             background: var(--accent-primary);
-            box-shadow: 0 4px 12px var(--accent-glow);
         }
 
         .tab-content {
             display: none;
-            animation: fadeIn 0.4s ease;
         }
 
         .tab-content.active {
             display: block;
+            animation: fadeIn 0.3s ease;
         }
 
-        /* Step List */
         .step-item {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--border-color);
-            border-radius: 14px;
-            padding: 1.25rem;
-            margin-bottom: 1rem;
             display: flex;
-            gap: 1rem;
-            align-items: flex-start;
+            gap: 1.25rem;
+            margin-bottom: 1.5rem;
+            position: relative;
         }
 
         .step-number {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
             background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
             color: white;
-            min-width: 28px;
-            height: 28px;
-            border-radius: 50%;
+            font-weight: 700;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: 700;
-            font-size: 0.85rem;
-            margin-top: 0.2rem;
+            flex-shrink: 0;
+            box-shadow: 0 4px 10px var(--accent-glow);
         }
 
         .step-body {
@@ -371,49 +367,48 @@
         }
 
         .step-title {
-            font-weight: 600;
+            font-family: var(--font-heading);
+            font-size: 1.15rem;
+            font-weight: 700;
             color: var(--text-main);
             margin-bottom: 0.35rem;
         }
 
         .step-desc {
             color: var(--text-muted);
-            font-size: 0.95rem;
+            font-size: 1.02rem;
         }
 
         .math-highlight {
             background: rgba(99, 102, 241, 0.1);
-            border-radius: 8px;
-            padding: 0.75rem 1rem;
-            margin: 0.75rem 0;
             border-left: 3px solid var(--accent-primary);
-            font-size: 1.1rem;
+            padding: 0.75rem 1rem;
+            border-radius: 0 8px 8px 0;
+            margin-top: 0.75rem;
+            color: var(--text-main);
         }
 
-        /* Key Formulas Grid */
         .formulas-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 1rem;
         }
 
         .formula-card {
             background: rgba(255, 255, 255, 0.02);
             border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 1rem 1.25rem;
+            border-radius: 14px;
+            padding: 1.2rem;
         }
 
         .formula-name {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: var(--accent-secondary);
+            font-family: var(--font-heading);
             font-weight: 700;
+            color: var(--accent-primary);
             margin-bottom: 0.5rem;
+            font-size: 1.05rem;
         }
 
-        /* Interactive Calculator */
         .calc-form {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -428,75 +423,69 @@
         }
 
         .input-group label {
+            font-weight: 600;
             font-size: 0.9rem;
             color: var(--text-muted);
-            font-weight: 500;
         }
 
-        .input-group input {
-            background: rgba(15, 23, 42, 0.8);
+        .input-group input, .input-group select {
+            background: rgba(255, 255, 255, 0.05);
             border: 1px solid var(--border-color);
             border-radius: 10px;
             padding: 0.75rem 1rem;
-            color: var(--text-main);
+            color: white;
             font-size: 1rem;
-            font-family: var(--font-body);
             outline: none;
             transition: border-color 0.2s ease;
         }
 
-        .input-group input:focus {
+        .input-group input:focus, .input-group select:focus {
             border-color: var(--accent-primary);
         }
 
         .calc-btn {
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            grid-column: 1 / -1;
+            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
             color: white;
             border: none;
-            border-radius: 10px;
-            padding: 0.75rem 1.5rem;
-            font-weight: 600;
+            border-radius: 12px;
+            padding: 0.85rem;
+            font-weight: 700;
+            font-size: 1rem;
             cursor: pointer;
-            align-self: flex-end;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
-            box-shadow: 0 4px 12px var(--accent-glow);
+            box-shadow: 0 4px 15px var(--accent-glow);
         }
 
         .calc-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 16px var(--accent-glow);
+            box-shadow: 0 6px 20px var(--accent-glow);
         }
 
         .calc-result {
-            background: rgba(15, 23, 42, 0.8);
-            border: 1px dashed var(--accent-primary);
-            border-radius: 12px;
+            background: rgba(15, 23, 42, 0.7);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
             padding: 1.25rem;
-            text-align: center;
-            font-size: 1.25rem;
-        }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(8px); }
-            to { opacity: 1; transform: translateY(0); }
+            font-size: 1.1rem;
+            margin-top: 1rem;
         }
 
         footer {
             text-align: center;
             color: var(--text-muted);
             font-size: 0.9rem;
-            padding: 1.5rem 0;
+            padding: 2rem 0;
             border-top: 1px solid var(--border-color);
-            margin-top: 1rem;
+            margin-top: 2rem;
         }
 
-        @media (max-width: 640px) {
-            h1 { font-size: 1.8rem; }
-            .card { padding: 1.25rem; }
-            .options-grid { grid-template-columns: 1fr; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-    
+
+
         
         /* Complete Mobile & Universal Responsive System */
         html, body {
@@ -689,8 +678,8 @@
 </head>
 <body>
     <div class="container">
-        <!-- Task Navigation -->
-                <nav class="task-nav">
+        <!-- Navigation -->
+        <nav class="task-nav">
             <a href="zadanie1.html" class="task-nav-link active">Zadanie 1</a>
             <a href="zadanie2.html" class="task-nav-link">Zadanie 2</a>
             <a href="zadanie3.html" class="task-nav-link">Zadanie 3</a>
@@ -730,11 +719,11 @@
         <!-- Header -->
         <header>
             <span class="badge">Matura z Matematyki • Zadanie 1</span>
-            <h1>Logarytmy - Wyjaśnienie & Rozwiązanie</h1>
-            <p>Szczegółowe omówienie krok po kroku z wykorzystaniem LaTeX</p>
+            <h1>Działania na Potęgach</h1>
+            <p>Sprowadzanie do wspólnej podstawy $2^k$</p>
         </header>
 
-        <!-- Task Interactive Card -->
+        <!-- Task Card -->
         <div class="card">
             <div class="card-header">
                 <div class="card-icon">1</div>
@@ -742,166 +731,101 @@
             </div>
 
             <div class="task-box">
-                Zadanie 1. (0–1)<br>
-                Liczba $\log_{\sqrt{2}} 2$ jest równa:
+                Zadanie 1. (0–1)<br>Liczba $\left(\frac{1}{2}\right)^{-3} \cdot 8^{-2}$ jest równa:
             </div>
 
             <div class="task-image-preview">
-                <img src="1.png" alt="Zadanie 1 - skan treści">
+                <img src="1.png" alt="Zadanie 1 - treść i rysunek">
             </div>
 
             <div class="options-grid" id="optionsGrid">
                 <button class="option-btn" onclick="checkAnswer('A')">
                     <span class="option-letter">A</span>
-                    <span>$2$</span>
+                    <span>$2^{-3}$</span>
                 </button>
                 <button class="option-btn" onclick="checkAnswer('B')">
                     <span class="option-letter">B</span>
-                    <span>$4$</span>
+                    <span>$2^{-9}$</span>
                 </button>
                 <button class="option-btn" onclick="checkAnswer('C')">
                     <span class="option-letter">C</span>
-                    <span>$\sqrt{2}$</span>
+                    <span>$2^3$</span>
                 </button>
                 <button class="option-btn" onclick="checkAnswer('D')">
                     <span class="option-letter">D</span>
-                    <span>$\frac{1}{2}$</span>
+                    <span>$2^9$</span>
                 </button>
             </div>
-
             <div class="feedback-box" id="feedbackBox"></div>
         </div>
 
-        <!-- Solutions Section -->
+        <!-- Solution Card -->
         <div class="card">
             <div class="card-header">
                 <div class="card-icon">💡</div>
                 <div class="card-title">Rozwiązanie Krok po Kroku</div>
             </div>
 
-            <!-- Navigation Tabs -->
+
             <div class="tabs-nav">
-                <button class="tab-btn active" onclick="switchTab('metoda1')">Metoda 1: Z definicji logarytmu</button>
-                <button class="tab-btn" onclick="switchTab('metoda2')">Metoda 2: Zamiana na potęgi</button>
-                <button class="tab-btn" onclick="switchTab('metoda3')">Metoda 3: Wzór na zamianę podstawy</button>
+                <button class="tab-btn active" onclick="switchTab('m1_1')">Metoda 1: Zamiana na potęgi dwójki (Główna)</button>
+                <button class="tab-btn" onclick="switchTab('m2_1')">Metoda 2: Obliczenia na ułamkach</button>
             </div>
-
-            <!-- Tab 1: Definicja -->
-            <div class="tab-content active" id="metoda1">
+            <div class="tab-content active" id="m1_1">
                 <div class="step-item">
                     <div class="step-number">1</div>
                     <div class="step-body">
-                        <div class="step-title">Przypomnienie definicji logarytmu</div>
-                        <div class="step-desc">
-                            Z definicji logarytmu dla $a > 0$, $a \neq 1$ oraz $b > 0$:
-                            $$\log_a b = c \iff a^c = b$$
-                        </div>
+                        <div class="step-title">Przekształcenie pierwszego czynnika $\left(\frac{1}{2}\right)^{-3}$</div>
+                        <div class="step-desc">Korzystamy ze wzoru na ujemny wykładnik $\left(\frac{a}{b}\right)^{-n} = \left(\frac{b}{a}\right)^n$:
+                        $$\left(\frac{1}{2}\right)^{-3} = 2^3 = 8$$</div>
                     </div>
                 </div>
-
                 <div class="step-item">
                     <div class="step-number">2</div>
                     <div class="step-body">
-                        <div class="step-title">Przyrównanie do niewiadomej $x$</div>
-                        <div class="step-desc">
-                            Niech $x = \log_{\sqrt{2}} 2$. Przekształcamy równanie z definicji:
-                            $$(\sqrt{2})^x = 2$$
-                        </div>
+                        <div class="step-title">Przekształcenie drugiego czynnika $8^{-2}$</div>
+                        <div class="step-desc">Zapisujemy $8$ jako $2^3$:
+                        $$8^{-2} = (2^3)^{-2} = 2^{3 \cdot (-2)} = 2^{-6}$$</div>
                     </div>
                 </div>
-
                 <div class="step-item">
                     <div class="step-number">3</div>
                     <div class="step-body">
-                        <div class="step-title">Wyznaczenie wartości $x$</div>
-                        <div class="step-desc">
-                            Zastanawiamy się, do jakiej potęgi należy podnieść $\sqrt{2}$, aby otrzymać $2$:
-                            $$(\sqrt{2})^1 = \sqrt{2}$$
-                            $$(\sqrt{2})^2 = \sqrt{2} \cdot \sqrt{2} = 2$$
-                            Stąd bezpośrednio wynika, że $x = 2$.
-                        </div>
-                        <div class="math-highlight">
-                            $$\mathbf{\log_{\sqrt{2}} 2 = 2} \quad \implies \quad \text{Poprawna odpowiedź to A}$$
-                        </div>
+                        <div class="step-title">Mnożenie potęg o jednakowych podstawach</div>
+                        <div class="step-desc">Dodajemy wykładniki potęg:
+                        $$2^3 \cdot 2^{-6} = 2^{3 + (-6)} = 2^{-3}$$</div>
+                        <div class="math-highlight">$$\mathbf{2^{-3}} \quad \implies \quad \text{Poprawna odpowiedź to A}$$</div>
                     </div>
                 </div>
             </div>
-
-            <!-- Tab 2: Potęgi -->
-            <div class="tab-content" id="metoda2">
+            <div class="tab-content" id="m2_1">
                 <div class="step-item">
                     <div class="step-number">1</div>
                     <div class="step-body">
-                        <div class="step-title">Zapisanie pierwiastka w postaci wykładniczej</div>
-                        <div class="step-desc">
-                            Korzystamy z zależności: $\sqrt{a} = a^{\frac{1}{2}}$. Stąd podstawa równa jest:
-                            $$\sqrt{2} = 2^{\frac{1}{2}}$$
-                        </div>
-                    </div>
-                </div>
-
-                <div class="step-item">
-                    <div class="step-number">2</div>
-                    <div class="step-body">
-                        <div class="step-title">Ułożenie równania wykładniczego</div>
-                        <div class="step-desc">
-                            Niech $\log_{\sqrt{2}} 2 = x$. Wtedy:
-                            $$\left(2^{\frac{1}{2}}\right)^x = 2^1$$
-                        </div>
-                    </div>
-                </div>
-
-                <div class="step-item">
-                    <div class="step-number">3</div>
-                    <div class="step-body">
-                        <div class="step-title">Mnożenie wykładników i przyrównanie</div>
-                        <div class="step-desc">
-                            Z zasady potęgowania potęgi $(a^m)^n = a^{m \cdot n}$:
-                            $$2^{\frac{x}{2}} = 2^1$$
-                            Ponieważ podstawy są jednakowe ($2 = 2$), przyrównujemy wykładniki:
-                            $$\frac{x}{2} = 1 \implies x = 2$$
-                        </div>
+                        <div class="step-title">Wartości liczbowe obu czynników</div>
+                        <div class="step-desc">$$\left(\frac{1}{2}\right)^{-3} = 8, \quad 8^{-2} = \frac{1}{64}$$
+                        $$8 \cdot \frac{1}{64} = \frac{8}{64} = \frac{1}{8} = \frac{1}{2^3} = 2^{-3}$$</div>
                     </div>
                 </div>
             </div>
+        
+        </div>
 
-            <!-- Tab 3: Zamiana podstawy -->
-            <div class="tab-content" id="metoda3">
-                <div class="step-item">
-                    <div class="step-number">1</div>
-                    <div class="step-body">
-                        <div class="step-title">Wzór na zamianę podstawy logarytmu</div>
-                        <div class="step-desc">
-                            Ogólny wzór na zmianę podstawy logarytmu:
-                            $$\log_a b = \frac{\log_c b}{\log_c a}$$
-                        </div>
-                    </div>
-                </div>
+        <!-- Traps Card -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon">⚠️</div>
+                <div class="card-title">Częste Pułapki i Błędy na Maturze</div>
+            </div>
 
-                <div class="step-item">
-                    <div class="step-number">2</div>
-                    <div class="step-body">
-                        <div class="step-title">Zastosowanie bazy $c = 2$</div>
-                        <div class="step-desc">
-                            Zamieniamy podstawę na $c = 2$:
-                            $$\log_{\sqrt{2}} 2 = \frac{\log_2 2}{\log_2 \sqrt{2}}$$
-                        </div>
-                    </div>
-                </div>
 
-                <div class="step-item">
-                    <div class="step-number">3</div>
-                    <div class="step-body">
-                        <div class="step-title">Obliczenie wartości licznik i mianownik</div>
-                        <div class="step-desc">
-                            • Licznik: $\log_2 2 = 1$<br>
-                            • Mianownik: $\log_2 \sqrt{2} = \log_2 (2^{1/2}) = \frac{1}{2}$<br><br>
-                            Otrzymujemy:
-                            $$\log_{\sqrt{2}} 2 = \frac{1}{\frac{1}{2}} = 1 \cdot 2 = 2$$
-                        </div>
-                    </div>
+            <div class="formulas-grid">
+                <div class="formula-card">
+                    <div class="formula-name" style="color:#ef4444;">Pułapka: Mnożenie wykładników przy mnożeniu potęg</div>
+                    <div>Częsty błąd to mnożenie wykładników $3 \cdot (-6) = -18$ lub dodawanie ujemnych podstaw. Pamiętaj: przy mnożeniu tych samych podstaw **dodajemy** wykładniki ($m + n$)!</div>
                 </div>
             </div>
+        
         </div>
 
         <!-- Formulas Card -->
@@ -911,130 +835,84 @@
                 <div class="card-title">Przydatne Wzory z Tablic Maturalnych</div>
             </div>
 
+
             <div class="formulas-grid">
                 <div class="formula-card">
-                    <div class="formula-name">Definicja logarytmu</div>
-                    <div>$$\log_a b = c \iff a^c = b$$</div>
+                    <div class="formula-name">Ujemny wykładnik</div>
+                    <div>$$a^{-n} = \frac{1}{a^n}, \quad \left(\frac{a}{b}\right)^{-n} = \left(\frac{b}{a}\right)^n$$</div>
                 </div>
                 <div class="formula-card">
-                    <div class="formula-name">Pierwiastek jako potęga</div>
-                    <div>$$\sqrt[n]{a^m} = a^{\frac{m}{n}}$$</div>
-                </div>
-                <div class="formula-card">
-                    <div class="formula-name">Logarytm potęgi</div>
-                    <div>$$\log_a (x^r) = r \cdot \log_a x$$</div>
-                </div>
-                <div class="formula-card">
-                    <div class="formula-name">Potęga w podstawie</div>
-                    <div>$$\log_{a^k} b = \frac{1}{k} \log_a b$$</div>
+                    <div class="formula-name">Potęgowanie potęgi</div>
+                    <div>$$(a^m)^n = a^{m \cdot n}$$</div>
                 </div>
             </div>
+        
         </div>
 
-        <!-- Interactive Calculator -->
+        <!-- Interactive Tool Card -->
         <div class="card">
             <div class="card-header">
                 <div class="card-icon">🧮</div>
-                <div class="card-title">Interaktywny Kalkulator Logarytmów</div>
+                <div class="card-title">Interaktywne Narzędzie Pomocnicze</div>
             </div>
 
-            <form class="calc-form" onsubmit="calculateLog(event)">
-                <div class="input-group">
-                    <label for="baseA">Podstawa logarytmu ($a$):</label>
-                    <input type="text" id="baseA" value="sqrt(2)" placeholder="np. 2, sqrt(2), 10">
-                </div>
-                <div class="input-group">
-                    <label for="argB">Liczba logarytmowana ($b$):</label>
-                    <input type="text" id="argB" value="2" placeholder="np. 2, 8, 100">
-                </div>
-                <button type="submit" class="calc-btn">Oblicz $\log_a b$</button>
+
+            <form class="calc-form" onsubmit="calcTask1(event)">
+                <div class="input-group"><label>Wykładnik n przy (1/2)^(-n):</label><input type="number" id="t1_n" value="3"></div>
+                <div class="input-group"><label>Wykładnik m przy 8^(m):</label><input type="number" id="t1_m" value="-2"></div>
+                <button type="submit" class="calc-btn">Oblicz potęgę 2^k</button>
             </form>
-
-            <div class="calc-result" id="calcResult">
-                Wynik pojawi się tutaj...
-            </div>
+            <div class="calc-result" id="t1_res">Wprowadź dane i kliknij przycisk.</div>
+        
         </div>
 
         <!-- Footer -->
         <footer>
-            Wygenerowano dla przygotowania do Matury z Matematyki • Wszelkie prawa zastrzeżone
+            Wygenerowano dla przygotowania do Matura z Matematyki • Wszelkie prawa zastrzeżone
         </footer>
     </div>
 
-    <!-- Interactive Script -->
     <script>
-        function checkAnswer(selectedOption) {
-            const feedbackBox = document.getElementById('feedbackBox');
-            const buttons = document.querySelectorAll('.option-btn');
-
-            buttons.forEach(btn => {
-                btn.classList.remove('correct', 'wrong');
-            });
-
-            const selectedBtn = Array.from(buttons).find(b => b.textContent.includes(selectedOption));
-
-            if (selectedOption === 'A') {
-                if (selectedBtn) selectedBtn.classList.add('correct');
-                feedbackBox.className = 'feedback-box active correct';
-                feedbackBox.innerHTML = '✨ <strong>Doskonale!</strong> Odpowiedź A ($2$) jest prawidłowa. $(\\sqrt{2})^2 = 2$.';
-            } else {
-                if (selectedBtn) selectedBtn.classList.add('wrong');
-                feedbackBox.className = 'feedback-box active wrong';
-                feedbackBox.innerHTML = `❌ Odpowiedź ${selectedOption} jest niepoprawna. Prawidłowa odpowiedź to <strong>A</strong> (wartość 2). Poniżej znajdziesz szczegółowe wyjaśnienie!`;
-            }
-        }
-
         function switchTab(tabId) {
             document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
             document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
-
-            event.target.classList.add('active');
-            const targetContent = document.getElementById(tabId);
-            if (targetContent) targetContent.classList.add('active');
+            
+            const activeBtn = Array.from(document.querySelectorAll('.tab-btn')).find(b => b.getAttribute('onclick').includes(tabId));
+            if (activeBtn) activeBtn.classList.add('active');
+            
+            const activeContent = document.getElementById(tabId);
+            if (activeContent) activeContent.classList.add('active');
         }
 
-        function parseMathValue(valStr) {
-            valStr = valStr.trim().toLowerCase();
-            if (valStr.startsWith('sqrt(') && valStr.endsWith(')')) {
-                const inner = parseFloat(valStr.substring(5, valStr.length - 1));
-                return Math.sqrt(inner);
+
+        function checkAnswer(opt) {
+            const feedbackBox = document.getElementById('feedbackBox');
+            const buttons = document.querySelectorAll('.option-btn');
+            buttons.forEach(b => b.classList.remove('correct', 'wrong'));
+            const selectedBtn = Array.from(buttons).find(b => b.textContent.trim().startsWith(opt));
+
+            if (opt === 'A') {
+                if (selectedBtn) selectedBtn.classList.add('correct');
+                feedbackBox.className = 'feedback-box active correct';
+                feedbackBox.innerHTML = '✨ <strong>Doskonale!</strong> Odpowiedź A ($2^{-3}$) jest prawidłowa. $(1/2)^{-3} \\cdot 8^{-2} = 2^3 \\cdot 2^{-6} = 2^{-3}$.';
+            } else {
+                if (selectedBtn) selectedBtn.classList.add('wrong');
+                feedbackBox.className = 'feedback-box active wrong';
+                feedbackBox.innerHTML = `❌ Odpowiedź ${opt} jest niepoprawna. Prawidłowa odpowiedź to <strong>A ($2^{-3}$)</strong>. Sprowadź oba czynniki do podstawy 2.`;
             }
-            if (valStr === 'e') return Math.E;
-            if (valStr === 'pi') return Math.PI;
-            return parseFloat(valStr);
+            if (window.MathJax) MathJax.typesetPromise([feedbackBox]);
         }
 
-        function calculateLog(e) {
+        function calcTask1(e) {
             e.preventDefault();
-            const aStr = document.getElementById('baseA').value;
-            const bStr = document.getElementById('argB').value;
-            const resultBox = document.getElementById('calcResult');
-
-            try {
-                const a = parseMathValue(aStr);
-                const b = parseMathValue(bStr);
-
-                if (isNaN(a) || isNaN(b)) {
-                    resultBox.innerHTML = '<span style="color:#ef4444;">Wprowadź poprawne liczby!</span>';
-                    return;
-                }
-                if (a <= 0 || a === 1) {
-                    resultBox.innerHTML = '<span style="color:#ef4444;">Podstawa $a$ musi być $> 0$ oraz $\\neq 1$!</span>';
-                } else if (b <= 0) {
-                    resultBox.innerHTML = '<span style="color:#ef4444;">Liczba logarytmowana $b$ musi być $> 0$!</span>';
-                } else {
-                    const res = Math.log(b) / Math.log(a);
-                    const rounded = Math.round(res * 100000) / 100000;
-                    resultBox.innerHTML = `$$\\log_{${aStr}} (${bStr}) = ${rounded}$$`;
-                }
-
-                if (window.MathJax) {
-                    MathJax.typesetPromise([resultBox]);
-                }
-            } catch (err) {
-                resultBox.innerHTML = '<span style="color:#ef4444;">Błąd podczas obliczeń!</span>';
-            }
+            const n = parseFloat(document.getElementById('t1_n').value);
+            const m = parseFloat(document.getElementById('t1_m').value);
+            if (isNaN(n) || isNaN(m)) return;
+            const exp = n + 3 * m;
+            const val = Math.pow(2, exp);
+            document.getElementById('t1_res').innerHTML = `<strong>Wykładnik k przy 2^k:</strong> ${exp}<br><strong>Wynik 2^(${exp}):</strong> ${val} (czyli 1/${Math.pow(2, -exp)})`;
         }
+        
     </script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zadanie 6 - Rozwiązanie i Wyjaśnienie | Matura z Matematyki</title>
+    <title>Zadanie 6 - Rozwiązanie i Wyjaśnienie | Matura z Matematyki 2019</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,27 +62,30 @@
         }
 
         .container {
-            max-width: 900px;
+            max-width: 950px;
             margin: 0 auto;
             display: flex;
             flex-direction: column;
             gap: 2rem;
         }
 
-        /* Top Navigation between tasks */
         .task-nav {
             display: flex;
-            justify-content: center;
-            gap: 0.5rem;
-            margin-bottom: -0.5rem;
             flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.4rem;
+            margin-bottom: -0.5rem;
+            background: rgba(15, 23, 42, 0.6);
+            padding: 1rem;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
         }
 
         .task-nav-link {
             background: rgba(255, 255, 255, 0.04);
             border: 1px solid var(--border-color);
             color: var(--text-muted);
-            padding: 0.5rem 1rem;
+            padding: 0.4rem 0.8rem;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
@@ -103,7 +106,6 @@
             box-shadow: 0 4px 12px var(--accent-glow);
         }
 
-        /* Header */
         header {
             text-align: center;
             padding: 2rem 1rem;
@@ -130,7 +132,7 @@
 
         h1 {
             font-family: var(--font-heading);
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             font-weight: 800;
             background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
             -webkit-background-clip: text;
@@ -143,7 +145,6 @@
             font-size: 1.1rem;
         }
 
-        /* Card Styles */
         .card {
             background-color: var(--bg-card);
             border: 1px solid var(--border-color);
@@ -186,18 +187,18 @@
             color: var(--text-main);
         }
 
-        /* Task Content */
         .task-box {
             background-color: rgba(15, 23, 42, 0.6);
             border-left: 4px solid var(--accent-primary);
             padding: 1.5rem;
             border-radius: 0 12px 12px 0;
             margin-bottom: 1.5rem;
-            font-size: 1.2rem;
+            font-size: 1.15rem;
         }
 
         .task-image-preview {
             margin-top: 1rem;
+            margin-bottom: 1.5rem;
             text-align: center;
         }
 
@@ -208,10 +209,9 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.4);
         }
 
-        /* Options Grid */
         .options-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1rem;
             margin-top: 1.5rem;
         }
@@ -222,7 +222,7 @@
             border-radius: 14px;
             padding: 1.2rem;
             color: var(--text-main);
-            font-size: 1.05rem;
+            font-size: 1.1rem;
             font-weight: 600;
             cursor: pointer;
             display: flex;
@@ -231,6 +231,7 @@
             transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
+            text-align: left;
         }
 
         .option-btn:hover {
@@ -249,36 +250,37 @@
             justify-content: center;
             font-family: var(--font-heading);
             font-weight: 700;
+            flex-shrink: 0;
         }
 
         .option-btn.correct {
             background: var(--correct-bg) !important;
             border-color: var(--correct-green) !important;
-            color: #ecfdf5 !important;
+            color: #34d399 !important;
         }
 
         .option-btn.correct .option-letter {
-            background: var(--correct-green);
-            color: white;
+            background: var(--correct-green) !important;
+            color: white !important;
         }
 
         .option-btn.wrong {
             background: var(--wrong-bg) !important;
             border-color: var(--wrong-red) !important;
-            color: #fef2f2 !important;
+            color: #f87171 !important;
         }
 
         .option-btn.wrong .option-letter {
-            background: var(--wrong-red);
-            color: white;
+            background: var(--wrong-red) !important;
+            color: white !important;
         }
 
         .feedback-box {
             margin-top: 1.5rem;
-            padding: 1rem 1.25rem;
-            border-radius: 12px;
-            font-weight: 500;
+            padding: 1.25rem;
+            border-radius: 14px;
             display: none;
+            font-size: 1.05rem;
             animation: fadeIn 0.3s ease;
         }
 
@@ -289,39 +291,75 @@
         .feedback-box.correct {
             background: var(--correct-bg);
             border: 1px solid var(--correct-green);
-            color: #6ee7b7;
+            color: #a7f3d0;
         }
 
         .feedback-box.wrong {
             background: var(--wrong-bg);
             border: 1px solid var(--wrong-red);
-            color: #fca5a5;
+            color: #fecaca;
         }
 
-        /* Step List */
-        .step-item {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--border-color);
-            border-radius: 14px;
-            padding: 1.25rem;
-            margin-bottom: 1rem;
+        .tabs-nav {
             display: flex;
-            gap: 1rem;
-            align-items: flex-start;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            overflow-x: auto;
+        }
+
+        .tab-btn {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            padding: 0.6rem 1.2rem;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .tab-btn:hover {
+            color: white;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .tab-btn.active {
+            color: white;
+            background: var(--accent-primary);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .step-item {
+            display: flex;
+            gap: 1.25rem;
+            margin-bottom: 1.5rem;
+            position: relative;
         }
 
         .step-number {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
             background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
             color: white;
-            min-width: 28px;
-            height: 28px;
-            border-radius: 50%;
+            font-weight: 700;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: 700;
-            font-size: 0.85rem;
-            margin-top: 0.2rem;
+            flex-shrink: 0;
+            box-shadow: 0 4px 10px var(--accent-glow);
         }
 
         .step-body {
@@ -329,69 +367,125 @@
         }
 
         .step-title {
-            font-weight: 600;
+            font-family: var(--font-heading);
+            font-size: 1.15rem;
+            font-weight: 700;
             color: var(--text-main);
             margin-bottom: 0.35rem;
         }
 
         .step-desc {
             color: var(--text-muted);
-            font-size: 0.95rem;
+            font-size: 1.02rem;
         }
 
         .math-highlight {
             background: rgba(99, 102, 241, 0.1);
-            border-radius: 8px;
-            padding: 0.75rem 1rem;
-            margin: 0.75rem 0;
             border-left: 3px solid var(--accent-primary);
-            font-size: 1.1rem;
+            padding: 0.75rem 1rem;
+            border-radius: 0 8px 8px 0;
+            margin-top: 0.75rem;
+            color: var(--text-main);
         }
 
-        /* Key Formulas Grid */
         .formulas-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 1rem;
         }
 
         .formula-card {
             background: rgba(255, 255, 255, 0.02);
             border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 1rem 1.25rem;
+            border-radius: 14px;
+            padding: 1.2rem;
         }
 
         .formula-name {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: var(--accent-secondary);
+            font-family: var(--font-heading);
             font-weight: 700;
+            color: var(--accent-primary);
             margin-bottom: 0.5rem;
+            font-size: 1.05rem;
         }
 
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(8px); }
-            to { opacity: 1; transform: translateY(0); }
+        .calc-form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .input-group label {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .input-group input, .input-group select {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 0.75rem 1rem;
+            color: white;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.2s ease;
+        }
+
+        .input-group input:focus, .input-group select:focus {
+            border-color: var(--accent-primary);
+        }
+
+        .calc-btn {
+            grid-column: 1 / -1;
+            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+            color: white;
+            border: none;
+            border-radius: 12px;
+            padding: 0.85rem;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 15px var(--accent-glow);
+        }
+
+        .calc-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px var(--accent-glow);
+        }
+
+        .calc-result {
+            background: rgba(15, 23, 42, 0.7);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 1.25rem;
+            font-size: 1.1rem;
+            margin-top: 1rem;
         }
 
         footer {
             text-align: center;
             color: var(--text-muted);
             font-size: 0.9rem;
-            padding: 1.5rem 0;
+            padding: 2rem 0;
             border-top: 1px solid var(--border-color);
-            margin-top: 1rem;
+            margin-top: 2rem;
         }
 
-        @media (max-width: 640px) {
-            h1 { font-size: 1.8rem; }
-            .card { padding: 1.25rem; }
-            .options-grid { grid-template-columns: 1fr; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-    
+
+
         
         /* Complete Mobile & Universal Responsive System */
         html, body {
@@ -584,8 +678,8 @@
 </head>
 <body>
     <div class="container">
-        <!-- Task Navigation -->
-                <nav class="task-nav">
+        <!-- Navigation -->
+        <nav class="task-nav">
             <a href="zadanie1.html" class="task-nav-link">Zadanie 1</a>
             <a href="zadanie2.html" class="task-nav-link">Zadanie 2</a>
             <a href="zadanie3.html" class="task-nav-link">Zadanie 3</a>
@@ -625,11 +719,11 @@
         <!-- Header -->
         <header>
             <span class="badge">Matura z Matematyki • Zadanie 6</span>
-            <h1>Równania Ułamkowe i Dziedzina</h1>
-            <p>Wyznaczanie dziedziny i rozwiązań równania wymiernego $\frac{(x-1)(x+2)}{x-3} = 0$</p>
+            <h1>Liczba Rozwiązań Równania Wymiernego</h1>
+            <p>Badanie dziedziny i zerowania licznika</p>
         </header>
 
-        <!-- Task Interactive Card -->
+        <!-- Task Card -->
         <div class="card">
             <div class="card-header">
                 <div class="card-icon">6</div>
@@ -637,132 +731,176 @@
             </div>
 
             <div class="task-box">
-                Zadanie 6. (0–1)<br>
-                Równanie $\frac{(x-1)(x+2)}{x-3} = 0$:
+                Zadanie 6. (0–1)<br>Liczba rozwiązań równania $\frac{(x^2 - 1)(x - 2)}{(x-1)(x+2)} = 0$ jest równa:
             </div>
 
             <div class="task-image-preview">
-                <img src="4,5,6.png" alt="Skan zadań 4, 5, 6">
+                <img src="6.png" alt="Zadanie 6 - treść i rysunek">
             </div>
 
             <div class="options-grid" id="optionsGrid">
                 <button class="option-btn" onclick="checkAnswer('A')">
                     <span class="option-letter">A</span>
-                    <span>ma 3 rozwiązania: $x=1, x=3, x=-2$</span>
+                    <span>0</span>
                 </button>
                 <button class="option-btn" onclick="checkAnswer('B')">
                     <span class="option-letter">B</span>
-                    <span>ma 3 rozwiązania: $x=-1, x=-3, x=2$</span>
+                    <span>1</span>
                 </button>
                 <button class="option-btn" onclick="checkAnswer('C')">
                     <span class="option-letter">C</span>
-                    <span>ma 2 rozwiązania: $x=1, x=-2$</span>
+                    <span>2</span>
                 </button>
                 <button class="option-btn" onclick="checkAnswer('D')">
                     <span class="option-letter">D</span>
-                    <span>ma 2 rozwiązania: $x=-1, x=2$</span>
+                    <span>3</span>
                 </button>
             </div>
-
             <div class="feedback-box" id="feedbackBox"></div>
         </div>
 
-        <!-- Solutions Section -->
+        <!-- Solution Card -->
         <div class="card">
             <div class="card-header">
                 <div class="card-icon">💡</div>
                 <div class="card-title">Rozwiązanie Krok po Kroku</div>
             </div>
 
-            <div class="step-item">
-                <div class="step-number">1</div>
-                <div class="step-body">
-                    <div class="step-title">Wyznaczenie dziedziny równania ($D$)</div>
-                    <div class="step-desc">
-                        Mianownik ułamka nie może być równy $0$:
-                        $$x - 3 \neq 0 \implies x \neq 3$$
-                        Dziedzina to: $D = \mathbb{R} \setminus \{3\}$. Liczba $x = 3$ jest wykluczona!
-                    </div>
-                </div>
-            </div>
 
-            <div class="step-item">
-                <div class="step-number">2</div>
-                <div class="step-body">
-                    <div class="step-title">Przyrównanie licznika do zera</div>
-                    <div class="step-desc">
-                        Ułamek zeruje się tylko wtedy, gdy jego licznik jest równy $0$:
-                        $$(x - 1)(x + 2) = 0$$
-                        Iloczyn jest równy zero, gdy co najmniej jeden czynnik jest zero:
-                        $$x - 1 = 0 \implies x = 1$$
-                        $$x + 2 = 0 \implies x = -2$$
+            <div class="tabs-nav">
+                <button class="tab-btn active" onclick="switchTab('m1_6')">Metoda 1: Dziedzina i rozkład na czynniki (Główna)</button>
+            </div>
+            <div class="tab-content active" id="m1_6">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-body">
+                        <div class="step-title">Wyznaczenie dziedziny równania</div>
+                        <div class="step-desc">Mianownik musi być różny od zera:
+                        $$(x-1)(x+2) \neq 0 \implies x \neq 1 \quad \text{oraz} \quad x \neq -2$$
+                        $$\mathcal{D} = \mathbb{R} \setminus \{-2, 1\}$$</div>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-body">
+                        <div class="step-title">Przyrównanie licznika do zera</div>
+                        <div class="step-desc">$$(x^2 - 1)(x - 2) = 0 \implies (x-1)(x+1)(x-2) = 0$$
+                        Miejsca zerowe licznika to: $x = 1$, $x = -1$, $x = 2$.</div>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-body">
+                        <div class="step-title">Weryfikacja z dziedziną</div>
+                        <div class="step-desc">Liczba $x = 1$ nie należy do dziedziny $\mathcal{D}$.<br>
+                        Rozwiązaniami są tylko $x = -1$ oraz $x = 2$ (2 rozwiązania).</div>
+                        <div class="math-highlight">$$\mathbf{2 \text{ rozwiązania}} \quad \implies \quad \text{Poprawna odpowiedź to C}$$</div>
                     </div>
                 </div>
             </div>
-
-            <div class="step-item">
-                <div class="step-number">3</div>
-                <div class="step-body">
-                    <div class="step-title">Weryfikacja rozwiązań z dziedziną</div>
-                    <div class="step-desc">
-                        • dla $x = 1$: $1 \in D$ (należy do dziedziny) $\checkmark$<br>
-                        • dla $x = -2$: $-2 \in D$ (należy do dziedziny) $\checkmark$<br>
-                        Równanie posiada dokładnie dwa rozwiązania: $x = 1$ oraz $x = -2$.
-                    </div>
-                    <div class="math-highlight">
-                        $$\mathbf{\text{Dwa rozwiązania: } x = 1, x = -2} \quad \implies \quad \text{Poprawna odpowiedź to C}$$
-                    </div>
-                </div>
-            </div>
+        
         </div>
 
         <!-- Traps Card -->
         <div class="card">
             <div class="card-header">
                 <div class="card-icon">⚠️</div>
-                <div class="card-title">Częste Pułapki</div>
+                <div class="card-title">Częste Pułapki i Błędy na Maturze</div>
             </div>
+
 
             <div class="formulas-grid">
                 <div class="formula-card">
-                    <div class="formula-name" style="color:#ef4444;">Pułapka 1 (Opcja A: Zaliczanie mianownika)</div>
-                    <div>Uwzględnienie $x = 3$ jako rozwiązania. Wartość $x = 3$ zeruje mianownik, powodując dzielenie przez $0$!</div>
-                </div>
-                <div class="formula-card">
-                    <div class="formula-name" style="color:#ef4444;">Pułapka 2 (Opcja B i D: Złe znaki)</div>
-                    <div>Błędne zmiana znaków przy przyrównaniu do zera (np. $x - 1 = 0 \implies x = -1$).</div>
+                    <div class="formula-name" style="color:#ef4444;">Pułapka: Zapomnienie o dziedzinie</div>
+                    <div>Wskazanie 3 rozwiązań (opcja D) bez odrzucenia $x = 1$ z mianownika to klasyczna pułapka maturalna! Pamiętaj: dzielenie przez zero jest niedozwolone.</div>
                 </div>
             </div>
+        
+        </div>
+
+        <!-- Formulas Card -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon">📖</div>
+                <div class="card-title">Przydatne Wzory z Tablic Maturalnych</div>
+            </div>
+
+
+            <div class="formulas-grid">
+                <div class="formula-card">
+                    <div class="formula-name">Równanie wymierne</div>
+                    <div>$$\frac{L(x)}{M(x)} = 0 \iff L(x) = 0 \quad \text{i} \quad M(x) \neq 0$$</div>
+                </div>
+            </div>
+        
+        </div>
+
+        <!-- Interactive Tool Card -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon">🧮</div>
+                <div class="card-title">Interaktywne Narzędzie Pomocnicze</div>
+            </div>
+
+
+            <form class="calc-form" onsubmit="calcTask6(event)">
+                <div class="input-group"><label>Zastąp wartość x do sprawdzenia:</label><input type="number" id="t6_x" value="1"></div>
+                <button type="submit" class="calc-btn">Sprawdź czy x należy do rozwiązania</button>
+            </form>
+            <div class="calc-result" id="t6_res">Wprowadź dane i kliknij przycisk.</div>
+        
         </div>
 
         <!-- Footer -->
         <footer>
-            Wygenerowano dla przygotowania do Matury z Matematyki • Wszelkie prawa zastrzeżone
+            Wygenerowano dla przygotowania do Matura z Matematyki • Wszelkie prawa zastrzeżone
         </footer>
     </div>
 
     <script>
-        function checkAnswer(selectedOption) {
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+            
+            const activeBtn = Array.from(document.querySelectorAll('.tab-btn')).find(b => b.getAttribute('onclick').includes(tabId));
+            if (activeBtn) activeBtn.classList.add('active');
+            
+            const activeContent = document.getElementById(tabId);
+            if (activeContent) activeContent.classList.add('active');
+        }
+
+
+        function checkAnswer(opt) {
             const feedbackBox = document.getElementById('feedbackBox');
             const buttons = document.querySelectorAll('.option-btn');
+            buttons.forEach(b => b.classList.remove('correct', 'wrong'));
+            const selectedBtn = Array.from(buttons).find(b => b.textContent.trim().startsWith(opt));
 
-            buttons.forEach(btn => btn.classList.remove('correct', 'wrong'));
-            const selectedBtn = Array.from(buttons).find(b => b.textContent.includes(selectedOption));
-
-            if (selectedOption === 'C') {
+            if (opt === 'C') {
                 if (selectedBtn) selectedBtn.classList.add('correct');
                 feedbackBox.className = 'feedback-box active correct';
-                feedbackBox.innerHTML = '✨ <strong>Doskonale!</strong> Odpowiedź C (dwa rozwiązania: $x=1, x=-2$) jest prawidłowa.';
-            } else if (selectedOption === 'A') {
-                if (selectedBtn) selectedBtn.classList.add('wrong');
-                feedbackBox.className = 'feedback-box active wrong';
-                feedbackBox.innerHTML = '❌ Odpowiedź A zaliczyła $x=3$ jako rozwiązanie. Liczba $3$ zeruje mianownik i jest wykluczona z dziedziny! Prawidłowa odpowiedź to <strong>C</strong>.';
+                feedbackBox.innerHTML = '✨ <strong>Doskonale!</strong> Odpowiedź C (2 rozwiązania) jest prawidłowa. Liczba $x=1$ odpada z dziedziny, zostają $x = -1$ i $x = 2$.';
             } else {
                 if (selectedBtn) selectedBtn.classList.add('wrong');
                 feedbackBox.className = 'feedback-box active wrong';
-                feedbackBox.innerHTML = `❌ Odpowiedź ${selectedOption} jest niepoprawna. Prawidłowa odpowiedź to <strong>C (dwa rozwiązania: $x=1, x=-2$)</strong>.`;
+                feedbackBox.innerHTML = `❌ Odpowiedź ${opt} jest niepoprawna. Prawidłowa odpowiedź to <strong>C (2 rozwiązania)</strong>. Pamiętaj o wykluczeniu $x=1$ z mianownika!`;
+            }
+            if (window.MathJax) MathJax.typesetPromise([feedbackBox]);
+        }
+
+        function calcTask6(e) {
+            e.preventDefault();
+            const x = parseFloat(document.getElementById('t6_x').value);
+            if (isNaN(x)) return;
+            if (x === 1 || x === -2) {
+                document.getElementById('t6_res').innerHTML = `<span style="color:#ef4444;">x = ${x} NIE należy do dziedziny (mianownik jest równy 0)!</span>`;
+            } else if (x === -1 || x === 2) {
+                document.getElementById('t6_res').innerHTML = `<span style="color:#10b981;">x = ${x} JEST poprawnym rozwiązaniem równania!</span>`;
+            } else {
+                document.getElementById('t6_res').innerHTML = `x = ${x} należy do dziedziny, ale nie zeruje licznika.`;
             }
         }
+        
     </script>
 </body>
 </html>

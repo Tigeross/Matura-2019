@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zadanie 5 - Rozwiązanie i Wyjaśnienie | Matura z Matematyki</title>
+    <title>Zadanie 5 - Rozwiązanie i Wyjaśnienie | Matura z Matematyki 2019</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,27 +62,30 @@
         }
 
         .container {
-            max-width: 900px;
+            max-width: 950px;
             margin: 0 auto;
             display: flex;
             flex-direction: column;
             gap: 2rem;
         }
 
-        /* Top Navigation between tasks */
         .task-nav {
             display: flex;
-            justify-content: center;
-            gap: 0.5rem;
-            margin-bottom: -0.5rem;
             flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.4rem;
+            margin-bottom: -0.5rem;
+            background: rgba(15, 23, 42, 0.6);
+            padding: 1rem;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
         }
 
         .task-nav-link {
             background: rgba(255, 255, 255, 0.04);
             border: 1px solid var(--border-color);
             color: var(--text-muted);
-            padding: 0.5rem 1rem;
+            padding: 0.4rem 0.8rem;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
@@ -103,7 +106,6 @@
             box-shadow: 0 4px 12px var(--accent-glow);
         }
 
-        /* Header */
         header {
             text-align: center;
             padding: 2rem 1rem;
@@ -130,7 +132,7 @@
 
         h1 {
             font-family: var(--font-heading);
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             font-weight: 800;
             background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
             -webkit-background-clip: text;
@@ -143,7 +145,6 @@
             font-size: 1.1rem;
         }
 
-        /* Card Styles */
         .card {
             background-color: var(--bg-card);
             border: 1px solid var(--border-color);
@@ -186,18 +187,18 @@
             color: var(--text-main);
         }
 
-        /* Task Content */
         .task-box {
             background-color: rgba(15, 23, 42, 0.6);
             border-left: 4px solid var(--accent-primary);
             padding: 1.5rem;
             border-radius: 0 12px 12px 0;
             margin-bottom: 1.5rem;
-            font-size: 1.2rem;
+            font-size: 1.15rem;
         }
 
         .task-image-preview {
             margin-top: 1rem;
+            margin-bottom: 1.5rem;
             text-align: center;
         }
 
@@ -208,10 +209,9 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.4);
         }
 
-        /* Options Grid */
         .options-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1rem;
             margin-top: 1.5rem;
         }
@@ -231,6 +231,7 @@
             transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
+            text-align: left;
         }
 
         .option-btn:hover {
@@ -249,36 +250,37 @@
             justify-content: center;
             font-family: var(--font-heading);
             font-weight: 700;
+            flex-shrink: 0;
         }
 
         .option-btn.correct {
             background: var(--correct-bg) !important;
             border-color: var(--correct-green) !important;
-            color: #ecfdf5 !important;
+            color: #34d399 !important;
         }
 
         .option-btn.correct .option-letter {
-            background: var(--correct-green);
-            color: white;
+            background: var(--correct-green) !important;
+            color: white !important;
         }
 
         .option-btn.wrong {
             background: var(--wrong-bg) !important;
             border-color: var(--wrong-red) !important;
-            color: #fef2f2 !important;
+            color: #f87171 !important;
         }
 
         .option-btn.wrong .option-letter {
-            background: var(--wrong-red);
-            color: white;
+            background: var(--wrong-red) !important;
+            color: white !important;
         }
 
         .feedback-box {
             margin-top: 1.5rem;
-            padding: 1rem 1.25rem;
-            border-radius: 12px;
-            font-weight: 500;
+            padding: 1.25rem;
+            border-radius: 14px;
             display: none;
+            font-size: 1.05rem;
             animation: fadeIn 0.3s ease;
         }
 
@@ -289,82 +291,75 @@
         .feedback-box.correct {
             background: var(--correct-bg);
             border: 1px solid var(--correct-green);
-            color: #6ee7b7;
+            color: #a7f3d0;
         }
 
         .feedback-box.wrong {
             background: var(--wrong-bg);
             border: 1px solid var(--wrong-red);
-            color: #fca5a5;
+            color: #fecaca;
         }
 
-        /* Tabs for Solution Steps */
         .tabs-nav {
             display: flex;
             gap: 0.5rem;
-            border-bottom: 1px solid var(--border-color);
             margin-bottom: 1.5rem;
-            overflow-x: auto;
+            border-bottom: 1px solid var(--border-color);
             padding-bottom: 0.5rem;
+            overflow-x: auto;
         }
 
         .tab-btn {
-            background: transparent;
+            background: none;
             border: none;
             color: var(--text-muted);
-            padding: 0.75rem 1.25rem;
-            font-size: 0.95rem;
+            padding: 0.6rem 1.2rem;
             font-weight: 600;
+            font-size: 0.95rem;
             cursor: pointer;
-            border-radius: 10px;
+            border-radius: 8px;
             transition: all 0.2s ease;
             white-space: nowrap;
         }
 
         .tab-btn:hover {
-            color: var(--text-main);
-            background: rgba(255, 255, 255, 0.04);
+            color: white;
+            background: rgba(255, 255, 255, 0.05);
         }
 
         .tab-btn.active {
             color: white;
             background: var(--accent-primary);
-            box-shadow: 0 4px 12px var(--accent-glow);
         }
 
         .tab-content {
             display: none;
-            animation: fadeIn 0.4s ease;
         }
 
         .tab-content.active {
             display: block;
+            animation: fadeIn 0.3s ease;
         }
 
-        /* Step List */
         .step-item {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--border-color);
-            border-radius: 14px;
-            padding: 1.25rem;
-            margin-bottom: 1rem;
             display: flex;
-            gap: 1rem;
-            align-items: flex-start;
+            gap: 1.25rem;
+            margin-bottom: 1.5rem;
+            position: relative;
         }
 
         .step-number {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
             background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
             color: white;
-            min-width: 28px;
-            height: 28px;
-            border-radius: 50%;
+            font-weight: 700;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: 700;
-            font-size: 0.85rem;
-            margin-top: 0.2rem;
+            flex-shrink: 0;
+            box-shadow: 0 4px 10px var(--accent-glow);
         }
 
         .step-body {
@@ -372,46 +367,125 @@
         }
 
         .step-title {
-            font-weight: 600;
+            font-family: var(--font-heading);
+            font-size: 1.15rem;
+            font-weight: 700;
             color: var(--text-main);
             margin-bottom: 0.35rem;
         }
 
         .step-desc {
             color: var(--text-muted);
-            font-size: 0.95rem;
+            font-size: 1.02rem;
         }
 
         .math-highlight {
             background: rgba(99, 102, 241, 0.1);
-            border-radius: 8px;
-            padding: 0.75rem 1rem;
-            margin: 0.75rem 0;
             border-left: 3px solid var(--accent-primary);
-            font-size: 1.1rem;
+            padding: 0.75rem 1rem;
+            border-radius: 0 8px 8px 0;
+            margin-top: 0.75rem;
+            color: var(--text-main);
         }
 
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(8px); }
-            to { opacity: 1; transform: translateY(0); }
+        .formulas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1rem;
+        }
+
+        .formula-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 1.2rem;
+        }
+
+        .formula-name {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            color: var(--accent-primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+        }
+
+        .calc-form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .input-group label {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .input-group input, .input-group select {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 0.75rem 1rem;
+            color: white;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.2s ease;
+        }
+
+        .input-group input:focus, .input-group select:focus {
+            border-color: var(--accent-primary);
+        }
+
+        .calc-btn {
+            grid-column: 1 / -1;
+            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+            color: white;
+            border: none;
+            border-radius: 12px;
+            padding: 0.85rem;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 15px var(--accent-glow);
+        }
+
+        .calc-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px var(--accent-glow);
+        }
+
+        .calc-result {
+            background: rgba(15, 23, 42, 0.7);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 1.25rem;
+            font-size: 1.1rem;
+            margin-top: 1rem;
         }
 
         footer {
             text-align: center;
             color: var(--text-muted);
             font-size: 0.9rem;
-            padding: 1.5rem 0;
+            padding: 2rem 0;
             border-top: 1px solid var(--border-color);
-            margin-top: 1rem;
+            margin-top: 2rem;
         }
 
-        @media (max-width: 640px) {
-            h1 { font-size: 1.8rem; }
-            .card { padding: 1.25rem; }
-            .options-grid { grid-template-columns: 1fr; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-    
+
+
         
         /* Complete Mobile & Universal Responsive System */
         html, body {
@@ -604,8 +678,8 @@
 </head>
 <body>
     <div class="container">
-        <!-- Task Navigation -->
-                <nav class="task-nav">
+        <!-- Navigation -->
+        <nav class="task-nav">
             <a href="zadanie1.html" class="task-nav-link">Zadanie 1</a>
             <a href="zadanie2.html" class="task-nav-link">Zadanie 2</a>
             <a href="zadanie3.html" class="task-nav-link">Zadanie 3</a>
@@ -645,11 +719,11 @@
         <!-- Header -->
         <header>
             <span class="badge">Matura z Matematyki • Zadanie 5</span>
-            <h1>Układ Równań z Parametrem</h1>
-            <p>Wyznaczanie parametru $a$, gdy znana jest para rozwiązań $(x, y)$</p>
+            <h1>Pierwiastki Równania Kwadratowego</h1>
+            <p>Wyznaczanie całkowitych współczynników $b$ i $c$</p>
         </header>
 
-        <!-- Task Interactive Card -->
+        <!-- Task Card -->
         <div class="card">
             <div class="card-header">
                 <div class="card-icon">5</div>
@@ -657,100 +731,181 @@
             </div>
 
             <div class="task-box">
-                Zadanie 5. (0–1)<br>
-                Para liczb $x = 2$ i $y = 2$ jest rozwiązaniem układu równań:
-                $$\begin{cases} ax + y = 4 \\ -2x + 3y = 2a \end{cases}$$
-                dla:
+                Zadanie 5. (0–1)<br>Liczba $a = \sqrt{2} + 1$ jest jednym z pierwiastków równania $x^2 + bx + c = 0$ o współczynnikach całkowitych $b$ i $c$. Wtedy:
             </div>
 
             <div class="task-image-preview">
-                <img src="4,5,6.png" alt="Skan zadań 4, 5, 6">
+                <img src="5.png" alt="Zadanie 5 - treść i rysunek">
             </div>
 
             <div class="options-grid" id="optionsGrid">
                 <button class="option-btn" onclick="checkAnswer('A')">
                     <span class="option-letter">A</span>
-                    <span>$a = -1$</span>
+                    <span>$b = -2, \, c = -1$</span>
                 </button>
                 <button class="option-btn" onclick="checkAnswer('B')">
                     <span class="option-letter">B</span>
-                    <span>$a = 1$</span>
+                    <span>$b = 2, \, c = -1$</span>
                 </button>
                 <button class="option-btn" onclick="checkAnswer('C')">
                     <span class="option-letter">C</span>
-                    <span>$a = -2$</span>
+                    <span>$b = -2, \, c = 1$</span>
                 </button>
                 <button class="option-btn" onclick="checkAnswer('D')">
                     <span class="option-letter">D</span>
-                    <span>$a = 2$</span>
+                    <span>$b = 2, \, c = 1$</span>
                 </button>
             </div>
-
             <div class="feedback-box" id="feedbackBox"></div>
         </div>
 
-        <!-- Solutions Section -->
+        <!-- Solution Card -->
         <div class="card">
             <div class="card-header">
                 <div class="card-icon">💡</div>
                 <div class="card-title">Rozwiązanie Krok po Kroku</div>
             </div>
 
-            <div class="step-item">
-                <div class="step-number">1</div>
-                <div class="step-body">
-                    <div class="step-title">Podstawienie znanych wartości $x = 2$ i $y = 2$ do pierwszego równania</div>
-                    <div class="step-desc">
-                        Pierwsze równanie: $ax + y = 4$<br>
-                        Podstawiamy $x = 2$ oraz $y = 2$:
-                        $$a \cdot 2 + 2 = 4 \implies 2a + 2 = 4$$
-                        $$2a = 4 - 2 \implies 2a = 2 \implies a = 1$$
+
+            <div class="tabs-nav">
+                <button class="tab-btn active" onclick="switchTab('m1_5')">Metoda 1: Pierwiastek sprzężony i wzory Viète'a (Główna)</button>
+                <button class="tab-btn" onclick="switchTab('m2_5')">Metoda 2: Podstawienie $x = \sqrt{2}+1$</button>
+            </div>
+            <div class="tab-content active" id="m1_5">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-body">
+                        <div class="step-title">Drugi pierwiastek równania o całkowitych współczynnikach</div>
+                        <div class="step-desc">Dla równania o współczynnikach całkowitych, jeśli jednym pierwiastkiem jest $x_1 = 1 + \sqrt{2}$, to drugim musi być pierwiastek sprzężony $x_2 = 1 - \sqrt{2}$.</div>
                     </div>
                 </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-body">
+                        <div class="step-title">Zastosowanie wzorów Viète'a</div>
+                        <div class="step-desc">$$b = -(x_1 + x_2) = -((1 + \sqrt{2}) + (1 - \sqrt{2})) = -2$$
+                        $$c = x_1 \cdot x_2 = (1 + \sqrt{2})(1 - \sqrt{2}) = 1^2 - (\sqrt{2})^2 = 1 - 2 = -1$$</div>
+                        <div class="math-highlight">$$\mathbf{b = -2, \, c = -1} \quad \implies \quad \text{Poprawna odpowiedź to A}$$</div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content" id="m2_5">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-body">
+                        <div class="step-title">Podstawienie pod $x^2 + bx + c = 0$</div>
+                        <div class="step-desc">$$(\sqrt{2}+1)^2 + b(\sqrt{2}+1) + c = 0 \implies (3 + 2\sqrt{2}) + b\sqrt{2} + b + c = 0$$
+                        $$(3 + b + c) + (2 + b)\sqrt{2} = 0$$
+                        Ponieważ $b, c \in \mathbb{Z}$, część niewymierna musi zerować się osobiście: $2 + b = 0 \implies b = -2$, a wtedy $3 - 2 + c = 0 \implies c = -1$.</div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+
+        <!-- Traps Card -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon">⚠️</div>
+                <div class="card-title">Częste Pułapki i Błędy na Maturze</div>
             </div>
 
-            <div class="step-item">
-                <div class="step-number">2</div>
-                <div class="step-body">
-                    <div class="step-title">Weryfikacja z drugim równaniem</div>
-                    <div class="step-desc">
-                        Drugie równanie: $-2x + 3y = 2a$<br>
-                        Podstawiamy $x = 2, y = 2$ oraz wyznaczone $a = 1$:
-                        $$\text{LHS} = -2(2) + 3(2) = -4 + 6 = 2$$
-                        $$\text{RHS} = 2a = 2(1) = 2$$
-                        Lewa strona jest równa prawej ($\text{LHS} = \text{RHS}$), więc $a = 1$ jest jedynym rozwiązaniem.
-                    </div>
-                    <div class="math-highlight">
-                        $$\mathbf{a = 1} \quad \implies \quad \text{Poprawna odpowiedź to B}$$
-                    </div>
+
+            <div class="formulas-grid">
+                <div class="formula-card">
+                    <div class="formula-name" style="color:#ef4444;">Pułapka: Błędy znaku przy sumie pierwiastków</div>
+                    <div>Pamiętaj, że ze wzorów Viète'a $x_1 + x_2 = -b$, a nie $+b$. Zatem $b = -2$.</div>
                 </div>
             </div>
+        
+        </div>
+
+        <!-- Formulas Card -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon">📖</div>
+                <div class="card-title">Przydatne Wzory z Tablic Maturalnych</div>
+            </div>
+
+
+            <div class="formulas-grid">
+                <div class="formula-card">
+                    <div class="formula-name">Wzory Viète'a dla $x^2 + bx + c = 0$</div>
+                    <div>$$x_1 + x_2 = -b, \quad x_1 \cdot x_2 = c$$</div>
+                </div>
+            </div>
+        
+        </div>
+
+        <!-- Interactive Tool Card -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon">🧮</div>
+                <div class="card-title">Interaktywne Narzędzie Pomocnicze</div>
+            </div>
+
+
+            <form class="calc-form" onsubmit="calcTask5(event)">
+                <div class="input-group"><label>Podaj współczynnik b:</label><input type="number" id="t5_b" value="-2"></div>
+                <div class="input-group"><label>Podaj współczynnik c:</label><input type="number" id="t5_c" value="-1"></div>
+                <button type="submit" class="calc-btn">Oblicz pierwiastki równania x^2 + bx + c = 0</button>
+            </form>
+            <div class="calc-result" id="t5_res">Wprowadź dane i kliknij przycisk.</div>
+        
         </div>
 
         <!-- Footer -->
         <footer>
-            Wygenerowano dla przygotowania do Matury z Matematyki • Wszelkie prawa zastrzeżone
+            Wygenerowano dla przygotowania do Matura z Matematyki • Wszelkie prawa zastrzeżone
         </footer>
     </div>
 
     <script>
-        function checkAnswer(selectedOption) {
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+            
+            const activeBtn = Array.from(document.querySelectorAll('.tab-btn')).find(b => b.getAttribute('onclick').includes(tabId));
+            if (activeBtn) activeBtn.classList.add('active');
+            
+            const activeContent = document.getElementById(tabId);
+            if (activeContent) activeContent.classList.add('active');
+        }
+
+
+        function checkAnswer(opt) {
             const feedbackBox = document.getElementById('feedbackBox');
             const buttons = document.querySelectorAll('.option-btn');
+            buttons.forEach(b => b.classList.remove('correct', 'wrong'));
+            const selectedBtn = Array.from(buttons).find(b => b.textContent.trim().startsWith(opt));
 
-            buttons.forEach(btn => btn.classList.remove('correct', 'wrong'));
-            const selectedBtn = Array.from(buttons).find(b => b.textContent.includes(selectedOption));
-
-            if (selectedOption === 'B') {
+            if (opt === 'A') {
                 if (selectedBtn) selectedBtn.classList.add('correct');
                 feedbackBox.className = 'feedback-box active correct';
-                feedbackBox.innerHTML = '✨ <strong>Doskonale!</strong> Odpowiedź B ($a = 1$) jest prawidłowa.';
+                feedbackBox.innerHTML = '✨ <strong>Doskonale!</strong> Odpowiedź A ($b = -2, c = -1$) jest prawidłowa. $x_1+x_2 = 2 \\implies b = -2$, a $x_1 x_2 = 1-2 = -1 \\implies c = -1$.';
             } else {
                 if (selectedBtn) selectedBtn.classList.add('wrong');
                 feedbackBox.className = 'feedback-box active wrong';
-                feedbackBox.innerHTML = `❌ Odpowiedź ${selectedOption} jest niepoprawna. Prawidłowa odpowiedź to <strong>B ($a = 1$)</strong>.`;
+                feedbackBox.innerHTML = `❌ Odpowiedź ${opt} jest niepoprawna. Prawidłowa odpowiedź to <strong>A ($b = -2, c = -1$)</strong>. Skorzystaj ze wzorów Viète'a.`;
+            }
+            if (window.MathJax) MathJax.typesetPromise([feedbackBox]);
+        }
+
+        function calcTask5(e) {
+            e.preventDefault();
+            const b = parseFloat(document.getElementById('t5_b').value);
+            const c = parseFloat(document.getElementById('t5_c').value);
+            if (isNaN(b) || isNaN(c)) return;
+            const delta = b*b - 4*c;
+            if (delta >= 0) {
+                const x1 = (-b + Math.sqrt(delta)) / 2;
+                const x2 = (-b - Math.sqrt(delta)) / 2;
+                document.getElementById('t5_res').innerHTML = `<strong>Wyróżnik Δ:</strong> ${delta}<br><strong>Pierwiastki:</strong> x1 = ${x1.toFixed(3)}, x2 = ${x2.toFixed(3)}`;
+            } else {
+                document.getElementById('t5_res').innerHTML = `Wyróżnik Δ < 0 (brak pierwiastków rzeczywistych).`;
             }
         }
+        
     </script>
 </body>
 </html>
