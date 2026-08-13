@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 14 - Rozwiązanie i Wyjaśnienie | Matura z Matematyki</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- MathJax for LaTeX Rendering -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                processEscapes: true
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <style>
+        :root {
+            --bg-primary: #0b0f19;
+            --bg-card: #151c2c;
+            --bg-card-hover: #1e293b;
+            --accent-primary: #6366f1;
+            --accent-secondary: #a855f7;
+            --accent-glow: rgba(99, 102, 241, 0.25);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --correct-green: #10b981;
+            --correct-bg: rgba(16, 185, 129, 0.15);
+            --wrong-red: #ef4444;
+            --wrong-bg: rgba(239, 68, 68, 0.15);
+            --font-heading: 'Outfit', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 2rem 1rem;
+            background-image: 
+                radial-gradient(circle at 15% 15%, rgba(99, 102, 241, 0.12) 0%, transparent 40%),
+                radial-gradient(circle at 85% 85%, rgba(168, 85, 247, 0.12) 0%, transparent 40%);
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        /* Top Navigation between tasks */
+        .task-nav {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: -0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .task-nav-link {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+            padding: 0.5rem 0.9rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: all 0.25s ease;
+        }
+
+        .task-nav-link:hover {
+            color: white;
+            background: rgba(99, 102, 241, 0.2);
+            border-color: var(--accent-primary);
+        }
+
+        .task-nav-link.active {
+            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+            color: white;
+            border-color: transparent;
+            box-shadow: 0 4px 12px var(--accent-glow);
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(168, 85, 247, 0.1));
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.35rem 1rem;
+            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+            color: white;
+            font-weight: 600;
+            font-size: 0.85rem;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 12px var(--accent-glow);
+        }
+
+        h1 {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        /* Card Styles */
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1rem;
+        }
+
+        .card-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            background: rgba(99, 102, 241, 0.15);
+            color: var(--accent-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .card-title {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .task-box {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 1.5rem;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .task-image-preview {
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        .task-image-preview img {
+            max-width: 100%;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+        }
+
+        /* Options Grid */
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .option-btn {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 1.2rem;
+            color: var(--text-main);
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .option-btn:hover {
+            background: rgba(99, 102, 241, 0.1);
+            border-color: var(--accent-primary);
+            transform: translateY(-2px);
+        }
+
+        .option-letter {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-heading);
+            font-weight: 700;
+        }
+
+        .option-btn.correct {
+            background: var(--correct-bg) !important;
+            border-color: var(--correct-green) !important;
+            color: #ecfdf5 !important;
+        }
+
+        .option-btn.correct .option-letter {
+            background: var(--correct-green);
+            color: white;
+        }
+
+        .option-btn.wrong {
+            background: var(--wrong-bg) !important;
+            border-color: var(--wrong-red) !important;
+            color: #fef2f2 !important;
+        }
+
+        .option-btn.wrong .option-letter {
+            background: var(--wrong-red);
+            color: white;
+        }
+
+        .feedback-box {
+            margin-top: 1.5rem;
+            padding: 1rem 1.25rem;
+            border-radius: 12px;
+            font-weight: 500;
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .feedback-box.active {
+            display: block;
+        }
+
+        .feedback-box.correct {
+            background: var(--correct-bg);
+            border: 1px solid var(--correct-green);
+            color: #6ee7b7;
+        }
+
+        .feedback-box.wrong {
+            background: var(--wrong-bg);
+            border: 1px solid var(--wrong-red);
+            color: #fca5a5;
+        }
+
+        /* Step List */
+        .step-item {
+            display: flex;
+            gap: 1.25rem;
+            margin-bottom: 1.75rem;
+            position: relative;
+        }
+
+        .step-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 45px;
+            left: 20px;
+            bottom: -20px;
+            width: 2px;
+            background: var(--border-color);
+        }
+
+        .step-number {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px var(--accent-glow);
+        }
+
+        .step-body {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.25rem 1.5rem;
+            flex-grow: 1;
+        }
+
+        .step-title {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+        }
+
+        .step-desc {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .math-highlight {
+            background: rgba(99, 102, 241, 0.1);
+            border-left: 4px solid var(--accent-primary);
+            padding: 0.75rem 1rem;
+            border-radius: 0 8px 8px 0;
+            margin: 0.75rem 0;
+            font-size: 1.1rem;
+        }
+
+        .formulas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .formula-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1rem 1.25rem;
+        }
+
+        .formula-name {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--accent-secondary);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        footer {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            padding: 1.5rem 0;
+            border-top: 1px solid var(--border-color);
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 640px) {
+            h1 { font-size: 1.8rem; }
+            .card { padding: 1.25rem; }
+            .options-grid { grid-template-columns: 1fr; }
+        }
+    
+        
+        /* Complete Mobile & Universal Responsive System */
+        html, body {
+            overflow-x: hidden !important;
+            width: 100% !important;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        img {
+            max-width: 100% !important;
+            height: auto !important;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .container {
+            width: 100% !important;
+            box-sizing: border-box;
+        }
+
+        .card {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            box-sizing: border-box;
+        }
+
+        /* Mobile Adjustments for Tablets and Phones (< 768px) */
+        @media (max-width: 768px) {
+            body {
+                padding: 0.75rem 0.5rem !important;
+            }
+
+            .container {
+                gap: 1rem !important;
+            }
+
+            header {
+                padding: 1.25rem 0.75rem !important;
+                border-radius: 16px !important;
+            }
+
+            .badge {
+                font-size: 0.75rem !important;
+                padding: 0.25rem 0.75rem !important;
+                letter-spacing: 0.5px !important;
+            }
+
+            h1 {
+                font-size: 1.5rem !important;
+                line-height: 1.3 !important;
+            }
+
+            header p {
+                font-size: 0.9rem !important;
+            }
+
+            .card {
+                padding: 1.15rem 0.85rem !important;
+                border-radius: 16px !important;
+            }
+
+            .card-header {
+                margin-bottom: 1rem !important;
+                padding-bottom: 0.65rem !important;
+                gap: 0.5rem !important;
+            }
+
+            .card-icon {
+                width: 34px !important;
+                height: 34px !important;
+                font-size: 1.05rem !important;
+                border-radius: 10px !important;
+            }
+
+            .card-title {
+                font-size: 1.1rem !important;
+            }
+
+            .task-box {
+                font-size: 1rem !important;
+                padding: 1rem !important;
+                border-radius: 0 10px 10px 0 !important;
+            }
+
+            .options-grid {
+                grid-template-columns: 1fr !important;
+                gap: 0.65rem !important;
+            }
+
+            .option-btn {
+                padding: 0.85rem !important;
+                font-size: 0.95rem !important;
+                min-height: 48px !important; /* iOS Touch Target */
+            }
+
+            .option-letter {
+                width: 28px !important;
+                height: 28px !important;
+                font-size: 0.9rem !important;
+            }
+
+            .task-nav {
+                padding: 0.6rem 0.4rem !important;
+                gap: 0.3rem !important;
+                max-height: 140px !important;
+                overflow-y: auto !important;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .task-nav-link {
+                padding: 0.3rem 0.6rem !important;
+                font-size: 0.75rem !important;
+            }
+
+            .tabs-nav {
+                gap: 0.3rem !important;
+                padding-bottom: 0.4rem !important;
+            }
+
+            .tab-btn {
+                padding: 0.45rem 0.75rem !important;
+                font-size: 0.82rem !important;
+            }
+
+            .step-item {
+                gap: 0.75rem !important;
+                margin-bottom: 1.15rem !important;
+            }
+
+            .step-number {
+                width: 28px !important;
+                height: 28px !important;
+                font-size: 0.85rem !important;
+            }
+
+            .step-title {
+                font-size: 1rem !important;
+            }
+
+            .step-desc {
+                font-size: 0.92rem !important;
+            }
+
+            .calc-form {
+                grid-template-columns: 1fr !important;
+                gap: 0.75rem !important;
+            }
+
+            .calc-form input, .calc-form select, .open-task-input input {
+                font-size: 16px !important; /* Prevents auto-zoom on iOS Safari */
+                padding: 0.65rem 0.75rem !important;
+            }
+
+            .calc-btn {
+                padding: 0.75rem !important;
+                font-size: 0.95rem !important;
+            }
+
+            .math-highlight, .formula-card {
+                padding: 0.65rem 0.85rem !important;
+                font-size: 0.92rem !important;
+            }
+        }
+
+        /* Extra Small Screens (< 400px) */
+        @media (max-width: 400px) {
+            h1 {
+                font-size: 1.3rem !important;
+            }
+
+            .task-box {
+                font-size: 0.95rem !important;
+            }
+
+            .option-btn {
+                font-size: 0.9rem !important;
+            }
+        }
+
+        /* MathJax Overflow Handling for Small Screens */
+        mjx-container[jax="SVG"][display="true"], mjx-container[jax="CHTML"][display="true"], .MathJax_Display {
+            overflow-x: auto !important;
+            overflow-y: hidden !important;
+            max-width: 100% !important;
+            padding: 0.25rem 0 !important;
+            -webkit-overflow-scrolling: touch;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Task Navigation -->
+                <nav class="task-nav">
+            <a href="zadanie1.html" class="task-nav-link">Zadanie 1</a>
+            <a href="zadanie2.html" class="task-nav-link">Zadanie 2</a>
+            <a href="zadanie3.html" class="task-nav-link">Zadanie 3</a>
+            <a href="zadanie4.html" class="task-nav-link">Zadanie 4</a>
+            <a href="zadanie5.html" class="task-nav-link">Zadanie 5</a>
+            <a href="zadanie6.html" class="task-nav-link">Zadanie 6</a>
+            <a href="zadanie7.html" class="task-nav-link">Zadanie 7</a>
+            <a href="zadanie8.html" class="task-nav-link">Zadanie 8</a>
+            <a href="zadanie9.html" class="task-nav-link">Zadanie 9</a>
+            <a href="zadanie10.html" class="task-nav-link">Zadanie 10</a>
+            <a href="zadanie11.html" class="task-nav-link">Zadanie 11</a>
+            <a href="zadanie12.html" class="task-nav-link">Zadanie 12</a>
+            <a href="zadanie13.html" class="task-nav-link">Zadanie 13</a>
+            <a href="zadanie14.html" class="task-nav-link active">Zadanie 14</a>
+            <a href="zadanie15.html" class="task-nav-link">Zadanie 15</a>
+            <a href="zadanie16.html" class="task-nav-link">Zadanie 16</a>
+            <a href="zadanie17.html" class="task-nav-link">Zadanie 17</a>
+            <a href="zadanie18.html" class="task-nav-link">Zadanie 18</a>
+            <a href="zadanie19.html" class="task-nav-link">Zadanie 19</a>
+            <a href="zadanie20.html" class="task-nav-link">Zadanie 20</a>
+            <a href="zadanie21.html" class="task-nav-link">Zadanie 21</a>
+            <a href="zadanie22.html" class="task-nav-link">Zadanie 22</a>
+            <a href="zadanie23.html" class="task-nav-link">Zadanie 23</a>
+            <a href="zadanie24.html" class="task-nav-link">Zadanie 24</a>
+            <a href="zadanie25.html" class="task-nav-link">Zadanie 25</a>
+            <a href="zadanie26.html" class="task-nav-link">Zadanie 26</a>
+            <a href="zadanie27.html" class="task-nav-link">Zadanie 27</a>
+            <a href="zadanie28.html" class="task-nav-link">Zadanie 28</a>
+            <a href="zadanie29.html" class="task-nav-link">Zadanie 29</a>
+            <a href="zadanie30.html" class="task-nav-link">Zadanie 30</a>
+            <a href="zadanie31.html" class="task-nav-link">Zadanie 31</a>
+            <a href="zadanie32.html" class="task-nav-link">Zadanie 32</a>
+            <a href="zadanie33.html" class="task-nav-link">Zadanie 33</a>
+            <a href="zadanie34.html" class="task-nav-link">Zadanie 34</a>
+        </nav>
+
+        <!-- Header -->
+        <header>
+            <span class="badge">Matura z Matematyki • Zadanie 14</span>
+            <h1>Kąt Wpisany w Okrąg</h1>
+            <p>Wyznaczanie miary kąta wpisanego $\alpha = \angle DEB$ opisanego na trójkącie równobocznym $ABC$</p>
+        </header>
+
+        <!-- Task Interactive Card -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon">14</div>
+                <div class="card-title">Treść Zadania</div>
+            </div>
+
+            <div class="task-box">
+                <strong>Zadanie 14. (0–1)</strong><br>
+                Punkty $D$ i $E$ leżą na okręgu opisanym na trójkącie równobocznym $ABC$ (zobacz rysunek). Odcinek $CD$ jest średnicą tego okręgu. Kąt wpisany $DEB$ ma miarę $\alpha$.<br>
+                Zatem:
+            </div>
+
+            <div class="task-image-preview">
+                <img src="14.png" alt="Rysunek do Zadania 14 - trójkąt równoboczny wpisany w okrąg">
+            </div>
+
+            <div class="options-grid" id="optionsGrid">
+                <button class="option-btn" onclick="checkAnswer('A')">
+                    <span class="option-letter">A</span>
+                    <span>$\alpha = 30^\circ$</span>
+                </button>
+                <button class="option-btn" onclick="checkAnswer('B')">
+                    <span class="option-letter">B</span>
+                    <span>$\alpha < 30^\circ$</span>
+                </button>
+                <button class="option-btn" onclick="checkAnswer('C')">
+                    <span class="option-letter">C</span>
+                    <span>$\alpha > 45^\circ$</span>
+                </button>
+                <button class="option-btn" onclick="checkAnswer('D')">
+                    <span class="option-letter">D</span>
+                    <span>$\alpha = 45^\circ$</span>
+                </button>
+            </div>
+
+            <div class="feedback-box" id="feedbackBox"></div>
+        </div>
+
+        <!-- Solutions Section -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon">💡</div>
+                <div class="card-title">Rozwiązanie Krok po Kroku</div>
+            </div>
+
+            <div class="step-item">
+                <div class="step-number">1</div>
+                <div class="step-body">
+                    <div class="step-title">Kąty w trójkącie równobocznym</div>
+                    <div class="step-desc">
+                        Trójkąt $ABC$ jest równoboczny, zatem każdy z jego kątów wewnętrznych ma miarę $60^\circ$:
+                        $$\angle ACB = \angle ABC = \angle BAC = 60^\circ$$
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-item">
+                <div class="step-number">2</div>
+                <div class="step-body">
+                    <div class="step-title">Własność średnicy $CD$ passing przechodzącej przez wierzchołek $C$</div>
+                    <div class="step-desc">
+                        W trójkącie równobocznym prosta przechodząca przez wierzchołek $C$ i środek okręgu $O$ (czyli średnica $CD$) jest jednocześnie <strong>dwusieczną kąta $\angle ACB$</strong> oraz osią symetrii trójkąta.<br>
+                        Zatem średnica $CD$ dzieli kąt $\angle ACB$ na dwa równe kąty o mierze $30^\circ$:
+                        $$\angle DCB = \frac{1}{2} \cdot \angle ACB = \frac{1}{2} \cdot 60^\circ = 30^\circ$$
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-item">
+                <div class="step-number">3</div>
+                <div class="step-body">
+                    <div class="step-title">Twierdzenie o kątach wpisanych opartych na tym samym łuku</div>
+                    <div class="step-desc">
+                        Zwróćmy uwagę na kąt wpisany $\angle DCB$ oraz szukany kąt wpisany $\alpha = \angle DEB$. Oba te kąty są wpisane w ten sam okrąg i **oparte są na tym samym łuku $DB$**!<br>
+                        Z twierdzenia o kącie wpisanym wynika, że kąty wpisane oparte na tym samym łuku mają równe miary:
+                        <div class="math-highlight">
+                            $$\alpha = \angle DEB = \angle DCB = 30^\circ \quad \implies \quad \text{Poprawna odpowiedź to A}$$
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Traps Card -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon">⚠️</div>
+                <div class="card-title">Częste Pułapki i Wskazówki</div>
+            </div>
+
+            <div class="formulas-grid">
+                <div class="formula-card">
+                    <div class="formula-name">Twierdzenie o kącie wpisanym</div>
+                    <div>Kąty wpisane oparte na tym samym łuku są równe: $$\angle DEB = \angle DCB$$</div>
+                    <div style="font-size:0.85rem; color: var(--text-muted); margin-top:0.3rem;">Zawsze szukaj innych kątów wpisanych opartych na tym samym łuku $DB$!</div>
+                </div>
+
+                <div class="formula-card">
+                    <div class="formula-name">Średnica jako dwusieczna</div>
+                    <div>Średnica $CD$ w trójkącie równobocznym pokrywa się z dwusieczną kąta przy wierzchołku $C$.</div>
+                    <div style="font-size:0.85rem; color: var(--text-muted); margin-top:0.3rem;">Stąd bez skomplikowanych obliczeń od razu wiemy, że $\angle DCB = 30^\circ$.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            Wygenerowano dla przygotowania do Matura z Matematyki • Wszelkie prawa zastrzeżone
+        </footer>
+    </div>
+
+    <script>
+        function checkAnswer(selectedOption) {
+            const feedbackBox = document.getElementById('feedbackBox');
+            const buttons = document.querySelectorAll('.option-btn');
+
+            buttons.forEach(btn => btn.classList.remove('correct', 'wrong'));
+            const selectedBtn = Array.from(buttons).find(b => b.textContent.trim().startsWith(selectedOption));
+
+            if (selectedOption === 'A') {
+                if (selectedBtn) selectedBtn.classList.add('correct');
+                feedbackBox.className = 'feedback-box active correct';
+                feedbackBox.innerHTML = '✨ <strong>Doskonale!</strong> Odpowiedź A ($\\alpha = 30^\\circ$) jest prawidłowa. Kąty wpisane $\\angle DEB$ i $\\angle DCB$ są oparte na tym samym łuku $DB$, a $\\angle DCB = 30^\\circ$ jako połowa kąta trójkąta równobocznego.';
+            } else {
+                if (selectedBtn) selectedBtn.classList.add('wrong');
+                feedbackBox.className = 'feedback-box active wrong';
+                feedbackBox.innerHTML = `❌ Odpowiedź ${selectedOption} jest niepoprawna. Prawidłowa odpowiedź to <strong>A ($\\alpha = 30^\\circ$)</strong>. Skorzystaj z faktu, że $\\angle DEB = \\angle DCB = 30^\\circ$.`;
+            }
+
+            if (window.MathJax) {
+                MathJax.typesetPromise([feedbackBox]);
+            }
+        }
+    </script>
+</body>
+</html>

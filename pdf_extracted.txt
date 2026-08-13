@@ -1,0 +1,1424 @@
+
+=== PAGE 1 ===
+ 
+ 
+MMA
+2019 
+Arkusz zawiera informacje  
+prawnie chronione do momentu 
+rozpoczęcia egzaminu. 
+Układ graficzny 
+© CKE 2015 
+MMA
+2019 
+ 
+UZUPEŁNIA ZDAJĄCY  
+ 
+ KOD PESEL  
+                 
+ 
+ 
+ 
+EGZAMIN MATURALNY  
+Z MATEMATYKI 
+ 
+POZIOM PODSTAWOWY 
+ 
+ 
+DATA: 7 maja 2019 r. 
+GODZINA ROZPOCZĘCIA: 9:00 
+CZAS PRACY: 170 minut 
+LICZBA PUNKTÓW DO UZYSKANIA: 50 
+ 
+Instrukcja dla zdającego 
+ 
+1. Sprawdź, czy arkusz egzaminacyjny zawiera 26 stron (zadania 1–34). 
+Ewentualny brak zgłoś przewodniczącemu zespołu nadzorującego 
+egzamin. 
+2. Rozwiązania zadań i odpowiedzi wpisuj w miejscu na to przeznaczonym. 
+3. Odpowiedzi do zadań zamkniętych (1–25) zaznacz na karcie odpowiedzi, 
+w części karty przeznaczonej dla zdającego. Zamaluj  pola do tego 
+przeznaczone. Błędne zaznaczenie otocz kółkiem  i zaznacz właściwe. 
+4. Pamiętaj, że pominięcie argumentacji lub istotnych obliczeń  
+w rozwiązaniu zadania otwartego (26–34) może spowodować, że za to 
+rozwiązanie nie otrzymasz pełnej liczby punktów. 
+5. Pisz czytelnie i używaj tylko długopisu lub pióra z czarnym tuszem lub 
+atramentem. 
+6. Nie używaj korektora, a błędne zapisy wyraźnie przekreśl. 
+7. Pamiętaj, że zapisy w brudnopisie nie będą oceniane. 
+8. Możesz korzystać z zestawu wzorów matematycznych, cyrkla i linijki, 
+a także z kalkulatora prostego. 
+9. Na tej stronie oraz na karcie odpowiedzi wpisz swój numer PESEL  
+i przyklej naklejkę z kodem.  
+10. Nie wpisuj żadnych znaków w części przeznaczonej dla egzaminatora. 
+ 
+ 
+ 
+ 
+ 
+MMA-P1_1P-192 
+ 
+UZUPEŁNIA ZESPÓŁ 
+NADZORUJĄCY 
+Uprawnienia zdającego do: 
+ dostosowania 
+kryteriów oceniania 
+ 
+ nieprzenoszenia 
+zaznaczeń na kartę 
+ 
+ dostosowania  
+w zw. z dyskalkulią 
+ 
+ 
+ 
+miejsce 
+na naklejkę 
+   NOWA FORMUŁA 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+=== PAGE 2 ===
+ 
+ 
+Strona 2 z 26 
+MMA_1P 
+W każdym z zadań od 1. do 25. wybierz i zaznacz na karcie odpowiedzi poprawną odpowiedź. 
+ 
+ 
+Zadanie 1. (0–1) 
+Liczba 2log 2  jest równa 
+A. 2  B. 4  C.  D.  
+ 
+Zadanie 2. (0–1) 
+Liczba naturalna 14 1525=⋅n w zapisie dziesiętnym ma 
+ 
+A. 14 cyfr B. 15 cyfr  C. 16 cyfr D. 30 cyfr 
+ 
+Zadanie 3. (0–1) 
+W pewnym banku prowizja od udziela nych kredytów hipotecznych przez ca ły stycze ń by ła 
+równa 4%. Na pocz ątku lutego ten bank obni żył wysokość prowizji od wszystkich kredytów  
+o  1 punkt procentowy. Oznacza to, że prowizja od kredytów hipotecznych w tym banku 
+zmniejszyła się o  
+A. 1% B. 25% C.  33% D. 75% 
+ 
+Zadanie 4. (0–1)   
+Równość  jest prawdziwa dla   
+ 
+A.  B.  C.  D.  
+ 
+Zadanie 5. (0–1) 
+Para liczb  i  jest rozwiązaniem układu równań 4
+23 2
+ax y
+x ya
++=
+−+ =
+ dla 
+A.  B.  C.  D.  
+ 
+Zadanie 6. (0–1) 
+Równanie   
+A. ma trzy różne rozwiązania: 1, 3, 2.xx x== = −  
+B. ma trzy różne rozwiązania: 1, 3, 2.xxx=− =− =  
+C. ma dwa różne rozwiązania: 1, 2.xx== −  
+D. ma dwa różne rozwiązania: 1, 2.xx=− =  
+  
+2 1
+2
+111 145++ = a
+11
+20=a 8
+9=a 9
+8=a
+20
+11=a
+2x = 2y =
+1a =− 1a = 2a =− 2a =
+() ( )12 03
+xx
+x
+−+ =−
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+=== PAGE 3 ===
+ 
+ 
+Strona 3 z 26 
+MMA_1P 
+BRUDNOPIS (nie podlega ocenie) 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+=== PAGE 4 ===
+ 
+ 
+Strona 4 z 26 
+MMA_1P 
+x 
+y 
+1 2 3 4 5 6 –1–2 –3 –4 0
+–1
+–2
+1
+3
+4
+Zadanie 7. (0–1) 
+Miejscem zerowym funkcji liniowej f  określonej wzorem () ( ) 31 6 3=+ −fx x  jest liczba 
+ 
+A. 36 3−  B. 163−  C. 23 1−  D.  123 3−  
+ 
+Informacja do zadań 8.–10.  
+Na rysunku przedstawiony jest fragment paraboli b ędącej wykresem funkcji kwadratowej .f  
+Wierzchołkiem tej paraboli jest punkt (2, 4)W =− . Liczby 0 i 4 to miejsca zerowe funkcji .f  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Zadanie 8. (0–1) 
+Zbiorem wartości funkcji f  jest przedział  
+A. (, 0−∞  B. 0, 4  C. 4, )−+ ∞  D.  4, )+∞  
+ 
+Zadanie 9. (0–1) 
+Największa wartość funkcji f  w przedziale 1, 4  jest równa 
+A. 3−  B. 4−  C. 4 D.  0  
+ 
+Zadanie 10. (0–1) 
+Osią symetrii wykresu funkcji f  jest prosta o równaniu  
+A. 4y =−  B. 4x =−  C. 2y =  D.  2x =  
+ 
+–3
+–4 .
+W 
+    
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+=== PAGE 5 ===
+ 
+ 
+Strona 5 z 26 
+MMA_1P 
+BRUDNOPIS (nie podlega ocenie) 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+=== PAGE 6 ===
+ 
+ 
+Strona 6 z 26 
+MMA_1P 
+Zadanie 11. (0–1) 
+W ciągu arytmetycznym , okre ślonym dla 1n ≥ , dane są dwa wyrazy: 1 7a =  i 8 49.a =−  
+Suma ośmiu początkowych wyrazów tego ciągu jest równa 
+A. –168 B. –189  C. –21 D. –42 
+ 
+ 
+Zadanie 12. (0–1) 
+Dany jest ci ąg geometryczny , okre ślony dla . Wszystkie wyrazy tego ci ągu s ą 
+dodatnie i spełniony jest warunek 5
+3
+1
+9=a
+a . Iloraz tego ciągu jest równy 
+A.  B.  C. 3  D.  
+ 
+ 
+Zadanie 13. (0–1) 
+Sinus kąta ostrego α  jest równy 5
+4 . Wtedy 
+A. 4
+5cos =α  B. 5
+1cos =α  C. 25
+9cos =α  D. 5
+3cos =α  
+ 
+ 
+Zadanie 14. (0–1) 
+Punkty D i E le żą na okr ęgu opisanym na trójk ącie równobocznym ABC (zobacz rysunek). 
+Odcinek CD jest średnicą tego okręgu. Kąt wpisany DEB ma miarę .α   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Zatem 
+  
+A. 30α =°  B. 30α <°  C. 45α >°  D. 45α =°  
+() na
+() na 1n ≥
+1
+3
+1
+3
+3
+A B 
+C 
+D 
+E
+. .
+. 
+.
+.
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+=== PAGE 7 ===
+ 
+ 
+Strona 7 z 26 
+MMA_1P 
+BRUDNOPIS (nie podlega ocenie) 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+=== PAGE 8 ===
+ 
+ 
+Strona 8 z 26 
+MMA_1P 
+Zadanie 15. (0–1) 
+Dane s ą dwa okr ęgi: okr ąg o środku w punkcie O i promieniu 5 oraz okr ąg o środku 
+w punkcie P i promieniu 3. Odcinek OP ma d ługość 16. Prosta AB jest styczna do tych 
+okręgów w punktach A i B. Ponadto prosta AB przecina odcinek OP w punkcie K (zobacz 
+rysunek).  
+ 
+ 
+ 
+ 
+ 
+ 
+    
+ 
+Wtedy
+  
+A. 6OK =  B. 8OK =  C. 10OK =  D. 12OK =  
+ 
+ 
+ 
+ 
+Zadanie 16. (0–1) 
+Dany jest romb o boku długości 4 i kącie rozwartym 150° . Pole tego rombu jest równe 
+ 
+A. 8 B. 12 C. 83  D. 16 
+ 
+ 
+ 
+ 
+Zadanie 17. (0–1) 
+Proste o równaniach (2 2) 2019ymx=+ −  oraz (3 3) 2019ymx=− +  są równoległe, gdy  
+A. 1m =−  B. 0m =  C. 1m =  D. 5m =  
+ 
+ 
+ 
+ 
+Zadanie 18. (0–1)  
+Prosta o równaniu baxy +=  jest prostopadła do prostej o równaniu 41yx=− +  i przechodzi 
+przez punkt ()1
+2 ,0P = , gdy 
+A. 4a =−  i 2−=b    B. 1
+4a =  i 1
+8b =−  
+C. 4a =−  i 2=b     D. 1
+4a =  i 1
+2b =  
+  
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+=== PAGE 9 ===
+ 
+ 
+Strona 9 z 26 
+MMA_1P 
+BRUDNOPIS (nie podlega ocenie) 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+ 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+=== PAGE 10 ===
+ 
+ 
+Strona 10 z 26 
+MMA_1P 
+Zadanie 19. (0–1) 
+Na rysunku przedstawiony jest frag ment wykresu funkcji liniowej f. Na wykresie tej funkcji 
+leżą punkty (0, 4)A =  i (2, 2)B = . 
+ 
+ 
+ 
+ 
+Obrazem prostej AB w symetrii wzgl ędem pocz ątku uk ładu wspó łrzędnych jest wykres 
+funkcji g określonej wzorem 
+ 
+ 
+A.  B.  C.  D.   
+ 
+ 
+ 
+Zadanie 20. (0–1) 
+Dane są punkty o wspó łrzędnych () 2, 5A =−  oraz ()4, 1B =− . Średnica okręgu wpisanego 
+w kwadrat o boku AB jest równa 
+A. 12 B. 6 C. 62  D. 26  
+ 
+ 
+ 
+Zadanie 21. (0–1) 
+Pudełko w kształcie prostopadłościanu ma wymiary 5 dm × 3 dm × 2 dm (zobacz rysunek).  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Przekątna 
+KL tego prostopadłościanu jest – z dokładnością do 0,01 dm – równa 
+ 
+A. 5,83 dm B.  6,16 dm C. 3,61 dm D.  5,39 dm  
+  
+-4 -3 -2 -1 1 2 3 4 5
+-4
+-3
+-2
+-1
+1
+2
+3
+4
+5
+x
+y
+ B
+0
+ A
+() 4=+gx x () 4=−gx x () 4=− −gx x () 4=− +gx x
+2 dm 
+3 dm 
+L 
+K 5 dm 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+=== PAGE 11 ===
+ 
+ 
+Strona 11 z 26 
+MMA_1P 
+BRUDNOPIS (nie podlega ocenie) 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+ 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+=== PAGE 12 ===
+ 
+ 
+Strona 12 z 26 
+MMA_1P 
+Zadanie 22. (0–1)  
+Promień kuli i promie ń podstawy sto żka są równe 4. Pole powierzchni kuli jest równe polu 
+powierzchni całkowitej stożka. Długość tworzącej stożka jest równa 
+ 
+A. 8 B. 4 C. 16 D. 12 
+ 
+ 
+ 
+Zadanie 23. (0–1) 
+Mediana zestawu sześciu danych liczb: 4, 8, 21, a, 16, 25, jest równa 14. Zatem  
+ 
+A. 7a =  B. 12a =  C. 14a =  D. 20a =  
+ 
+ 
+ 
+Zadanie 24. (0–1) 
+Wszystkich liczb pięciocyfrowych, w których występują wyłącznie cyfry 0, 2, 5, jest 
+ 
+A. 12  B. 36 C. 162 D. 243 
+ 
+ 
+ 
+Zadanie 25. (0–1) 
+W pude łku jest 40 kul. W śród nich jest 35 kul bia łych, a pozosta łe to kule czerwone. 
+Prawdopodobieństwo wylosowania ka żdej kuli jest takie samo. Z pude łka losujemy jedn ą 
+kulę. Prawdopodobieństwo zdarzenia polegającego na tym, że otrzymamy kulę czerwoną, jest 
+równe  
+ 
+A. 1
+8  B. 1
+5  C. 1
+40  D. 1
+35  
+ 
+ 
+  
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+=== PAGE 13 ===
+ 
+ 
+Strona 13 z 26 
+MMA_1P 
+BRUDNOPIS (nie podlega ocenie) 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+=== PAGE 14 ===
+ 
+ 
+Strona 14 z 26 
+MMA_1P 
+Zadanie 26. (0–2) 
+Rozwiąż równanie () ( )
+32 84 5 0xx x−− − = . 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+Odpowiedź:  ...............................................................................................................................  . 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+=== PAGE 15 ===
+ 
+ 
+Strona 15 z 26 
+MMA_1P 
+Zadanie 27. (0–2)  
+Rozwiąż nierówność  231 6 1 6 0xx −+ > . 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+Odpowiedź:  ...............................................................................................................................  . 
+Wypełnia 
+egzaminator 
+Nr zadania 26. 27. 
+Maks. liczba pkt 2 2 
+Uzyskana liczba pkt   
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+=== PAGE 16 ===
+ 
+ 
+Strona 16 z 26 
+MMA_1P 
+Zadanie 28. (0–2) 
+Wykaż, że dla dowolnych liczb rzeczywistych a i b prawdziwa jest nierówność 
+223230aa b b−+≥ . 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+=== PAGE 17 ===
+ 
+ 
+Strona 17 z 26 
+MMA_1P 
+Zadanie 29. (0–2)  
+Dany jest okr ąg o środku w punkcie S i promieniu r. Na przed łużeniu ci ęciwy AB poza 
+punkt B odłożono odcinek BC równy promieniowi danego okr ęgu. Przez punkty C i S 
+poprowadzono prost ą. Prosta CS przecina dany okr ąg w punktach D i E (zobacz rysunek). 
+Wykaż, że jeżeli miara kąta ACS jest równa α, to miara kąta ASD jest równa 3α. 
+ 
+ 
+ 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+ 
+Wypełnia 
+egzaminator 
+Nr zadania 28. 29. 
+Maks. liczba pkt 2 2 
+Uzyskana liczba pkt   
+A 
+C
+B
+S
+D 
+r r 
+r 
+r 
+E
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+=== PAGE 18 ===
+ 
+ 
+Strona 18 z 26 
+MMA_1P 
+Zadanie 30. (0–2)  
+Ze zbioru liczb { }1, 2, 3, 4, 5 losujemy dwa razy po jednej liczbie ze zwracaniem. Oblicz 
+prawdopodobieństwo zdarzenia A polegaj ącego na wylosowaniu liczb, których iloczyn jest 
+liczbą nieparzystą. 
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+Odpowiedź: ..................................................................................................................................  . 
+  
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+=== PAGE 19 ===
+ 
+ 
+Strona 19 z 26 
+MMA_1P 
+Zadanie 31. (0–2) 
+W trapezie prostokątnym ABCD dłuższa podstawa AB ma długość 8. Przekątna AC tego trapezu 
+ma długość 4 i tworzy z krótsz ą podstawą trapezu kąt o mierze  (zobacz rysunek). Oblicz 
+długość przekątnej BD tego trapezu. 
+ 
+ 
+ 
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+Odpowiedź: ................................................................................................................................ . 
+ 
+Wypełnia 
+egzaminator 
+Nr zadania 30. 31. 
+Maks. liczba pkt 2 2 
+Uzyskana liczba pkt   
+30°
+ 
+D C
+A B 
+4 
+8 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+=== PAGE 20 ===
+ 
+ 
+Strona 20 z 26 
+MMA_1P 
+Zadanie 32. (0–4)  
+Ciąg arytmetyczny  jest okre ślony dla każdej liczby naturalnej . Ró żnicą tego ciągu 
+jest liczba 4r =− , a średnia arytmetyczna pocz ątkowych sze ściu wyrazów tego ci ągu:         
+, , , , , ,  jest równa 16.  
+a) Oblicz pierwszy wyraz tego ciągu.  
+b) Oblicz liczbę k, dla której 78.ka =−  
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+() na 1≥n
+1a 2a 3a 4a 5a 6a
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+=== PAGE 21 ===
+ 
+ 
+Strona 21 z 26 
+MMA_1P 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+Odpowiedź: ................................................................................................................................ . 
+ 
+Wypełnia 
+egzaminator
+Nr zadania 32. 
+Maks. liczba pkt 4 
+Uzyskana liczba pkt  
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+=== PAGE 22 ===
+ 
+ 
+Strona 22 z 26 
+MMA_1P 
+Zadanie 33. (0–4)  
+Dany jest punkt () 18,10A =− . Prosta o równaniu 3yx=  jest symetralną odcinka .AB  Wyznacz 
+współrzędne punktu .B  
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+=== PAGE 23 ===
+ 
+ 
+Strona 23 z 26 
+MMA_1P 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+Odpowiedź: ................................................................................................................................ . 
+ 
+Wypełnia 
+egzaminator
+Nr zadania 33. 
+Maks. liczba pkt 4 
+Uzyskana liczba pkt  
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+=== PAGE 24 ===
+ 
+ 
+Strona 24 z 26 
+MMA_1P 
+Zadanie 34. (0–5)  
+Długość kraw ędzi podstawy ostros łupa prawid łowego czworok ątnego jest równa 6. Pole 
+powierzchni ca łkowitej tego ostros łupa jest cztery razy wi ększe od pola jego podstawy.        
+Kąt α  jest k ątem nachylenia kraw ędzi bocznej tego ostros łupa do p łaszczyzny podstawy 
+(zobacz rysunek). Oblicz cosinus kąta .α   
+ 
+ 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+A B 
+C D 
+S 
+6 
+6 
+  
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+=== PAGE 25 ===
+ 
+ 
+Strona 25 z 26 
+MMA_1P 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+Odpowiedź: ................................................................................................................................ . 
+ 
+Wypełnia 
+egzaminator
+Nr zadania 34. 
+Maks. liczba pkt 5 
+Uzyskana liczba pkt  
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+=== PAGE 26 ===
+ 
+ 
+Strona 26 z 26 
+MMA_1P 
+BRUDNOPIS (nie podlega ocenie) 
+ 
+ 
+ 
+ 
+ 
+ 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl

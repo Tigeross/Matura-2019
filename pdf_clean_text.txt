@@ -1,0 +1,958 @@
+
+[[PAGE 1]]
+MMA
+2019 
+Arkusz zawiera informacje  
+prawnie chronione do momentu 
+rozpoczęcia egzaminu. 
+Układ graficzny 
+© CKE 2015 
+MMA
+2019 
+UZUPEŁNIA ZDAJĄCY 
+KOD 
+PESEL 
+EGZAMIN MATURALNY  
+Z MATEMATYKI 
+POZIOM PODSTAWOWY 
+DATA: 7 maja 2019 r. 
+GODZINA ROZPOCZĘCIA: 9:00 
+CZAS PRACY: 170 minut 
+LICZBA PUNKTÓW DO UZYSKANIA: 50 
+Instrukcja dla zdającego 
+1. Sprawdź, czy arkusz egzaminacyjny zawiera 26 stron (zadania 1–34). 
+Ewentualny brak zgłoś przewodniczącemu zespołu nadzorującego 
+egzamin. 
+2. Rozwiązania zadań i odpowiedzi wpisuj w miejscu na to przeznaczonym. 
+3. Odpowiedzi do zadań zamkniętych (1–25) zaznacz na karcie odpowiedzi, 
+w części karty przeznaczonej dla zdającego. Zamaluj 
+ pola do tego 
+przeznaczone. Błędne zaznaczenie otocz kółkiem 
+ i zaznacz właściwe. 
+4. Pamiętaj, że pominięcie argumentacji lub istotnych obliczeń  
+w rozwiązaniu zadania otwartego (26–34) może spowodować, że za to 
+rozwiązanie nie otrzymasz pełnej liczby punktów. 
+5. Pisz czytelnie i używaj tylko długopisu lub pióra z czarnym tuszem lub 
+atramentem. 
+6. Nie używaj korektora, a błędne zapisy wyraźnie przekreśl. 
+7. Pamiętaj, że zapisy w brudnopisie nie będą oceniane. 
+8. Możesz korzystać z zestawu wzorów matematycznych, cyrkla i linijki, 
+a także z kalkulatora prostego. 
+9. Na tej stronie oraz na karcie odpowiedzi wpisz swój numer PESEL  
+i przyklej naklejkę z kodem.  
+10. Nie wpisuj żadnych znaków w części przeznaczonej dla egzaminatora. 
+MMA-P1_1P-192 
+UZUPEŁNIA ZESPÓŁ 
+NADZORUJĄCY 
+Uprawnienia zdającego do: 
+dostosowania 
+kryteriów oceniania 
+nieprzenoszenia 
+zaznaczeń na kartę 
+dostosowania  
+w zw. z dyskalkulią 
+miejsce 
+na naklejkę 
+   NOWA FORMUŁA 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+[[PAGE 2]]
+Strona 2 z 26 
+MMA_1P 
+W każdym z zadań od 1. do 25. wybierz i zaznacz na karcie odpowiedzi poprawną odpowiedź. 
+Zadanie 1. (0–1) 
+Liczba 
+2
+log
+2 jest równa 
+A. 2 
+B. 4 
+C. 
+D. 
+Zadanie 2. (0–1) 
+Liczba naturalna 
+14
+15
+2
+5
+=
+⋅
+n
+w zapisie dziesiętnym ma 
+A. 14 cyfr 
+B. 15 cyfr 
+C. 16 cyfr 
+D. 30 cyfr 
+Zadanie 3. (0–1) 
+W pewnym banku prowizja od udzielanych kredytów hipotecznych przez cały styczeń była 
+równa 4%. Na początku lutego ten bank obniżył wysokość prowizji od wszystkich kredytów  
+o  1 punkt procentowy. Oznacza to, że prowizja od kredytów hipotecznych w tym banku 
+zmniejszyła się o  
+A. 1% 
+B. 25% 
+C.  33% 
+D. 75% 
+Zadanie 4. (0–1)   
+Równość 
+ jest prawdziwa dla   
+A. 
+B. 
+C. 
+D. 
+Zadanie 5. (0–1) 
+Para liczb 
+ i 
+ jest rozwiązaniem układu równań 
+4
+2
+3
+2
+ax
+y
+x
+y
+a
++
+=
+
+−
++
+=
+
+ dla 
+A. 
+B. 
+C. 
+D. 
+Zadanie 6. (0–1) 
+Równanie 
+A. ma trzy różne rozwiązania: 
+1,
+3,
+2.
+x
+x
+x
+=
+=
+= −
+B. ma trzy różne rozwiązania: 
+1,
+3,
+2.
+x
+x
+x
+= −
+= −
+=
+C. ma dwa różne rozwiązania: 
+1,
+2.
+x
+x
+=
+= −
+D. ma dwa różne rozwiązania: 
+1,
+2.
+x
+x
+= −
+=
+2
+1
+2
+1
+1
+1
+1
+4
+5
++
++
+=
+a
+11
+20
+=
+a
+8
+9
+=
+a
+9
+8
+=
+a
+20
+11
+=
+a
+2
+x =
+2
+y =
+1
+a = −
+1
+a =
+2
+a = −
+2
+a =
+(
+)(
+)
+1
+2
+0
+3
+x
+x
+x
+−
++
+=
+−
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+[[PAGE 3]]
+Strona 3 z 26 
+MMA_1P 
+BRUDNOPIS (nie podlega ocenie) 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+[[PAGE 4]]
+Strona 4 z 26 
+MMA_1P 
+x 
+y 
+1
+2
+3
+4
+5
+6 
+–1
+–2 
+–3 
+–4
+0
+–1
+–2
+1
+3
+4
+Zadanie 7. (0–1) 
+Miejscem zerowym funkcji liniowej f określonej wzorem 
+( )
+(
+)
+3
+1
+6 3
+=
++
+−
+f x
+x
+ jest liczba 
+A. 3 6 3
+−
+B. 1 6 3
+−
+C. 2 3 1
+− 
+D.  
+1
+2 3
+3
+−
+Informacja do zadań 8.–10.  
+Na rysunku przedstawiony jest fragment paraboli będącej wykresem funkcji kwadratowej 
+.f 
+Wierzchołkiem tej paraboli jest punkt 
+(2,
+4)
+W =
+−
+. Liczby 0 i 4 to miejsca zerowe funkcji 
+.f 
+Zadanie 8. (0–1) 
+Zbiorem wartości funkcji f jest przedział  
+A. (
+, 0
+−∞
+B. 
+0, 4 
+C. 
+4,
+)
+−
++ ∞ 
+D.  
+4,
+)
++ ∞ 
+Zadanie 9. (0–1) 
+Największa wartość funkcji f w przedziale 1, 4 jest równa 
+A. 
+3
+− 
+B. 
+4
+−
+C. 4 
+D. 0 
+Zadanie 10. (0–1) 
+Osią symetrii wykresu funkcji f jest prosta o równaniu  
+A. 
+4
+y = −
+B. 
+4
+x = −
+C. 
+2
+y =
+D.  
+2
+x =
+–3
+–4
+.
+W 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+[[PAGE 5]]
+Strona 5 z 26 
+MMA_1P 
+BRUDNOPIS (nie podlega ocenie) 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+[[PAGE 6]]
+Strona 6 z 26 
+MMA_1P 
+Zadanie 11. (0–1) 
+W ciągu arytmetycznym 
+, określonym dla 
+1
+n ≥, dane są dwa wyrazy: 
+1
+7
+a =
+ i 
+8
+49.
+a = −
+Suma ośmiu początkowych wyrazów tego ciągu jest równa 
+A. –168 
+B. –189 
+C. –21 
+D. –42 
+Zadanie 12. (0–1) 
+Dany jest ciąg geometryczny 
+, określony dla 
+. Wszystkie wyrazy tego ciągu są 
+dodatnie i spełniony jest warunek 
+5
+3
+1
+9
+=
+a
+a
+. Iloraz tego ciągu jest równy 
+A. 
+B. 
+C. 3  
+D. 
+Zadanie 13. (0–1) 
+Sinus kąta ostrego α jest równy 5
+4 . Wtedy 
+A. 
+4
+5
+cos
+=
+α
+B. 
+5
+1
+cos
+=
+α
+C. 
+25
+9
+cos
+=
+α
+D. 
+5
+3
+cos
+=
+α
+Zadanie 14. (0–1) 
+Punkty D i E leżą na okręgu opisanym na trójkącie równobocznym ABC (zobacz rysunek). 
+Odcinek CD jest średnicą tego okręgu. Kąt wpisany DEB ma miarę .
+α  
+Zatem 
+A. 
+30
+α =
+° 
+B. 
+30
+α <
+° 
+C. 
+45
+α >
+° 
+D. 
+45
+α =
+° 
+(
+)
+na
+(
+)
+na
+1
+n ≥
+1
+3
+1
+3
+3
+A 
+B 
+C 
+D 
+E
+.
+.
+. 
+.
+.
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+[[PAGE 7]]
+Strona 7 z 26 
+MMA_1P 
+BRUDNOPIS (nie podlega ocenie) 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+[[PAGE 8]]
+Strona 8 z 26 
+MMA_1P 
+Zadanie 15. (0–1) 
+Dane są dwa okręgi: okrąg o środku w punkcie O i promieniu 5 oraz okrąg o środku 
+w punkcie P i promieniu 3. Odcinek OP ma długość 16. Prosta AB jest styczna do tych 
+okręgów w punktach A i B. Ponadto prosta AB przecina odcinek OP w punkcie K (zobacz 
+rysunek).  
+Wtedy  
+A. 
+6
+OK =
+B. 
+8
+OK = 
+C. 
+10
+OK =
+D. 
+12
+OK =
+Zadanie 16. (0–1) 
+Dany jest romb o boku długości 4 i kącie rozwartym 150°. Pole tego rombu jest równe 
+A. 8 
+B. 12 
+C. 8 3 
+D. 16 
+Zadanie 17. (0–1) 
+Proste o równaniach
+(2
+2)
+2019
+y
+m
+x
+=
++
+−
+ oraz 
+(3
+3)
+2019
+y
+m
+x
+=
+−
++
+ są równoległe, gdy  
+A. 
+1
+m = − 
+B. 
+0
+m =
+C. 
+1
+m = 
+D. 
+5
+m =
+Zadanie 18. (0–1)  
+Prosta o równaniu 
+b
+ax
+y
++
+=
+ jest prostopadła do prostej o równaniu
+4
+1
+y
+x
+= −
++ i przechodzi 
+przez punkt 
+(
+)
+1
+2 , 0
+P =
+, gdy 
+A. 
+4
+a = −
+ i 
+2
+−
+=
+b
+B. 
+1
+4
+a =
+ i 
+1
+8
+b = −
+C. 
+4
+a = − i 
+2
+=
+b
+D. 
+1
+4
+a =
+ i 
+1
+2
+b =
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+[[PAGE 9]]
+Strona 9 z 26 
+MMA_1P 
+BRUDNOPIS (nie podlega ocenie) 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+[[PAGE 10]]
+Strona 10 z 26 
+MMA_1P 
+Zadanie 19. (0–1) 
+Na rysunku przedstawiony jest fragment wykresu funkcji liniowej f. Na wykresie tej funkcji 
+leżą punkty
+(0, 4)
+A =
+ i 
+(2, 2)
+B =
+. 
+Obrazem prostej AB w symetrii względem początku układu współrzędnych jest wykres 
+funkcji g określonej wzorem 
+A. 
+B. 
+C. 
+D.  
+Zadanie 20. (0–1) 
+Dane są punkty o współrzędnych 
+(
+)
+2, 5
+A = −
+ oraz 
+(
+)
+4,
+1
+B =
+−
+. Średnica okręgu wpisanego 
+w kwadrat o boku AB jest równa 
+A. 12 
+B. 6 
+C. 6 2 
+D. 2 6 
+Zadanie 21. (0–1) 
+Pudełko w kształcie prostopadłościanu ma wymiary 5 dm × 3 dm × 2 dm (zobacz rysunek).  
+Przekątna KL tego prostopadłościanu jest – z dokładnością do 0,01 dm – równa 
+A. 5,83 dm 
+B.  6,16 dm 
+C. 3,61 dm 
+D.  5,39 dm  
+-4
+-3
+-2
+-1
+1
+2
+3
+4
+5
+-4
+-3
+-2
+-1
+1
+2
+3
+4
+5
+x
+y
+ B
+0
+ A
+( )
+4
+=
++
+g x
+x
+( )
+4
+=
+−
+g x
+x
+( )
+4
+= −−
+g x
+x
+( )
+4
+= −+
+g x
+x
+2 dm 
+3 dm 
+L 
+K 
+5 dm 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+[[PAGE 11]]
+Strona 11 z 26 
+MMA_1P 
+BRUDNOPIS (nie podlega ocenie) 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+[[PAGE 12]]
+Strona 12 z 26 
+MMA_1P 
+Zadanie 22. (0–1)  
+Promień kuli i promień podstawy stożka są równe 4. Pole powierzchni kuli jest równe polu 
+powierzchni całkowitej stożka. Długość tworzącej stożka jest równa 
+A. 8 
+B. 4 
+C. 16 
+D. 12 
+Zadanie 23. (0–1) 
+Mediana zestawu sześciu danych liczb: 4, 8, 21, a, 16, 25, jest równa 14. Zatem  
+A. 
+7
+a =
+B. 
+12
+a =
+C. 
+14
+a =
+D. 
+20
+a =
+Zadanie 24. (0–1) 
+Wszystkich liczb pięciocyfrowych, w których występują wyłącznie cyfry 0, 2, 5, jest 
+A. 12 
+B. 36 
+C. 162 
+D. 243 
+Zadanie 25. (0–1) 
+W pudełku jest 40 kul. Wśród nich jest 35 kul białych, a pozostałe to kule czerwone. 
+Prawdopodobieństwo wylosowania każdej kuli jest takie samo. Z pudełka losujemy jedną 
+kulę. Prawdopodobieństwo zdarzenia polegającego na tym, że otrzymamy kulę czerwoną, jest 
+równe  
+A. 1
+8 
+B. 1
+5 
+C. 
+1
+40 
+D. 
+1
+35 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+[[PAGE 13]]
+Strona 13 z 26 
+MMA_1P 
+BRUDNOPIS (nie podlega ocenie) 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+[[PAGE 14]]
+Strona 14 z 26 
+MMA_1P 
+Zadanie 26. (0–2) 
+Rozwiąż równanie (
+)(
+)
+3
+2
+8
+4
+5
+0
+x
+x
+x
+−
+−
+−
+=
+. 
+Odpowiedź:  ...............................................................................................................................  . 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+[[PAGE 15]]
+Strona 15 z 26 
+MMA_1P 
+Zadanie 27. (0–2)  
+Rozwiąż nierówność  
+2
+3
+16
+16
+0
+x
+x
+−
++
+>
+. 
+Odpowiedź:  ...............................................................................................................................  . 
+Wypełnia 
+egzaminator 
+Nr zadania 
+26. 
+27. 
+Maks. liczba pkt 
+2 
+2 
+Uzyskana liczba pkt 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+[[PAGE 16]]
+Strona 16 z 26 
+MMA_1P 
+Zadanie 28. (0–2) 
+Wykaż, że dla dowolnych liczb rzeczywistych a i b prawdziwa jest nierówność 
+2
+2
+3
+2
+3
+0
+a
+ab
+b
+−
++
+≥
+. 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+[[PAGE 17]]
+Strona 17 z 26 
+MMA_1P 
+Zadanie 29. (0–2)  
+Dany jest okrąg o środku w punkcie S i promieniu r. Na przedłużeniu cięciwy AB poza 
+punkt B odłożono odcinek BC równy promieniowi danego okręgu. Przez punkty C i S 
+poprowadzono prostą. Prosta CS przecina dany okrąg w punktach D i E (zobacz rysunek). 
+Wykaż, że jeżeli miara kąta ACS jest równa α, to miara kąta ASD jest równa 3α. 
+Wypełnia 
+egzaminator 
+Nr zadania 
+28. 
+29. 
+Maks. liczba pkt 
+2 
+2 
+Uzyskana liczba pkt 
+A 
+C
+B
+S
+D 
+r 
+r 
+r 
+r 
+E
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+[[PAGE 18]]
+Strona 18 z 26 
+MMA_1P 
+Zadanie 30. (0–2)  
+Ze zbioru liczb {
+}
+1, 2, 3, 4, 5 losujemy dwa razy po jednej liczbie ze zwracaniem. Oblicz 
+prawdopodobieństwo zdarzenia A polegającego na wylosowaniu liczb, których iloczyn jest 
+liczbą nieparzystą. 
+Odpowiedź: ..................................................................................................................................  . 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+[[PAGE 19]]
+Strona 19 z 26 
+MMA_1P 
+Zadanie 31. (0–2) 
+W trapezie prostokątnym ABCD dłuższa podstawa AB ma długość 8. Przekątna AC tego trapezu 
+ma długość 4 i tworzy z krótszą podstawą trapezu kąt o mierze 
+ (zobacz rysunek). Oblicz 
+długość przekątnej BD tego trapezu. 
+Odpowiedź: ................................................................................................................................ . 
+Wypełnia 
+egzaminator 
+Nr zadania 
+30. 
+31. 
+Maks. liczba pkt 
+2 
+2 
+Uzyskana liczba pkt 
+30°
+D
+C
+A 
+B 
+4 
+8 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+[[PAGE 20]]
+Strona 20 z 26 
+MMA_1P 
+Zadanie 32. (0–4)  
+Ciąg arytmetyczny 
+ jest określony dla każdej liczby naturalnej 
+. Różnicą tego ciągu 
+jest liczba 
+4
+r = −, a średnia arytmetyczna początkowych sześciu wyrazów tego ciągu:         
+, 
+, 
+, 
+, 
+, 
+,  jest równa 16.  
+a) Oblicz pierwszy wyraz tego ciągu.  
+b) Oblicz liczbę k, dla której 
+78.
+k
+a = −
+(
+)
+n
+a
+1
+≥
+n
+1a
+2a
+3a
+4a
+5a
+6a
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+[[PAGE 21]]
+Strona 21 z 26 
+MMA_1P 
+Odpowiedź: ................................................................................................................................ . 
+Wypełnia 
+egzaminator
+Nr zadania 
+32. 
+Maks. liczba pkt 
+4 
+Uzyskana liczba pkt 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+[[PAGE 22]]
+Strona 22 z 26 
+MMA_1P 
+Zadanie 33. (0–4)  
+Dany jest punkt 
+(
+)
+18,10
+A = −
+. Prosta o równaniu 
+3
+y
+x
+=
+ jest symetralną odcinka 
+.
+AB Wyznacz 
+współrzędne punktu .
+B 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+[[PAGE 23]]
+Strona 23 z 26 
+MMA_1P 
+Odpowiedź: ................................................................................................................................ . 
+Wypełnia 
+egzaminator
+Nr zadania 
+33. 
+Maks. liczba pkt 
+4 
+Uzyskana liczba pkt 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+[[PAGE 24]]
+Strona 24 z 26 
+MMA_1P 
+Zadanie 34. (0–5)  
+Długość krawędzi podstawy ostrosłupa prawidłowego czworokątnego jest równa 6. Pole 
+powierzchni całkowitej tego ostrosłupa jest cztery razy większe od pola jego podstawy.        
+Kąt α jest kątem nachylenia krawędzi bocznej tego ostrosłupa do płaszczyzny podstawy 
+(zobacz rysunek). Oblicz cosinus kąta .
+α  
+A 
+B 
+C 
+D 
+S 
+6 
+6 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+[[PAGE 25]]
+Strona 25 z 26 
+MMA_1P 
+Odpowiedź: ................................................................................................................................ . 
+Wypełnia 
+egzaminator
+Nr zadania 
+34. 
+Maks. liczba pkt 
+5 
+Uzyskana liczba pkt 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+[[PAGE 26]]
+Strona 26 z 26 
+MMA_1P 
+BRUDNOPIS (nie podlega ocenie) 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
