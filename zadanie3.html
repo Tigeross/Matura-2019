@@ -487,38 +487,48 @@
 
 
         
+        
         /* Complete Mobile & Universal Responsive System */
+        *, *::before, *::after {
+            box-sizing: border-box !important;
+        }
+
         html, body {
             overflow-x: hidden !important;
             width: 100% !important;
+            margin: 0;
+            padding: 0;
             -webkit-text-size-adjust: 100%;
         }
 
-        img {
+        img, video, iframe, canvas, svg {
             max-width: 100% !important;
             height: auto !important;
-            display: block;
-            margin: 0 auto;
         }
 
         .container {
             width: 100% !important;
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 1.5rem 1rem;
             box-sizing: border-box;
         }
 
-        .card {
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-            box-sizing: border-box;
+        .card, .task-box, .step-body, .math-highlight, .formula-card, .feedback-box, .calc-result {
+            word-wrap: break-word !important;
+            overflow-wrap: break-word !important;
+            box-sizing: border-box !important;
+            max-width: 100% !important;
         }
 
         /* Mobile Adjustments for Tablets and Phones (< 768px) */
         @media (max-width: 768px) {
             body {
-                padding: 0.75rem 0.5rem !important;
+                padding: 0.5rem 0.25rem !important;
             }
 
             .container {
+                padding: 0.75rem 0.5rem !important;
                 gap: 1rem !important;
             }
 
@@ -534,7 +544,7 @@
             }
 
             h1 {
-                font-size: 1.5rem !important;
+                font-size: 1.4rem !important;
                 line-height: 1.3 !important;
             }
 
@@ -543,136 +553,162 @@
             }
 
             .card {
-                padding: 1.15rem 0.85rem !important;
+                padding: 1rem 0.75rem !important;
                 border-radius: 16px !important;
             }
 
             .card-header {
-                margin-bottom: 1rem !important;
-                padding-bottom: 0.65rem !important;
+                margin-bottom: 0.85rem !important;
+                padding-bottom: 0.5rem !important;
                 gap: 0.5rem !important;
             }
 
             .card-icon {
-                width: 34px !important;
-                height: 34px !important;
-                font-size: 1.05rem !important;
-                border-radius: 10px !important;
+                width: 32px !important;
+                height: 32px !important;
+                font-size: 1rem !important;
+                border-radius: 8px !important;
             }
 
             .card-title {
-                font-size: 1.1rem !important;
+                font-size: 1.05rem !important;
             }
 
             .task-box {
-                font-size: 1rem !important;
-                padding: 1rem !important;
-                border-radius: 0 10px 10px 0 !important;
+                font-size: 0.98rem !important;
+                padding: 0.85rem !important;
+                border-radius: 0 8px 8px 0 !important;
             }
 
             .options-grid {
                 grid-template-columns: 1fr !important;
-                gap: 0.65rem !important;
+                gap: 0.6rem !important;
             }
 
             .option-btn {
-                padding: 0.85rem !important;
-                font-size: 0.95rem !important;
+                padding: 0.75rem 0.85rem !important;
+                font-size: 0.92rem !important;
                 min-height: 48px !important; /* iOS Touch Target */
+                word-break: break-word;
             }
 
             .option-letter {
                 width: 28px !important;
                 height: 28px !important;
-                font-size: 0.9rem !important;
+                font-size: 0.85rem !important;
             }
 
+            /* Sleek Horizontal Scroll Navbar for Mobile */
             .task-nav {
-                padding: 0.6rem 0.4rem !important;
-                gap: 0.3rem !important;
-                max-height: 140px !important;
-                overflow-y: auto !important;
+                display: flex !important;
+                flex-wrap: nowrap !important;
+                overflow-x: auto !important;
+                white-space: nowrap !important;
+                padding: 0.5rem 0.4rem !important;
+                gap: 0.35rem !important;
+                max-height: none !important;
                 -webkit-overflow-scrolling: touch;
+                scrollbar-width: thin;
             }
 
             .task-nav-link {
-                padding: 0.3rem 0.6rem !important;
-                font-size: 0.75rem !important;
+                flex-shrink: 0 !important;
+                padding: 0.35rem 0.7rem !important;
+                font-size: 0.78rem !important;
             }
 
+            /* Horizontal Scroll Tabs for Mobile */
             .tabs-nav {
-                gap: 0.3rem !important;
+                display: flex !important;
+                flex-wrap: nowrap !important;
+                overflow-x: auto !important;
+                white-space: nowrap !important;
+                gap: 0.35rem !important;
                 padding-bottom: 0.4rem !important;
+                -webkit-overflow-scrolling: touch;
             }
 
             .tab-btn {
+                flex-shrink: 0 !important;
                 padding: 0.45rem 0.75rem !important;
                 font-size: 0.82rem !important;
             }
 
             .step-item {
-                gap: 0.75rem !important;
-                margin-bottom: 1.15rem !important;
+                gap: 0.65rem !important;
+                margin-bottom: 1rem !important;
             }
 
             .step-number {
-                width: 28px !important;
-                height: 28px !important;
-                font-size: 0.85rem !important;
+                width: 26px !important;
+                height: 26px !important;
+                font-size: 0.8rem !important;
             }
 
             .step-title {
-                font-size: 1rem !important;
+                font-size: 0.95rem !important;
             }
 
             .step-desc {
-                font-size: 0.92rem !important;
+                font-size: 0.9rem !important;
             }
 
             .calc-form {
                 grid-template-columns: 1fr !important;
-                gap: 0.75rem !important;
+                gap: 0.65rem !important;
             }
 
             .calc-form input, .calc-form select, .open-task-input input {
                 font-size: 16px !important; /* Prevents auto-zoom on iOS Safari */
-                padding: 0.65rem 0.75rem !important;
+                padding: 0.6rem 0.75rem !important;
             }
 
             .calc-btn {
                 padding: 0.75rem !important;
-                font-size: 0.95rem !important;
+                font-size: 0.92rem !important;
             }
 
             .math-highlight, .formula-card {
-                padding: 0.65rem 0.85rem !important;
-                font-size: 0.92rem !important;
+                padding: 0.6rem 0.75rem !important;
+                font-size: 0.9rem !important;
             }
         }
 
         /* Extra Small Screens (< 400px) */
         @media (max-width: 400px) {
             h1 {
-                font-size: 1.3rem !important;
+                font-size: 1.25rem !important;
             }
 
             .task-box {
-                font-size: 0.95rem !important;
+                font-size: 0.92rem !important;
             }
 
             .option-btn {
-                font-size: 0.9rem !important;
+                font-size: 0.88rem !important;
             }
         }
 
-        /* MathJax Overflow Handling for Small Screens */
-        mjx-container[jax="SVG"][display="true"], mjx-container[jax="CHTML"][display="true"], .MathJax_Display {
-            overflow-x: auto !important;
-            overflow-y: hidden !important;
-            max-width: 100% !important;
-            padding: 0.25rem 0 !important;
-            -webkit-overflow-scrolling: touch;
+        /* ABSOLUTELY NO SCROLLBARS OR ARROWS ON MATHJAX FORMULAS */
+        mjx-container, mjx-container *, .MathJax, .MathJax_Display {
+            overflow: visible !important;
+            overflow-x: visible !important;
+            overflow-y: visible !important;
+            scrollbar-width: none !important;
+            -ms-overflow-style: none !important;
         }
+
+        mjx-container::-webkit-scrollbar, 
+        mjx-container *::-webkit-scrollbar,
+        .MathJax::-webkit-scrollbar,
+        .MathJax_Display::-webkit-scrollbar {
+            display: none !important;
+            width: 0 !important;
+            height: 0 !important;
+        }
+
+        mjx-container[display="true"] {
+            display: block !important;
 
     </style>
 </head>
@@ -719,8 +755,8 @@
         <!-- Header -->
         <header>
             <span class="badge">Matura z Matematyki • Zadanie 3</span>
-            <h1>Działania na Logarytmach</h1>
-            <p>Różnica logarytmów $\log_5 225 - 2\log_5 3$</p>
+            <h1>Punkty Procentowe i Procenty</h1>
+            <p>Obniżka prowizji bankowej o 1 p.p.</p>
         </header>
 
         <!-- Task Card -->
@@ -731,7 +767,7 @@
             </div>
 
             <div class="task-box">
-                Zadanie 3. (0–1)<br>Liczba $\log_5 225 - 2\log_5 3$ jest równa:
+                Zadanie 3. (0–1)<br>W pewnym banku prowizja od udzielanych kredytów hipotecznych przez cały styczeń była równa $4\%$. Na początku lutego ten bank obniżył wysokość prowizji od wszystkich kredytów o $1$ punkt procentowy. Oznacza to, że prowizja od kredytów hipotecznych w tym banku zmniejszyła się o:
             </div>
 
             <div class="task-image-preview">
@@ -741,19 +777,19 @@
             <div class="options-grid" id="optionsGrid">
                 <button class="option-btn" onclick="checkAnswer('A')">
                     <span class="option-letter">A</span>
-                    <span>$\log_5 216$</span>
+                    <span>$1\%$</span>
                 </button>
                 <button class="option-btn" onclick="checkAnswer('B')">
                     <span class="option-letter">B</span>
-                    <span>$2$</span>
+                    <span>$25\%$</span>
                 </button>
                 <button class="option-btn" onclick="checkAnswer('C')">
                     <span class="option-letter">C</span>
-                    <span>$\log_5 219$</span>
+                    <span>$33\%$</span>
                 </button>
                 <button class="option-btn" onclick="checkAnswer('D')">
                     <span class="option-letter">D</span>
-                    <span>$1$</span>
+                    <span>$75\%</span>
                 </button>
             </div>
             <div class="feedback-box" id="feedbackBox"></div>
@@ -768,29 +804,23 @@
 
 
             <div class="tabs-nav">
-                <button class="tab-btn active" onclick="switchTab('m1_3')">Metoda 1: Wzory na logarytmy (Główna)</button>
+                <button class="tab-btn active" onclick="switchTab('m1_3')">Metoda 1: Wyznaczenie zmiany względnej (Główna)</button>
             </div>
             <div class="tab-content active" id="m1_3">
                 <div class="step-item">
                     <div class="step-number">1</div>
                     <div class="step-body">
-                        <div class="step-title">Wniesienie liczby 2 do wnętrza logarytmu</div>
-                        <div class="step-desc">$$2\log_5 3 = \log_5(3^2) = \log_5 9$$</div>
+                        <div class="step-title">Wartość początkowa i zmiana bezwzględna</div>
+                        <div class="step-desc">Prowizja początkowa wynosiła $4\%$. Obniżka o $1$ punkt procentowy oznacza nową prowizję równą $4\% - 1\% = 3\%$.</div>
                     </div>
                 </div>
                 <div class="step-item">
                     <div class="step-number">2</div>
                     <div class="step-body">
-                        <div class="step-title">Zastosowanie wzoru na różnicę logarytmów</div>
-                        <div class="step-desc">$$\log_5 225 - \log_5 9 = \log_5\left(\frac{225}{9}\right) = \log_5 25$$</div>
-                    </div>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">3</div>
-                    <div class="step-body">
-                        <div class="step-title">Obliczenie wartości $\log_5 25$</div>
-                        <div class="step-desc">$$\log_5 25 = 2 \quad \text{ponieważ } 5^2 = 25$$</div>
-                        <div class="math-highlight">$$\mathbf{\log_5 25 = 2} \quad \implies \quad \text{Poprawna odpowiedź to B}$$</div>
+                        <div class="step-title">Obliczenie spadku w procentach (zmiana względna)</div>
+                        <div class="step-desc">$$\text{Spadek w } \% = \frac{1\%}{4\%} \cdot 100\% = \frac{1}{4} \cdot 100\% = 25\%$$</div>
+                        <div class="math-highlight">$$\mathbf{25\%}$$
+                        $$\text{Poprawna odpowiedź to B}$$</div>
                     </div>
                 </div>
             </div>
@@ -807,8 +837,8 @@
 
             <div class="formulas-grid">
                 <div class="formula-card">
-                    <div class="formula-name" style="color:#ef4444;">Pułapka: Odejmowanie liczb zamiast dzielenia</div>
-                    <div>Błędne podjęcie różnicy $225 - 9 = 216 \implies \log_5 216$ (opcja A) lub $225 - 6 = 219$ (opcja C). Pamiętaj: różnica logarytmów to **logarytm ilorazu**!</div>
+                    <div class="formula-name" style="color:#ef4444;">Pułapka: Pomylenie punktów procentowych z procentami</div>
+                    <div>Wybranie odpowiedzi A ($1\%$) to pomylenie punktu procentowego ze zmianą procentową! $1$ p.p. w stosunku do $4\%$ to spadek aż o $25\%$.</div>
                 </div>
             </div>
         
@@ -824,12 +854,8 @@
 
             <div class="formulas-grid">
                 <div class="formula-card">
-                    <div class="formula-name">Różnica logarytmów</div>
-                    <div>$$\log_a x - \log_a y = \log_a\left(\frac{x}{y}\right)$$</div>
-                </div>
-                <div class="formula-card">
-                    <div class="formula-name">Logarytm potęgi</div>
-                    <div>$$k \log_a x = \log_a(x^k)$$</div>
+                    <div class="formula-name">Zmiana względna</div>
+                    <div>$$\text{Zmiana } \% = \frac{|x_2 - x_1|}{x_1} \cdot 100\%$$</div>
                 </div>
             </div>
         
@@ -844,11 +870,9 @@
 
 
             <form class="calc-form" onsubmit="calcTask3(event)">
-                <div class="input-group"><label>Podstawa logarytmu a:</label><input type="number" id="t3_a" value="5"></div>
-                <div class="input-group"><label>Liczba x:</label><input type="number" id="t3_x" value="225"></div>
-                <div class="input-group"><label>Mnożnik k przy log(y):</label><input type="number" id="t3_k" value="2"></div>
-                <div class="input-group"><label>Liczba y:</label><input type="number" id="t3_y" value="3"></div>
-                <button type="submit" class="calc-btn">Oblicz log_a(x) - k*log_a(y)</button>
+                <div class="input-group"><label>Początkowa prowizja (%):</label><input type="number" id="t3_p1" value="4"></div>
+                <div class="input-group"><label>Obniżka w p.p.:</label><input type="number" id="t3_pp" value="1"></div>
+                <button type="submit" class="calc-btn">Oblicz procentowy spadek</button>
             </form>
             <div class="calc-result" id="t3_res">Wprowadź dane i kliknij przycisk.</div>
         
@@ -882,26 +906,22 @@
             if (opt === 'B') {
                 if (selectedBtn) selectedBtn.classList.add('correct');
                 feedbackBox.className = 'feedback-box active correct';
-                feedbackBox.innerHTML = '✨ <strong>Doskonale!</strong> Odpowiedź B ($2$) jest prawidłowa. $\\log_5 225 - \\log_5 9 = \\log_5 25 = 2$.';
+                feedbackBox.innerHTML = '✨ <strong>Doskonale!</strong> Odpowiedź B ($25\%$) jest prawidłowa. $1\% / 4\% = 1/4 = 25\%$.';
             } else {
                 if (selectedBtn) selectedBtn.classList.add('wrong');
                 feedbackBox.className = 'feedback-box active wrong';
-                feedbackBox.innerHTML = `❌ Odpowiedź ${opt} jest niepoprawna. Prawidłowa odpowiedź to <strong>B ($2$)</strong>. Podziel 225 przez 9.`;
+                feedbackBox.innerHTML = `❌ Odpowiedź ${opt} jest niepoprawna. Prawidłowa odpowiedź to <strong>B ($25\%$)</strong>. Pamiętaj: $1$ p.p. z $4\%$ to $25\%$.`;
             }
             if (window.MathJax) MathJax.typesetPromise([feedbackBox]);
         }
 
         function calcTask3(e) {
             e.preventDefault();
-            const a = parseFloat(document.getElementById('t3_a').value);
-            const x = parseFloat(document.getElementById('t3_x').value);
-            const k = parseFloat(document.getElementById('t3_k').value);
-            const y = parseFloat(document.getElementById('t3_y').value);
-            if (isNaN(a) || isNaN(x) || isNaN(k) || isNaN(y) || a <= 0 || a === 1 || x <= 0 || y <= 0) return;
-            const yk = Math.pow(y, k);
-            const div = x / yk;
-            const res = Math.log(div) / Math.log(a);
-            document.getElementById('t3_res').innerHTML = `<strong>Iloraz wewnątrz logarytmu:</strong> ${x} / ${yk} = ${div}<br><strong>Wynik log_${a}(${div}):</strong> ${res.toFixed(2)}`;
+            const p1 = parseFloat(document.getElementById('t3_p1').value);
+            const pp = parseFloat(document.getElementById('t3_pp').value);
+            if (isNaN(p1) || isNaN(pp) || p1 <= 0) return;
+            const rel = (pp / p1) * 100;
+            document.getElementById('t3_res').innerHTML = `<strong>Nowa prowizja:</strong> ${(p1-pp).toFixed(2)}%<br><strong>Procentowy spadek:</strong> ${rel.toFixed(2)}%`;
         }
         
     </script>

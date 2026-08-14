@@ -487,38 +487,48 @@
 
 
         
+        
         /* Complete Mobile & Universal Responsive System */
+        *, *::before, *::after {
+            box-sizing: border-box !important;
+        }
+
         html, body {
             overflow-x: hidden !important;
             width: 100% !important;
+            margin: 0;
+            padding: 0;
             -webkit-text-size-adjust: 100%;
         }
 
-        img {
+        img, video, iframe, canvas, svg {
             max-width: 100% !important;
             height: auto !important;
-            display: block;
-            margin: 0 auto;
         }
 
         .container {
             width: 100% !important;
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 1.5rem 1rem;
             box-sizing: border-box;
         }
 
-        .card {
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-            box-sizing: border-box;
+        .card, .task-box, .step-body, .math-highlight, .formula-card, .feedback-box, .calc-result {
+            word-wrap: break-word !important;
+            overflow-wrap: break-word !important;
+            box-sizing: border-box !important;
+            max-width: 100% !important;
         }
 
         /* Mobile Adjustments for Tablets and Phones (< 768px) */
         @media (max-width: 768px) {
             body {
-                padding: 0.75rem 0.5rem !important;
+                padding: 0.5rem 0.25rem !important;
             }
 
             .container {
+                padding: 0.75rem 0.5rem !important;
                 gap: 1rem !important;
             }
 
@@ -534,7 +544,7 @@
             }
 
             h1 {
-                font-size: 1.5rem !important;
+                font-size: 1.4rem !important;
                 line-height: 1.3 !important;
             }
 
@@ -543,136 +553,162 @@
             }
 
             .card {
-                padding: 1.15rem 0.85rem !important;
+                padding: 1rem 0.75rem !important;
                 border-radius: 16px !important;
             }
 
             .card-header {
-                margin-bottom: 1rem !important;
-                padding-bottom: 0.65rem !important;
+                margin-bottom: 0.85rem !important;
+                padding-bottom: 0.5rem !important;
                 gap: 0.5rem !important;
             }
 
             .card-icon {
-                width: 34px !important;
-                height: 34px !important;
-                font-size: 1.05rem !important;
-                border-radius: 10px !important;
+                width: 32px !important;
+                height: 32px !important;
+                font-size: 1rem !important;
+                border-radius: 8px !important;
             }
 
             .card-title {
-                font-size: 1.1rem !important;
+                font-size: 1.05rem !important;
             }
 
             .task-box {
-                font-size: 1rem !important;
-                padding: 1rem !important;
-                border-radius: 0 10px 10px 0 !important;
+                font-size: 0.98rem !important;
+                padding: 0.85rem !important;
+                border-radius: 0 8px 8px 0 !important;
             }
 
             .options-grid {
                 grid-template-columns: 1fr !important;
-                gap: 0.65rem !important;
+                gap: 0.6rem !important;
             }
 
             .option-btn {
-                padding: 0.85rem !important;
-                font-size: 0.95rem !important;
+                padding: 0.75rem 0.85rem !important;
+                font-size: 0.92rem !important;
                 min-height: 48px !important; /* iOS Touch Target */
+                word-break: break-word;
             }
 
             .option-letter {
                 width: 28px !important;
                 height: 28px !important;
-                font-size: 0.9rem !important;
+                font-size: 0.85rem !important;
             }
 
+            /* Sleek Horizontal Scroll Navbar for Mobile */
             .task-nav {
-                padding: 0.6rem 0.4rem !important;
-                gap: 0.3rem !important;
-                max-height: 140px !important;
-                overflow-y: auto !important;
+                display: flex !important;
+                flex-wrap: nowrap !important;
+                overflow-x: auto !important;
+                white-space: nowrap !important;
+                padding: 0.5rem 0.4rem !important;
+                gap: 0.35rem !important;
+                max-height: none !important;
                 -webkit-overflow-scrolling: touch;
+                scrollbar-width: thin;
             }
 
             .task-nav-link {
-                padding: 0.3rem 0.6rem !important;
-                font-size: 0.75rem !important;
+                flex-shrink: 0 !important;
+                padding: 0.35rem 0.7rem !important;
+                font-size: 0.78rem !important;
             }
 
+            /* Horizontal Scroll Tabs for Mobile */
             .tabs-nav {
-                gap: 0.3rem !important;
+                display: flex !important;
+                flex-wrap: nowrap !important;
+                overflow-x: auto !important;
+                white-space: nowrap !important;
+                gap: 0.35rem !important;
                 padding-bottom: 0.4rem !important;
+                -webkit-overflow-scrolling: touch;
             }
 
             .tab-btn {
+                flex-shrink: 0 !important;
                 padding: 0.45rem 0.75rem !important;
                 font-size: 0.82rem !important;
             }
 
             .step-item {
-                gap: 0.75rem !important;
-                margin-bottom: 1.15rem !important;
+                gap: 0.65rem !important;
+                margin-bottom: 1rem !important;
             }
 
             .step-number {
-                width: 28px !important;
-                height: 28px !important;
-                font-size: 0.85rem !important;
+                width: 26px !important;
+                height: 26px !important;
+                font-size: 0.8rem !important;
             }
 
             .step-title {
-                font-size: 1rem !important;
+                font-size: 0.95rem !important;
             }
 
             .step-desc {
-                font-size: 0.92rem !important;
+                font-size: 0.9rem !important;
             }
 
             .calc-form {
                 grid-template-columns: 1fr !important;
-                gap: 0.75rem !important;
+                gap: 0.65rem !important;
             }
 
             .calc-form input, .calc-form select, .open-task-input input {
                 font-size: 16px !important; /* Prevents auto-zoom on iOS Safari */
-                padding: 0.65rem 0.75rem !important;
+                padding: 0.6rem 0.75rem !important;
             }
 
             .calc-btn {
                 padding: 0.75rem !important;
-                font-size: 0.95rem !important;
+                font-size: 0.92rem !important;
             }
 
             .math-highlight, .formula-card {
-                padding: 0.65rem 0.85rem !important;
-                font-size: 0.92rem !important;
+                padding: 0.6rem 0.75rem !important;
+                font-size: 0.9rem !important;
             }
         }
 
         /* Extra Small Screens (< 400px) */
         @media (max-width: 400px) {
             h1 {
-                font-size: 1.3rem !important;
+                font-size: 1.25rem !important;
             }
 
             .task-box {
-                font-size: 0.95rem !important;
+                font-size: 0.92rem !important;
             }
 
             .option-btn {
-                font-size: 0.9rem !important;
+                font-size: 0.88rem !important;
             }
         }
 
-        /* MathJax Overflow Handling for Small Screens */
-        mjx-container[jax="SVG"][display="true"], mjx-container[jax="CHTML"][display="true"], .MathJax_Display {
-            overflow-x: auto !important;
-            overflow-y: hidden !important;
-            max-width: 100% !important;
-            padding: 0.25rem 0 !important;
-            -webkit-overflow-scrolling: touch;
+        /* ABSOLUTELY NO SCROLLBARS OR ARROWS ON MATHJAX FORMULAS */
+        mjx-container, mjx-container *, .MathJax, .MathJax_Display {
+            overflow: visible !important;
+            overflow-x: visible !important;
+            overflow-y: visible !important;
+            scrollbar-width: none !important;
+            -ms-overflow-style: none !important;
         }
+
+        mjx-container::-webkit-scrollbar, 
+        mjx-container *::-webkit-scrollbar,
+        .MathJax::-webkit-scrollbar,
+        .MathJax_Display::-webkit-scrollbar {
+            display: none !important;
+            width: 0 !important;
+            height: 0 !important;
+        }
+
+        mjx-container[display="true"] {
+            display: block !important;
 
     </style>
 </head>
@@ -719,8 +755,8 @@
         <!-- Header -->
         <header>
             <span class="badge">Matura z Matematyki • Zadanie 7</span>
-            <h1>Miejsca Zerowe z Wykresu Funkcji</h1>
-            <p>Odczytywanie punktów przecięcia z osią OX</p>
+            <h1>Miejsce Zerowe Funkcji Liniowej</h1>
+            <p>Wyznaczanie $x$ dla $f(x) = 3(x+1) - 6\sqrt{3} = 0$</p>
         </header>
 
         <!-- Task Card -->
@@ -731,7 +767,7 @@
             </div>
 
             <div class="task-box">
-                Zadanie 7. (0–1)<br>Na rysunku przedstawiono wykres funkcji $f$. Miejscami zerowymi tej funkcji są liczby:
+                Zadanie 7. (0–1)<br>Miejscem zerowym funkcji liniowej $f$ określonej wzorem $f(x) = 3(x+1) - 6\sqrt{3}$ jest liczba:
             </div>
 
             <div class="task-image-preview">
@@ -741,19 +777,19 @@
             <div class="options-grid" id="optionsGrid">
                 <button class="option-btn" onclick="checkAnswer('A')">
                     <span class="option-letter">A</span>
-                    <span>$-2$ oraz $2$</span>
+                    <span>$3 - 6\sqrt{3}$</span>
                 </button>
                 <button class="option-btn" onclick="checkAnswer('B')">
                     <span class="option-letter">B</span>
-                    <span>$-4$ oraz $4$</span>
+                    <span>$1 - 6\sqrt{3}$</span>
                 </button>
                 <button class="option-btn" onclick="checkAnswer('C')">
                     <span class="option-letter">C</span>
-                    <span>$-4, -2, 2, 4$</span>
+                    <span>$2\sqrt{3} - 1$</span>
                 </button>
                 <button class="option-btn" onclick="checkAnswer('D')">
                     <span class="option-letter">D</span>
-                    <span>$-2, 0, 2$</span>
+                    <span>$\frac{2\sqrt{3}-1}{3}$</span>
                 </button>
             </div>
             <div class="feedback-box" id="feedbackBox"></div>
@@ -768,22 +804,33 @@
 
 
             <div class="tabs-nav">
-                <button class="tab-btn active" onclick="switchTab('m1_7')">Metoda 1: Odczyt z wykresu</button>
+                <button class="tab-btn active" onclick="switchTab('m1_7')">Metoda 1: Przyrównanie wzoru do zera (Główna)</button>
             </div>
             <div class="tab-content active" id="m1_7">
                 <div class="step-item">
                     <div class="step-number">1</div>
                     <div class="step-body">
-                        <div class="step-title">Definicja miejsca zerowego</div>
-                        <div class="step-desc">Miejsce zerowe funkcji to argument $x$, dla którego wartość funkcji wynosi zero ($f(x) = 0$). Na wykresie są to współrzędne $x$ punktów przecięcia wykresu z osią OX.</div>
+                        <div class="step-title">Równanie $f(x) = 0$</div>
+                        <div class="step-desc">$$3(x+1) - 6\sqrt{3} = 0$$</div>
                     </div>
                 </div>
                 <div class="step-item">
                     <div class="step-number">2</div>
                     <div class="step-body">
-                        <div class="step-title">Odczyt punktów przeciecia z osią OX</div>
-                        <div class="step-desc">Wykres przecina oś OX dokładnie w dwóch punktach: $x = -2$ oraz $x = 2$.</div>
-                        <div class="math-highlight">$$\mathbf{x = -2 \quad \text{oraz} \quad x = 2} \quad \implies \quad \text{Poprawna odpowiedź to A}$$</div>
+                        <div class="step-title">Przeniesienie wyrazu wolnego i podział przez 3</div>
+                        <div class="step-desc">
+                            $$3(x+1) = 6\sqrt{3}$$
+                            $$x + 1 = \frac{6\sqrt{3}}{3} = 2\sqrt{3}$$
+                        </div>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-body">
+                        <div class="step-title">Wyznaczenie $x$</div>
+                        <div class="step-desc">$$x = 2\sqrt{3} - 1$$</div>
+                        <div class="math-highlight">$$\mathbf{x = 2\sqrt{3} - 1}$$
+                        $$\text{Poprawna odpowiedź to C}$$</div>
                     </div>
                 </div>
             </div>
@@ -800,8 +847,8 @@
 
             <div class="formulas-grid">
                 <div class="formula-card">
-                    <div class="formula-name" style="color:#ef4444;">Pułapka: Pomylenie końców dziedziny z miejscami zerowymi</div>
-                    <div>Liczby $-4$ i $4$ to krańce dziedziny funkcji na wykresie, a nie miejsca zerowe! Miejsca zerowe to tylko te punkty, gdzie linia wykresu dotyka osi OX.</div>
+                    <div class="formula-name" style="color:#ef4444;">Pułapka: Błędy znaku przy odejmowaniu jedynki</div>
+                    <div>Uważaj, by po przeniesieniu $+1$ odjąć jedynkę, dając $2\sqrt{3} - 1$, a nie $+1$.</div>
                 </div>
             </div>
         
@@ -817,8 +864,8 @@
 
             <div class="formulas-grid">
                 <div class="formula-card">
-                    <div class="formula-name">Miejsce zerowe</div>
-                    <div>$$f(x_0) = 0$$</div>
+                    <div class="formula-name">Miejsce zerowe funkcji</div>
+                    <div>$$f(x) = 0$$</div>
                 </div>
             </div>
         
@@ -833,10 +880,9 @@
 
 
             <form class="calc-form" onsubmit="calcTask7(event)">
-                <div class="input-group"><label>Wpisz x do sprawdzenia:</label><input type="number" id="t7_x" value="-2"></div>
-                <button type="submit" class="calc-btn">Sprawdź czy x jest miejscem zerowym</button>
+                <button type="submit" class="calc-btn">Oblicz dokładnie x dla f(x)=0</button>
             </form>
-            <div class="calc-result" id="t7_res">Wprowadź dane i kliknij przycisk.</div>
+            <div class="calc-result" id="t7_res">Kliknij przycisk.</div>
         
         </div>
 
@@ -865,27 +911,22 @@
             buttons.forEach(b => b.classList.remove('correct', 'wrong'));
             const selectedBtn = Array.from(buttons).find(b => b.textContent.trim().startsWith(opt));
 
-            if (opt === 'A') {
+            if (opt === 'C') {
                 if (selectedBtn) selectedBtn.classList.add('correct');
                 feedbackBox.className = 'feedback-box active correct';
-                feedbackBox.innerHTML = '✨ <strong>Doskonale!</strong> Odpowiedź A ($-2$ oraz $2$) jest prawidłowa. Wykres przecina oś OX w punktach $x = -2$ i $x = 2$.';
+                feedbackBox.innerHTML = '✨ <strong>Doskonale!</strong> Odpowiedź C ($2\sqrt{3}-1$) jest prawidłowa. $3(x+1) = 6\sqrt{3} \\implies x+1=2\sqrt{3} \\implies x=2\sqrt{3}-1$.';
             } else {
                 if (selectedBtn) selectedBtn.classList.add('wrong');
                 feedbackBox.className = 'feedback-box active wrong';
-                feedbackBox.innerHTML = `❌ Odpowiedź ${opt} jest niepoprawna. Prawidłowa odpowiedź to <strong>A ($-2$ oraz $2$)</strong>. Odczytaj punkty przecięcia z osią OX.`;
+                feedbackBox.innerHTML = `❌ Odpowiedź ${opt} jest niepoprawna. Prawidłowa odpowiedź to <strong>C ($2\sqrt{3}-1$)</strong>.`;
             }
             if (window.MathJax) MathJax.typesetPromise([feedbackBox]);
         }
 
         function calcTask7(e) {
             e.preventDefault();
-            const x = parseFloat(document.getElementById('t7_x').value);
-            if (isNaN(x)) return;
-            if (x === -2 || x === 2) {
-                document.getElementById('t7_res').innerHTML = `<span style="color:#10b981;">x = ${x} JEST miejscem zerowym funkcji f!</span>`;
-            } else {
-                document.getElementById('t7_res').innerHTML = `x = ${x} NIE jest miejscem zerowym tej funkcji.`;
-            }
+            const val = 2 * Math.sqrt(3) - 1;
+            document.getElementById('t7_res').innerHTML = `<strong>Postać dokładna:</strong> 2√3 - 1<br><strong>Wartość przybliżona:</strong> ${val.toFixed(4)}`;
         }
         
     </script>

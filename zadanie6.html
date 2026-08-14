@@ -487,38 +487,48 @@
 
 
         
+        
         /* Complete Mobile & Universal Responsive System */
+        *, *::before, *::after {
+            box-sizing: border-box !important;
+        }
+
         html, body {
             overflow-x: hidden !important;
             width: 100% !important;
+            margin: 0;
+            padding: 0;
             -webkit-text-size-adjust: 100%;
         }
 
-        img {
+        img, video, iframe, canvas, svg {
             max-width: 100% !important;
             height: auto !important;
-            display: block;
-            margin: 0 auto;
         }
 
         .container {
             width: 100% !important;
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 1.5rem 1rem;
             box-sizing: border-box;
         }
 
-        .card {
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-            box-sizing: border-box;
+        .card, .task-box, .step-body, .math-highlight, .formula-card, .feedback-box, .calc-result {
+            word-wrap: break-word !important;
+            overflow-wrap: break-word !important;
+            box-sizing: border-box !important;
+            max-width: 100% !important;
         }
 
         /* Mobile Adjustments for Tablets and Phones (< 768px) */
         @media (max-width: 768px) {
             body {
-                padding: 0.75rem 0.5rem !important;
+                padding: 0.5rem 0.25rem !important;
             }
 
             .container {
+                padding: 0.75rem 0.5rem !important;
                 gap: 1rem !important;
             }
 
@@ -534,7 +544,7 @@
             }
 
             h1 {
-                font-size: 1.5rem !important;
+                font-size: 1.4rem !important;
                 line-height: 1.3 !important;
             }
 
@@ -543,136 +553,162 @@
             }
 
             .card {
-                padding: 1.15rem 0.85rem !important;
+                padding: 1rem 0.75rem !important;
                 border-radius: 16px !important;
             }
 
             .card-header {
-                margin-bottom: 1rem !important;
-                padding-bottom: 0.65rem !important;
+                margin-bottom: 0.85rem !important;
+                padding-bottom: 0.5rem !important;
                 gap: 0.5rem !important;
             }
 
             .card-icon {
-                width: 34px !important;
-                height: 34px !important;
-                font-size: 1.05rem !important;
-                border-radius: 10px !important;
+                width: 32px !important;
+                height: 32px !important;
+                font-size: 1rem !important;
+                border-radius: 8px !important;
             }
 
             .card-title {
-                font-size: 1.1rem !important;
+                font-size: 1.05rem !important;
             }
 
             .task-box {
-                font-size: 1rem !important;
-                padding: 1rem !important;
-                border-radius: 0 10px 10px 0 !important;
+                font-size: 0.98rem !important;
+                padding: 0.85rem !important;
+                border-radius: 0 8px 8px 0 !important;
             }
 
             .options-grid {
                 grid-template-columns: 1fr !important;
-                gap: 0.65rem !important;
+                gap: 0.6rem !important;
             }
 
             .option-btn {
-                padding: 0.85rem !important;
-                font-size: 0.95rem !important;
+                padding: 0.75rem 0.85rem !important;
+                font-size: 0.92rem !important;
                 min-height: 48px !important; /* iOS Touch Target */
+                word-break: break-word;
             }
 
             .option-letter {
                 width: 28px !important;
                 height: 28px !important;
-                font-size: 0.9rem !important;
+                font-size: 0.85rem !important;
             }
 
+            /* Sleek Horizontal Scroll Navbar for Mobile */
             .task-nav {
-                padding: 0.6rem 0.4rem !important;
-                gap: 0.3rem !important;
-                max-height: 140px !important;
-                overflow-y: auto !important;
+                display: flex !important;
+                flex-wrap: nowrap !important;
+                overflow-x: auto !important;
+                white-space: nowrap !important;
+                padding: 0.5rem 0.4rem !important;
+                gap: 0.35rem !important;
+                max-height: none !important;
                 -webkit-overflow-scrolling: touch;
+                scrollbar-width: thin;
             }
 
             .task-nav-link {
-                padding: 0.3rem 0.6rem !important;
-                font-size: 0.75rem !important;
+                flex-shrink: 0 !important;
+                padding: 0.35rem 0.7rem !important;
+                font-size: 0.78rem !important;
             }
 
+            /* Horizontal Scroll Tabs for Mobile */
             .tabs-nav {
-                gap: 0.3rem !important;
+                display: flex !important;
+                flex-wrap: nowrap !important;
+                overflow-x: auto !important;
+                white-space: nowrap !important;
+                gap: 0.35rem !important;
                 padding-bottom: 0.4rem !important;
+                -webkit-overflow-scrolling: touch;
             }
 
             .tab-btn {
+                flex-shrink: 0 !important;
                 padding: 0.45rem 0.75rem !important;
                 font-size: 0.82rem !important;
             }
 
             .step-item {
-                gap: 0.75rem !important;
-                margin-bottom: 1.15rem !important;
+                gap: 0.65rem !important;
+                margin-bottom: 1rem !important;
             }
 
             .step-number {
-                width: 28px !important;
-                height: 28px !important;
-                font-size: 0.85rem !important;
+                width: 26px !important;
+                height: 26px !important;
+                font-size: 0.8rem !important;
             }
 
             .step-title {
-                font-size: 1rem !important;
+                font-size: 0.95rem !important;
             }
 
             .step-desc {
-                font-size: 0.92rem !important;
+                font-size: 0.9rem !important;
             }
 
             .calc-form {
                 grid-template-columns: 1fr !important;
-                gap: 0.75rem !important;
+                gap: 0.65rem !important;
             }
 
             .calc-form input, .calc-form select, .open-task-input input {
                 font-size: 16px !important; /* Prevents auto-zoom on iOS Safari */
-                padding: 0.65rem 0.75rem !important;
+                padding: 0.6rem 0.75rem !important;
             }
 
             .calc-btn {
                 padding: 0.75rem !important;
-                font-size: 0.95rem !important;
+                font-size: 0.92rem !important;
             }
 
             .math-highlight, .formula-card {
-                padding: 0.65rem 0.85rem !important;
-                font-size: 0.92rem !important;
+                padding: 0.6rem 0.75rem !important;
+                font-size: 0.9rem !important;
             }
         }
 
         /* Extra Small Screens (< 400px) */
         @media (max-width: 400px) {
             h1 {
-                font-size: 1.3rem !important;
+                font-size: 1.25rem !important;
             }
 
             .task-box {
-                font-size: 0.95rem !important;
+                font-size: 0.92rem !important;
             }
 
             .option-btn {
-                font-size: 0.9rem !important;
+                font-size: 0.88rem !important;
             }
         }
 
-        /* MathJax Overflow Handling for Small Screens */
-        mjx-container[jax="SVG"][display="true"], mjx-container[jax="CHTML"][display="true"], .MathJax_Display {
-            overflow-x: auto !important;
-            overflow-y: hidden !important;
-            max-width: 100% !important;
-            padding: 0.25rem 0 !important;
-            -webkit-overflow-scrolling: touch;
+        /* ABSOLUTELY NO SCROLLBARS OR ARROWS ON MATHJAX FORMULAS */
+        mjx-container, mjx-container *, .MathJax, .MathJax_Display {
+            overflow: visible !important;
+            overflow-x: visible !important;
+            overflow-y: visible !important;
+            scrollbar-width: none !important;
+            -ms-overflow-style: none !important;
         }
+
+        mjx-container::-webkit-scrollbar, 
+        mjx-container *::-webkit-scrollbar,
+        .MathJax::-webkit-scrollbar,
+        .MathJax_Display::-webkit-scrollbar {
+            display: none !important;
+            width: 0 !important;
+            height: 0 !important;
+        }
+
+        mjx-container[display="true"] {
+            display: block !important;
 
     </style>
 </head>
@@ -720,7 +756,7 @@
         <header>
             <span class="badge">Matura z Matematyki • Zadanie 6</span>
             <h1>Liczba Rozwiązań Równania Wymiernego</h1>
-            <p>Badanie dziedziny i zerowania licznika</p>
+            <p>Badanie zerowania się licznika przy uwzględnieniu dziedziny</p>
         </header>
 
         <!-- Task Card -->
@@ -731,7 +767,7 @@
             </div>
 
             <div class="task-box">
-                Zadanie 6. (0–1)<br>Liczba rozwiązań równania $\frac{(x^2 - 1)(x - 2)}{(x-1)(x+2)} = 0$ jest równa:
+                Zadanie 6. (0–1)<br>Równanie $\frac{(x-1)(x+2)}{x-3} = 0$:
             </div>
 
             <div class="task-image-preview">
@@ -741,19 +777,19 @@
             <div class="options-grid" id="optionsGrid">
                 <button class="option-btn" onclick="checkAnswer('A')">
                     <span class="option-letter">A</span>
-                    <span>0</span>
+                    <span>ma trzy różne rozwiązania: $x=1, x=3, x=-2$</span>
                 </button>
                 <button class="option-btn" onclick="checkAnswer('B')">
                     <span class="option-letter">B</span>
-                    <span>1</span>
+                    <span>ma trzy różne rozwiązania: $x=-1, x=-3, x=2$</span>
                 </button>
                 <button class="option-btn" onclick="checkAnswer('C')">
                     <span class="option-letter">C</span>
-                    <span>2</span>
+                    <span>ma dwa różne rozwiązania: $x=1, x=-2$</span>
                 </button>
                 <button class="option-btn" onclick="checkAnswer('D')">
                     <span class="option-letter">D</span>
-                    <span>3</span>
+                    <span>ma dwa różne rozwiązania: $x=-1, x=2$</span>
                 </button>
             </div>
             <div class="feedback-box" id="feedbackBox"></div>
@@ -768,33 +804,32 @@
 
 
             <div class="tabs-nav">
-                <button class="tab-btn active" onclick="switchTab('m1_6')">Metoda 1: Dziedzina i rozkład na czynniki (Główna)</button>
+                <button class="tab-btn active" onclick="switchTab('m1_6')">Metoda 1: Dziedzina i przyrównanie licznika do zera</button>
             </div>
             <div class="tab-content active" id="m1_6">
                 <div class="step-item">
                     <div class="step-number">1</div>
                     <div class="step-body">
                         <div class="step-title">Wyznaczenie dziedziny równania</div>
-                        <div class="step-desc">Mianownik musi być różny od zera:
-                        $$(x-1)(x+2) \neq 0 \implies x \neq 1 \quad \text{oraz} \quad x \neq -2$$
-                        $$\mathcal{D} = \mathbb{R} \setminus \{-2, 1\}$$</div>
+                        <div class="step-desc">Mianownik musi być różny od zera: $x - 3 \neq 0 \implies x \neq 3$.
+                        $$\mathcal{D} = \mathbb{R} \setminus \{3\}$$</div>
                     </div>
                 </div>
                 <div class="step-item">
                     <div class="step-number">2</div>
                     <div class="step-body">
                         <div class="step-title">Przyrównanie licznika do zera</div>
-                        <div class="step-desc">$$(x^2 - 1)(x - 2) = 0 \implies (x-1)(x+1)(x-2) = 0$$
-                        Miejsca zerowe licznika to: $x = 1$, $x = -1$, $x = 2$.</div>
+                        <div class="step-desc">$$(x-1)(x+2) = 0 \implies x = 1 \quad \text{lub} \quad x = -2$$</div>
                     </div>
                 </div>
                 <div class="step-item">
                     <div class="step-number">3</div>
                     <div class="step-body">
-                        <div class="step-title">Weryfikacja z dziedziną</div>
-                        <div class="step-desc">Liczba $x = 1$ nie należy do dziedziny $\mathcal{D}$.<br>
-                        Rozwiązaniami są tylko $x = -1$ oraz $x = 2$ (2 rozwiązania).</div>
-                        <div class="math-highlight">$$\mathbf{2 \text{ rozwiązania}} \quad \implies \quad \text{Poprawna odpowiedź to C}$$</div>
+                        <div class="step-title">Weryfikacja pierwiastków z dziedziną</div>
+                        <div class="step-desc">Oba rozwiązania $x=1$ oraz $x=-2$ należą do dziedziny $\mathcal{D}$.
+                        Równanie ma **dwa różne rozwiązania**: $x = 1$ oraz $x = -2$.</div>
+                        <div class="math-highlight">$$\mathbf{\text{ma dwa różne rozwiązania: } x = 1, x = -2}$$
+                        $$\text{Poprawna odpowiedź to C}$$</div>
                     </div>
                 </div>
             </div>
@@ -811,8 +846,8 @@
 
             <div class="formulas-grid">
                 <div class="formula-card">
-                    <div class="formula-name" style="color:#ef4444;">Pułapka: Zapomnienie o dziedzinie</div>
-                    <div>Wskazanie 3 rozwiązań (opcja D) bez odrzucenia $x = 1$ z mianownika to klasyczna pułapka maturalna! Pamiętaj: dzielenie przez zero jest niedozwolone.</div>
+                    <div class="formula-name" style="color:#ef4444;">Pułapka: Uwzględnienie miejsca zerowego mianownika</div>
+                    <div>Dopisanie $x = 3$ jako rozwiązania daje błędnie 3 rozwiązania (opcja A). Pamiętaj: mianownik **nie może** być równy 0!</div>
                 </div>
             </div>
         
@@ -829,7 +864,7 @@
             <div class="formulas-grid">
                 <div class="formula-card">
                     <div class="formula-name">Równanie wymierne</div>
-                    <div>$$\frac{L(x)}{M(x)} = 0 \iff L(x) = 0 \quad \text{i} \quad M(x) \neq 0$$</div>
+                    <div>$$\frac{L(x)}{M(x)} = 0 \iff L(x) = 0 \quad \text{oraz} \quad M(x) \neq 0$$</div>
                 </div>
             </div>
         
@@ -844,8 +879,8 @@
 
 
             <form class="calc-form" onsubmit="calcTask6(event)">
-                <div class="input-group"><label>Zastąp wartość x do sprawdzenia:</label><input type="number" id="t6_x" value="1"></div>
-                <button type="submit" class="calc-btn">Sprawdź czy x należy do rozwiązania</button>
+                <div class="input-group"><label>Testowana wartość x:</label><input type="number" id="t6_x" value="1"></div>
+                <button type="submit" class="calc-btn">Sprawdź rozwiązanie</button>
             </form>
             <div class="calc-result" id="t6_res">Wprowadź dane i kliknij przycisk.</div>
         
@@ -879,11 +914,11 @@
             if (opt === 'C') {
                 if (selectedBtn) selectedBtn.classList.add('correct');
                 feedbackBox.className = 'feedback-box active correct';
-                feedbackBox.innerHTML = '✨ <strong>Doskonale!</strong> Odpowiedź C (2 rozwiązania) jest prawidłowa. Liczba $x=1$ odpada z dziedziny, zostają $x = -1$ i $x = 2$.';
+                feedbackBox.innerHTML = '✨ <strong>Doskonale!</strong> Odpowiedź C jest prawidłowa. Pierwiastkami są $x = 1$ oraz $x = -2$.';
             } else {
                 if (selectedBtn) selectedBtn.classList.add('wrong');
                 feedbackBox.className = 'feedback-box active wrong';
-                feedbackBox.innerHTML = `❌ Odpowiedź ${opt} jest niepoprawna. Prawidłowa odpowiedź to <strong>C (2 rozwiązania)</strong>. Pamiętaj o wykluczeniu $x=1$ z mianownika!`;
+                feedbackBox.innerHTML = `❌ Odpowiedź ${opt} jest niepoprawna. Prawidłowa odpowiedź to <strong>C</strong> (dwa rozwiązania: $x=1, x=-2$).`;
             }
             if (window.MathJax) MathJax.typesetPromise([feedbackBox]);
         }
@@ -892,12 +927,12 @@
             e.preventDefault();
             const x = parseFloat(document.getElementById('t6_x').value);
             if (isNaN(x)) return;
-            if (x === 1 || x === -2) {
-                document.getElementById('t6_res').innerHTML = `<span style="color:#ef4444;">x = ${x} NIE należy do dziedziny (mianownik jest równy 0)!</span>`;
-            } else if (x === -1 || x === 2) {
-                document.getElementById('t6_res').innerHTML = `<span style="color:#10b981;">x = ${x} JEST poprawnym rozwiązaniem równania!</span>`;
+            if (x === 3) {
+                document.getElementById('t6_res').innerHTML = `<span style="color:#ef4444;">x = 3 NIE należy do dziedziny!</span>`;
+            } else if (x === 1 || x === -2) {
+                document.getElementById('t6_res').innerHTML = `<span style="color:#10b981;">x = ${x} JEST poprawnym rozwiązaniem!</span>`;
             } else {
-                document.getElementById('t6_res').innerHTML = `x = ${x} należy do dziedziny, ale nie zeruje licznika.`;
+                document.getElementById('t6_res').innerHTML = `x = ${x} należy do dziedziny, ale ułamek wynosi ${((x-1)*(x+2))/(x-3)}.`;
             }
         }
         

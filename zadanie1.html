@@ -487,38 +487,48 @@
 
 
         
+        
         /* Complete Mobile & Universal Responsive System */
+        *, *::before, *::after {
+            box-sizing: border-box !important;
+        }
+
         html, body {
             overflow-x: hidden !important;
             width: 100% !important;
+            margin: 0;
+            padding: 0;
             -webkit-text-size-adjust: 100%;
         }
 
-        img {
+        img, video, iframe, canvas, svg {
             max-width: 100% !important;
             height: auto !important;
-            display: block;
-            margin: 0 auto;
         }
 
         .container {
             width: 100% !important;
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 1.5rem 1rem;
             box-sizing: border-box;
         }
 
-        .card {
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-            box-sizing: border-box;
+        .card, .task-box, .step-body, .math-highlight, .formula-card, .feedback-box, .calc-result {
+            word-wrap: break-word !important;
+            overflow-wrap: break-word !important;
+            box-sizing: border-box !important;
+            max-width: 100% !important;
         }
 
         /* Mobile Adjustments for Tablets and Phones (< 768px) */
         @media (max-width: 768px) {
             body {
-                padding: 0.75rem 0.5rem !important;
+                padding: 0.5rem 0.25rem !important;
             }
 
             .container {
+                padding: 0.75rem 0.5rem !important;
                 gap: 1rem !important;
             }
 
@@ -534,7 +544,7 @@
             }
 
             h1 {
-                font-size: 1.5rem !important;
+                font-size: 1.4rem !important;
                 line-height: 1.3 !important;
             }
 
@@ -543,136 +553,162 @@
             }
 
             .card {
-                padding: 1.15rem 0.85rem !important;
+                padding: 1rem 0.75rem !important;
                 border-radius: 16px !important;
             }
 
             .card-header {
-                margin-bottom: 1rem !important;
-                padding-bottom: 0.65rem !important;
+                margin-bottom: 0.85rem !important;
+                padding-bottom: 0.5rem !important;
                 gap: 0.5rem !important;
             }
 
             .card-icon {
-                width: 34px !important;
-                height: 34px !important;
-                font-size: 1.05rem !important;
-                border-radius: 10px !important;
+                width: 32px !important;
+                height: 32px !important;
+                font-size: 1rem !important;
+                border-radius: 8px !important;
             }
 
             .card-title {
-                font-size: 1.1rem !important;
+                font-size: 1.05rem !important;
             }
 
             .task-box {
-                font-size: 1rem !important;
-                padding: 1rem !important;
-                border-radius: 0 10px 10px 0 !important;
+                font-size: 0.98rem !important;
+                padding: 0.85rem !important;
+                border-radius: 0 8px 8px 0 !important;
             }
 
             .options-grid {
                 grid-template-columns: 1fr !important;
-                gap: 0.65rem !important;
+                gap: 0.6rem !important;
             }
 
             .option-btn {
-                padding: 0.85rem !important;
-                font-size: 0.95rem !important;
+                padding: 0.75rem 0.85rem !important;
+                font-size: 0.92rem !important;
                 min-height: 48px !important; /* iOS Touch Target */
+                word-break: break-word;
             }
 
             .option-letter {
                 width: 28px !important;
                 height: 28px !important;
-                font-size: 0.9rem !important;
+                font-size: 0.85rem !important;
             }
 
+            /* Sleek Horizontal Scroll Navbar for Mobile */
             .task-nav {
-                padding: 0.6rem 0.4rem !important;
-                gap: 0.3rem !important;
-                max-height: 140px !important;
-                overflow-y: auto !important;
+                display: flex !important;
+                flex-wrap: nowrap !important;
+                overflow-x: auto !important;
+                white-space: nowrap !important;
+                padding: 0.5rem 0.4rem !important;
+                gap: 0.35rem !important;
+                max-height: none !important;
                 -webkit-overflow-scrolling: touch;
+                scrollbar-width: thin;
             }
 
             .task-nav-link {
-                padding: 0.3rem 0.6rem !important;
-                font-size: 0.75rem !important;
+                flex-shrink: 0 !important;
+                padding: 0.35rem 0.7rem !important;
+                font-size: 0.78rem !important;
             }
 
+            /* Horizontal Scroll Tabs for Mobile */
             .tabs-nav {
-                gap: 0.3rem !important;
+                display: flex !important;
+                flex-wrap: nowrap !important;
+                overflow-x: auto !important;
+                white-space: nowrap !important;
+                gap: 0.35rem !important;
                 padding-bottom: 0.4rem !important;
+                -webkit-overflow-scrolling: touch;
             }
 
             .tab-btn {
+                flex-shrink: 0 !important;
                 padding: 0.45rem 0.75rem !important;
                 font-size: 0.82rem !important;
             }
 
             .step-item {
-                gap: 0.75rem !important;
-                margin-bottom: 1.15rem !important;
+                gap: 0.65rem !important;
+                margin-bottom: 1rem !important;
             }
 
             .step-number {
-                width: 28px !important;
-                height: 28px !important;
-                font-size: 0.85rem !important;
+                width: 26px !important;
+                height: 26px !important;
+                font-size: 0.8rem !important;
             }
 
             .step-title {
-                font-size: 1rem !important;
+                font-size: 0.95rem !important;
             }
 
             .step-desc {
-                font-size: 0.92rem !important;
+                font-size: 0.9rem !important;
             }
 
             .calc-form {
                 grid-template-columns: 1fr !important;
-                gap: 0.75rem !important;
+                gap: 0.65rem !important;
             }
 
             .calc-form input, .calc-form select, .open-task-input input {
                 font-size: 16px !important; /* Prevents auto-zoom on iOS Safari */
-                padding: 0.65rem 0.75rem !important;
+                padding: 0.6rem 0.75rem !important;
             }
 
             .calc-btn {
                 padding: 0.75rem !important;
-                font-size: 0.95rem !important;
+                font-size: 0.92rem !important;
             }
 
             .math-highlight, .formula-card {
-                padding: 0.65rem 0.85rem !important;
-                font-size: 0.92rem !important;
+                padding: 0.6rem 0.75rem !important;
+                font-size: 0.9rem !important;
             }
         }
 
         /* Extra Small Screens (< 400px) */
         @media (max-width: 400px) {
             h1 {
-                font-size: 1.3rem !important;
+                font-size: 1.25rem !important;
             }
 
             .task-box {
-                font-size: 0.95rem !important;
+                font-size: 0.92rem !important;
             }
 
             .option-btn {
-                font-size: 0.9rem !important;
+                font-size: 0.88rem !important;
             }
         }
 
-        /* MathJax Overflow Handling for Small Screens */
-        mjx-container[jax="SVG"][display="true"], mjx-container[jax="CHTML"][display="true"], .MathJax_Display {
-            overflow-x: auto !important;
-            overflow-y: hidden !important;
-            max-width: 100% !important;
-            padding: 0.25rem 0 !important;
-            -webkit-overflow-scrolling: touch;
+        /* ABSOLUTELY NO SCROLLBARS OR ARROWS ON MATHJAX FORMULAS */
+        mjx-container, mjx-container *, .MathJax, .MathJax_Display {
+            overflow: visible !important;
+            overflow-x: visible !important;
+            overflow-y: visible !important;
+            scrollbar-width: none !important;
+            -ms-overflow-style: none !important;
         }
+
+        mjx-container::-webkit-scrollbar, 
+        mjx-container *::-webkit-scrollbar,
+        .MathJax::-webkit-scrollbar,
+        .MathJax_Display::-webkit-scrollbar {
+            display: none !important;
+            width: 0 !important;
+            height: 0 !important;
+        }
+
+        mjx-container[display="true"] {
+            display: block !important;
 
     </style>
 </head>
@@ -719,8 +755,8 @@
         <!-- Header -->
         <header>
             <span class="badge">Matura z Matematyki • Zadanie 1</span>
-            <h1>Działania na Potęgach</h1>
-            <p>Sprowadzanie do wspólnej podstawy $2^k$</p>
+            <h1>Własności Logarytmów</h1>
+            <p>Wyznaczanie wartości wyrażenia $\log_{\sqrt{2}} 2$</p>
         </header>
 
         <!-- Task Card -->
@@ -731,7 +767,7 @@
             </div>
 
             <div class="task-box">
-                Zadanie 1. (0–1)<br>Liczba $\left(\frac{1}{2}\right)^{-3} \cdot 8^{-2}$ jest równa:
+                Zadanie 1. (0–1)<br>Liczba $\log_{\sqrt{2}} 2$ jest równa:
             </div>
 
             <div class="task-image-preview">
@@ -741,19 +777,19 @@
             <div class="options-grid" id="optionsGrid">
                 <button class="option-btn" onclick="checkAnswer('A')">
                     <span class="option-letter">A</span>
-                    <span>$2^{-3}$</span>
+                    <span>$2$</span>
                 </button>
                 <button class="option-btn" onclick="checkAnswer('B')">
                     <span class="option-letter">B</span>
-                    <span>$2^{-9}$</span>
+                    <span>$4$</span>
                 </button>
                 <button class="option-btn" onclick="checkAnswer('C')">
                     <span class="option-letter">C</span>
-                    <span>$2^3$</span>
+                    <span>$\sqrt{2}$</span>
                 </button>
                 <button class="option-btn" onclick="checkAnswer('D')">
                     <span class="option-letter">D</span>
-                    <span>$2^9$</span>
+                    <span>$\frac{1}{2}$</span>
                 </button>
             </div>
             <div class="feedback-box" id="feedbackBox"></div>
@@ -768,33 +804,33 @@
 
 
             <div class="tabs-nav">
-                <button class="tab-btn active" onclick="switchTab('m1_1')">Metoda 1: Zamiana na potęgi dwójki (Główna)</button>
-                <button class="tab-btn" onclick="switchTab('m2_1')">Metoda 2: Obliczenia na ułamkach</button>
+                <button class="tab-btn active" onclick="switchTab('m1_1')">Metoda 1: Z definicji logarytmu (Główna)</button>
+                <button class="tab-btn" onclick="switchTab('m2_1')">Metoda 2: Zamiana bazy na potęgę liczby 2</button>
             </div>
             <div class="tab-content active" id="m1_1">
                 <div class="step-item">
                     <div class="step-number">1</div>
                     <div class="step-body">
-                        <div class="step-title">Przekształcenie pierwszego czynnika $\left(\frac{1}{2}\right)^{-3}$</div>
-                        <div class="step-desc">Korzystamy ze wzoru na ujemny wykładnik $\left(\frac{a}{b}\right)^{-n} = \left(\frac{b}{a}\right)^n$:
-                        $$\left(\frac{1}{2}\right)^{-3} = 2^3 = 8$$</div>
+                        <div class="step-title">Zastosowanie definicji logarytmu</div>
+                        <div class="step-desc">Niech $\log_{\sqrt{2}} 2 = c$. Z definicji logarytmu mamy:
+                        $$(\sqrt{2})^c = 2$$</div>
                     </div>
                 </div>
                 <div class="step-item">
                     <div class="step-number">2</div>
                     <div class="step-body">
-                        <div class="step-title">Przekształcenie drugiego czynnika $8^{-2}$</div>
-                        <div class="step-desc">Zapisujemy $8$ jako $2^3$:
-                        $$8^{-2} = (2^3)^{-2} = 2^{3 \cdot (-2)} = 2^{-6}$$</div>
+                        <div class="step-title">Zapisanie pierwiastka jako potęgi o podstawie 2</div>
+                        <div class="step-desc">Ponieważ $\sqrt{2} = 2^{\frac{1}{2}}$, podstawiamy:
+                        $$\left(2^{\frac{1}{2}}\right)^c = 2^1 \implies 2^{\frac{c}{2}} = 2^1$$</div>
                     </div>
                 </div>
                 <div class="step-item">
                     <div class="step-number">3</div>
                     <div class="step-body">
-                        <div class="step-title">Mnożenie potęg o jednakowych podstawach</div>
-                        <div class="step-desc">Dodajemy wykładniki potęg:
-                        $$2^3 \cdot 2^{-6} = 2^{3 + (-6)} = 2^{-3}$$</div>
-                        <div class="math-highlight">$$\mathbf{2^{-3}} \quad \implies \quad \text{Poprawna odpowiedź to A}$$</div>
+                        <div class="step-title">Przyrównanie wykładników</div>
+                        <div class="step-desc">$$\frac{c}{2} = 1 \implies c = 2$$</div>
+                        <div class="math-highlight">$$\mathbf{\log_{\sqrt{2}} 2 = 2}$$
+                        $$\text{Poprawna odpowiedź to A}$$</div>
                     </div>
                 </div>
             </div>
@@ -802,9 +838,9 @@
                 <div class="step-item">
                     <div class="step-number">1</div>
                     <div class="step-body">
-                        <div class="step-title">Wartości liczbowe obu czynników</div>
-                        <div class="step-desc">$$\left(\frac{1}{2}\right)^{-3} = 8, \quad 8^{-2} = \frac{1}{64}$$
-                        $$8 \cdot \frac{1}{64} = \frac{8}{64} = \frac{1}{8} = \frac{1}{2^3} = 2^{-3}$$</div>
+                        <div class="step-title">Wzór na zmianę podstawy / potęgę w podstawie logarytmu</div>
+                        <div class="step-desc">Stosujemy wzór $\log_{a^k} b = \frac{1}{k} \log_a b$:
+                        $$\log_{\sqrt{2}} 2 = \log_{2^{1/2}} 2 = \frac{1}{\frac{1}{2}} \cdot \log_2 2 = 2 \cdot 1 = 2$$</div>
                     </div>
                 </div>
             </div>
@@ -821,8 +857,8 @@
 
             <div class="formulas-grid">
                 <div class="formula-card">
-                    <div class="formula-name" style="color:#ef4444;">Pułapka: Mnożenie wykładników przy mnożeniu potęg</div>
-                    <div>Częsty błąd to mnożenie wykładników $3 \cdot (-6) = -18$ lub dodawanie ujemnych podstaw. Pamiętaj: przy mnożeniu tych samych podstaw **dodajemy** wykładniki ($m + n$)!</div>
+                    <div class="formula-name" style="color:#ef4444;">Pułapka: Pomylenie z potęgowaniem pierwiastka</div>
+                    <div>Częsty błąd to pomylenie wykładnika i uznanie, że $(\sqrt{2})^2 = 2$ daje wynik $\sqrt{2}$ (opcja C) lub $\frac{1}{2}$ (opcja D). Pamiętaj: szukamy wykładnika $c$, do którego podnosimy $\sqrt{2}$!</div>
                 </div>
             </div>
         
@@ -838,12 +874,12 @@
 
             <div class="formulas-grid">
                 <div class="formula-card">
-                    <div class="formula-name">Ujemny wykładnik</div>
-                    <div>$$a^{-n} = \frac{1}{a^n}, \quad \left(\frac{a}{b}\right)^{-n} = \left(\frac{b}{a}\right)^n$$</div>
+                    <div class="formula-name">Definicja logarytmu</div>
+                    <div>$$\log_a b = c \iff a^c = b$$</div>
                 </div>
                 <div class="formula-card">
-                    <div class="formula-name">Potęgowanie potęgi</div>
-                    <div>$$(a^m)^n = a^{m \cdot n}$$</div>
+                    <div class="formula-name">Potęga o wykładniku ułamkowym</div>
+                    <div>$$\sqrt[n]{a} = a^{\frac{1}{n}}$$</div>
                 </div>
             </div>
         
@@ -858,9 +894,8 @@
 
 
             <form class="calc-form" onsubmit="calcTask1(event)">
-                <div class="input-group"><label>Wykładnik n przy (1/2)^(-n):</label><input type="number" id="t1_n" value="3"></div>
-                <div class="input-group"><label>Wykładnik m przy 8^(m):</label><input type="number" id="t1_m" value="-2"></div>
-                <button type="submit" class="calc-btn">Oblicz potęgę 2^k</button>
+                <div class="input-group"><label>Liczba podlogarytmowa b:</label><input type="number" id="t1_b" value="2"></div>
+                <button type="submit" class="calc-btn">Oblicz log_{sqrt(2)}(b)</button>
             </form>
             <div class="calc-result" id="t1_res">Wprowadź dane i kliknij przycisk.</div>
         
@@ -894,23 +929,21 @@
             if (opt === 'A') {
                 if (selectedBtn) selectedBtn.classList.add('correct');
                 feedbackBox.className = 'feedback-box active correct';
-                feedbackBox.innerHTML = '✨ <strong>Doskonale!</strong> Odpowiedź A ($2^{-3}$) jest prawidłowa. $(1/2)^{-3} \\cdot 8^{-2} = 2^3 \\cdot 2^{-6} = 2^{-3}$.';
+                feedbackBox.innerHTML = '✨ <strong>Doskonale!</strong> Odpowiedź A ($2$) jest prawidłowa. Z definicji: $(\sqrt{2})^2 = 2$.';
             } else {
                 if (selectedBtn) selectedBtn.classList.add('wrong');
                 feedbackBox.className = 'feedback-box active wrong';
-                feedbackBox.innerHTML = `❌ Odpowiedź ${opt} jest niepoprawna. Prawidłowa odpowiedź to <strong>A ($2^{-3}$)</strong>. Sprowadź oba czynniki do podstawy 2.`;
+                feedbackBox.innerHTML = `❌ Odpowiedź ${opt} jest niepoprawna. Prawidłowa odpowiedź to <strong>A ($2$)</strong>. Ponieważ $(\sqrt{2})^2 = 2$.`;
             }
             if (window.MathJax) MathJax.typesetPromise([feedbackBox]);
         }
 
         function calcTask1(e) {
             e.preventDefault();
-            const n = parseFloat(document.getElementById('t1_n').value);
-            const m = parseFloat(document.getElementById('t1_m').value);
-            if (isNaN(n) || isNaN(m)) return;
-            const exp = n + 3 * m;
-            const val = Math.pow(2, exp);
-            document.getElementById('t1_res').innerHTML = `<strong>Wykładnik k przy 2^k:</strong> ${exp}<br><strong>Wynik 2^(${exp}):</strong> ${val} (czyli 1/${Math.pow(2, -exp)})`;
+            const b = parseFloat(document.getElementById('t1_b').value);
+            if (isNaN(b) || b <= 0) return;
+            const res = Math.log(b) / Math.log(Math.sqrt(2));
+            document.getElementById('t1_res').innerHTML = `<strong>Wynik log_{√2}(${b}):</strong> ${res.toFixed(4)}`;
         }
         
     </script>
