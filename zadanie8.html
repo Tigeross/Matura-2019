@@ -486,52 +486,38 @@
         }
 
 
-        
-        
-        
-        
-        
         /* Complete Mobile & Universal Responsive System */
-        *, *::before, *::after {
-            box-sizing: border-box !important;
-        }
-
         html, body {
             overflow-x: hidden !important;
             width: 100% !important;
-            margin: 0;
-            padding: 0;
             -webkit-text-size-adjust: 100%;
         }
 
-        img, video, iframe, canvas, svg {
+        img {
             max-width: 100% !important;
             height: auto !important;
+            display: block;
+            margin: 0 auto;
         }
 
         .container {
             width: 100% !important;
-            max-width: 950px;
-            margin: 0 auto;
-            padding: 1.5rem 1rem;
             box-sizing: border-box;
         }
 
-        .card, .task-box, .step-body, .math-highlight, .formula-card, .feedback-box, .calc-result {
-            word-wrap: break-word !important;
-            overflow-wrap: break-word !important;
-            box-sizing: border-box !important;
-            max-width: 100% !important;
+        .card {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            box-sizing: border-box;
         }
 
         /* Mobile Adjustments for Tablets and Phones (< 768px) */
         @media (max-width: 768px) {
             body {
-                padding: 0.5rem 0.25rem !important;
+                padding: 0.75rem 0.5rem !important;
             }
 
             .container {
-                padding: 0.75rem 0.5rem !important;
                 gap: 1rem !important;
             }
 
@@ -547,7 +533,7 @@
             }
 
             h1 {
-                font-size: 1.4rem !important;
+                font-size: 1.5rem !important;
                 line-height: 1.3 !important;
             }
 
@@ -556,144 +542,129 @@
             }
 
             .card {
-                padding: 1rem 0.75rem !important;
+                padding: 1.15rem 0.85rem !important;
                 border-radius: 16px !important;
             }
 
             .card-header {
-                margin-bottom: 0.85rem !important;
-                padding-bottom: 0.5rem !important;
+                margin-bottom: 1rem !important;
+                padding-bottom: 0.65rem !important;
                 gap: 0.5rem !important;
             }
 
             .card-icon {
-                width: 32px !important;
-                height: 32px !important;
-                font-size: 1rem !important;
-                border-radius: 8px !important;
+                width: 34px !important;
+                height: 34px !important;
+                font-size: 1.05rem !important;
+                border-radius: 10px !important;
             }
 
             .card-title {
-                font-size: 1.05rem !important;
+                font-size: 1.1rem !important;
             }
 
             .task-box {
-                font-size: 0.98rem !important;
-                padding: 0.85rem !important;
-                border-radius: 0 8px 8px 0 !important;
+                font-size: 1rem !important;
+                padding: 1rem !important;
+                border-radius: 0 10px 10px 0 !important;
             }
 
             .options-grid {
                 grid-template-columns: 1fr !important;
-                gap: 0.6rem !important;
+                gap: 0.65rem !important;
             }
 
             .option-btn {
-                padding: 0.75rem 0.85rem !important;
-                font-size: 0.92rem !important;
+                padding: 0.85rem !important;
+                font-size: 0.95rem !important;
                 min-height: 48px !important; /* iOS Touch Target */
-                word-break: break-word;
             }
 
             .option-letter {
                 width: 28px !important;
                 height: 28px !important;
-                font-size: 0.85rem !important;
+                font-size: 0.9rem !important;
             }
 
-            /* Sleek Horizontal Scroll Navbar for Mobile */
             .task-nav {
-                display: flex !important;
-                flex-wrap: nowrap !important;
-                overflow-x: auto !important;
-                white-space: nowrap !important;
-                padding: 0.5rem 0.4rem !important;
-                gap: 0.35rem !important;
-                max-height: none !important;
+                padding: 0.6rem 0.4rem !important;
+                gap: 0.3rem !important;
+                max-height: 140px !important;
+                overflow-y: auto !important;
                 -webkit-overflow-scrolling: touch;
-                scrollbar-width: thin;
             }
 
             .task-nav-link {
-                flex-shrink: 0 !important;
-                padding: 0.35rem 0.7rem !important;
-                font-size: 0.78rem !important;
+                padding: 0.3rem 0.6rem !important;
+                font-size: 0.75rem !important;
             }
 
-            /* Horizontal Scroll Tabs for Mobile */
             .tabs-nav {
-                display: flex !important;
-                flex-wrap: nowrap !important;
-                overflow-x: auto !important;
-                white-space: nowrap !important;
-                gap: 0.35rem !important;
+                gap: 0.3rem !important;
                 padding-bottom: 0.4rem !important;
-                -webkit-overflow-scrolling: touch;
             }
 
             .tab-btn {
-                flex-shrink: 0 !important;
                 padding: 0.45rem 0.75rem !important;
                 font-size: 0.82rem !important;
             }
 
             .step-item {
-                gap: 0.65rem !important;
-                margin-bottom: 1rem !important;
+                gap: 0.75rem !important;
+                margin-bottom: 1.15rem !important;
             }
 
             .step-number {
-                width: 26px !important;
-                height: 26px !important;
-                font-size: 0.8rem !important;
+                width: 28px !important;
+                height: 28px !important;
+                font-size: 0.85rem !important;
             }
 
             .step-title {
-                font-size: 0.95rem !important;
+                font-size: 1rem !important;
             }
 
             .step-desc {
-                font-size: 0.9rem !important;
+                font-size: 0.92rem !important;
             }
 
             .calc-form {
                 grid-template-columns: 1fr !important;
-                gap: 0.65rem !important;
+                gap: 0.75rem !important;
             }
 
             .calc-form input, .calc-form select, .open-task-input input {
                 font-size: 16px !important; /* Prevents auto-zoom on iOS Safari */
-                padding: 0.6rem 0.75rem !important;
+                padding: 0.65rem 0.75rem !important;
             }
 
             .calc-btn {
                 padding: 0.75rem !important;
-                font-size: 0.92rem !important;
+                font-size: 0.95rem !important;
             }
 
             .math-highlight, .formula-card {
-                padding: 0.6rem 0.75rem !important;
-                font-size: 0.9rem !important;
+                padding: 0.65rem 0.85rem !important;
+                font-size: 0.92rem !important;
             }
         }
 
         /* Extra Small Screens (< 400px) */
         @media (max-width: 400px) {
             h1 {
-                font-size: 1.25rem !important;
+                font-size: 1.3rem !important;
             }
 
             .task-box {
-                font-size: 0.92rem !important;
+                font-size: 0.95rem !important;
             }
 
             .option-btn {
-                font-size: 0.88rem !important;
+                font-size: 0.9rem !important;
             }
         }
-
         /* ABSOLUTELY NO SCROLLBARS OR ARROWS ON MATHJAX FORMULAS */
-        mjx-container, mjx-container *, .MathJax, .MathJax_Display {
+        mjx-container, mjx-container * {
             overflow: visible !important;
             overflow-x: visible !important;
             overflow-y: visible !important;
@@ -703,7 +674,6 @@
 
         mjx-container::-webkit-scrollbar, 
         mjx-container *::-webkit-scrollbar,
-        .MathJax::-webkit-scrollbar,
         .MathJax_Display::-webkit-scrollbar {
             display: none !important;
             width: 0 !important;
@@ -712,6 +682,10 @@
 
         mjx-container[display="true"] {
             display: block !important;
+            margin: 0.75em 0 !important;
+            text-align: center !important;
+            max-width: 100% !important;
+        }
 
     </style>
 </head>
@@ -758,8 +732,8 @@
         <!-- Header -->
         <header>
             <span class="badge">Matura z Matematyki • Zadanie 8</span>
-            <h1>Wierzchołek Paraboli w Postaci Kanonicznej</h1>
-            <p>Odczytanie współrzędnych $W=(p,q)$ z $f(x) = a(x-p)^2 + q$</p>
+            <h1>Zbiór Wartości Funkcji Kwadratowej z Wykresu</h1>
+            <p>Odczytanie zbioru wartości $Y_f$ z wykresu paraboli o wierzchołku $W=(2,-4)$</p>
         </header>
 
         <!-- Task Card -->
@@ -770,29 +744,29 @@
             </div>
 
             <div class="task-box">
-                Zadanie 8. (0–1)<br>Wierzchołek paraboli będącej wykresem funkcji kwadratowej $f(x) = -2(x - 1)^2 + 3$ ma współrzędne:
+                Informacja do zadań 8.–10.<br>Na rysunku przedstawiony jest fragment paraboli będącej wykresem funkcji kwadratowej $f$. Wierzchołkiem tej paraboli jest punkt $W = (2, -4)$. Liczby $0$ i $4$ to miejsca zerowe funkcji $f$.<br><br>Zadanie 8. (0–1)<br>Zbiorem wartości funkcji $f$ jest przedział:
             </div>
 
             <div class="task-image-preview">
-                <img src="8.png" alt="Zadanie 8 - treść i rysunek">
+                <img src="rysunek do 8-10.png" alt="Zadanie 8 - treść i rysunek">
             </div>
 
             <div class="options-grid" id="optionsGrid">
                 <button class="option-btn" onclick="checkAnswer('A')">
                     <span class="option-letter">A</span>
-                    <span>$(1, -3)$</span>
+                    <span>$(-\infty, 0\rangle$</span>
                 </button>
                 <button class="option-btn" onclick="checkAnswer('B')">
                     <span class="option-letter">B</span>
-                    <span>$(1, 3)$</span>
+                    <span>$\langle 0, 4\rangle$</span>
                 </button>
                 <button class="option-btn" onclick="checkAnswer('C')">
                     <span class="option-letter">C</span>
-                    <span>$(-1, 3)$</span>
+                    <span>$\langle -4, +\infty)$</span>
                 </button>
                 <button class="option-btn" onclick="checkAnswer('D')">
                     <span class="option-letter">D</span>
-                    <span>$(-1, -3)$</span>
+                    <span>$\langle 4, +\infty)$</span>
                 </button>
             </div>
             <div class="feedback-box" id="feedbackBox"></div>
@@ -807,26 +781,30 @@
 
 
             <div class="tabs-nav">
-                <button class="tab-btn active" onclick="switchTab('m1_8')">Metoda 1: Bezpośredni odczyt z postaci kanonicznej</button>
+                <button class="tab-btn active" onclick="switchTab('m1_8')">Metoda 1: Odczyt rzędnej wierzchołka q i kierunku ramion (Główna)</button>
             </div>
             <div class="tab-content active" id="m1_8">
                 <div class="step-item">
                     <div class="step-number">1</div>
                     <div class="step-body">
-                        <div class="step-title">Wzór postaci kanonicznej</div>
-                        <div class="step-desc">Postać kanoniczna funkcji kwadratowej to $f(x) = a(x - p)^2 + q$, gdzie $W = (p, q)$ są współrzędnymi wierzchołka paraboli.</div>
+                        <div class="step-title">Określenie kierunku ramion paraboli</div>
+                        <div class="step-desc">Z wykresu widzimy, że ramiona paraboli skierowane są **w górę**, a funkcja osiąga wartość najmniejszą w wierzchołku.</div>
                     </div>
                 </div>
                 <div class="step-item">
                     <div class="step-number">2</div>
                     <div class="step-body">
-                        <div class="step-title">Odczytanie parametrów $p$ i $q$</div>
-                        <div class="step-desc">Porównujemy $f(x) = -2(x - 1)^2 + 3$ ze wzorem ogólnym:<br>
-                        - $p = 1$ (zwróć uwagę na minus we wzorze $x - 1$),<br>
-                        - $q = 3$.<br>
-                        Zatem $W = (1, 3)$.</div>
-                        <div class="math-highlight">$$\mathbf{W = (1, 3)}$$
-                        $$\text{Poprawna odpowiedź to B}$$</div>
+                        <div class="step-title">Odczytanie rzędnej wierzchołka $q$</div>
+                        <div class="step-desc">Wierzchołek ma współrzędne $W = (2, -4)$, zatem rzędna wierzchołka $q = -4$.</div>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-body">
+                        <div class="step-title">Wyznaczenie zbioru wartości</div>
+                        <div class="step-desc">Ponieważ ramiona idą w górę, zbiór wartości wynosi $Y_f = \langle q, +\infty) = \langle -4, +\infty)$.</div>
+                        <div class="math-highlight">$$\mathbf{Y_f = \langle -4, +\infty)}$$
+                        $$\text{Poprawna odpowiedź to C}$$</div>
                     </div>
                 </div>
             </div>
@@ -843,8 +821,12 @@
 
             <div class="formulas-grid">
                 <div class="formula-card">
-                    <div class="formula-name" style="color:#ef4444;">Pułapka: Zmiana znaku przy p</div>
-                    <div>Wzór brzmi $(x - p)^2$. Przy zapisie $(x - 1)^2$ wartość $p = +1$. Błędne odczytanie $p = -1$ prowadzi do zlej opcji C.</div>
+                    <div class="formula-name" style="color:#ef4444;">Pułapka: Odczytanie abscysy p zamiast rzędnej q</div>
+                    <div>Współrzędna $p = 2$ określa oś symetrii. Zbiór wartości odczytujemy z osi Oy, czyli z rzędnej $q = -4$!</div>
+                </div>
+                <div class="formula-card">
+                    <div class="formula-name" style="color:#ef4444;">Pułapka: Wybranie przedziału miejsc zerowych</div>
+                    <div>Przedział $\langle 0, 4\rangle$ (opcja B) to przedział na osi Ox między miejscami zerowymi, a nie zbiór wartości na osi Oy.</div>
                 </div>
             </div>
         
@@ -860,8 +842,8 @@
 
             <div class="formulas-grid">
                 <div class="formula-card">
-                    <div class="formula-name">Postać kanoniczna</div>
-                    <div>$$f(x) = a(x - p)^2 + q \quad \implies \quad W = (p, q)$$</div>
+                    <div class="formula-name">Zbiór wartości funkcji kwadratowej</div>
+                    <div>Dla $a > 0$: $Y_f = \langle q, +\infty)$<br>Dla $a < 0$: $Y_f = (-\infty, q\rangle$</div>
                 </div>
             </div>
         
@@ -876,12 +858,10 @@
 
 
             <form class="calc-form" onsubmit="calcTask8(event)">
-                <div class="input-group"><label>a:</label><input type="number" id="t8_a" value="-2"></div>
-                <div class="input-group"><label>p:</label><input type="number" id="t8_p" value="1"></div>
-                <div class="input-group"><label>q:</label><input type="number" id="t8_q" value="3"></div>
-                <button type="submit" class="calc-btn">Wyznacz Wierzchołek W=(p,q)</button>
+                <div class="input-group"><label>Współrzędna q wierzchołka:</label><input type="number" id="t8_q" value="-4"></div>
+                <button type="submit" class="calc-btn">Wyznacz Zbiór Wartości</button>
             </form>
-            <div class="calc-result" id="t8_res">Wprowadź dane i kliknij przycisk.</div>
+            <div class="calc-result" id="t8_res">Kliknij przycisk.</div>
         
         </div>
 
@@ -910,25 +890,23 @@
             buttons.forEach(b => b.classList.remove('correct', 'wrong'));
             const selectedBtn = Array.from(buttons).find(b => b.textContent.trim().startsWith(opt));
 
-            if (opt === 'B') {
+            if (opt === 'C') {
                 if (selectedBtn) selectedBtn.classList.add('correct');
                 feedbackBox.className = 'feedback-box active correct';
-                feedbackBox.innerHTML = '✨ <strong>Doskonale!</strong> Odpowiedź B ($(1, 3)$) jest prawidłowa. Z postaci kanonicznej $p = 1, q = 3$.';
+                feedbackBox.innerHTML = '✨ <strong>Doskonale!</strong> Odpowiedź C ($\\langle -4, +\\infty)$) jest prawidłowa. Rzędna wierzchołka $q = -4$, a ramiona paraboli skierowane są w górę.';
             } else {
                 if (selectedBtn) selectedBtn.classList.add('wrong');
                 feedbackBox.className = 'feedback-box active wrong';
-                feedbackBox.innerHTML = `❌ Odpowiedź ${opt} jest niepoprawna. Prawidłowa odpowiedź to <strong>B ($(1, 3)$)</strong>. Pamiętaj o znaku we wzorze $a(x-p)^2+q$.`;
+                feedbackBox.innerHTML = `❌ Odpowiedź ${opt} jest niepoprawna. Prawidłowa odpowiedź to <strong>C ($\\langle -4, +\\infty)$)</strong>. Zbiór wartości odczytujemy od $q = -4$ do $+\\infty$.`;
             }
             if (window.MathJax) MathJax.typesetPromise([feedbackBox]);
         }
 
         function calcTask8(e) {
             e.preventDefault();
-            const a = parseFloat(document.getElementById('t8_a').value);
-            const p = parseFloat(document.getElementById('t8_p').value);
             const q = parseFloat(document.getElementById('t8_q').value);
-            if (isNaN(a) || isNaN(p) || isNaN(q)) return;
-            document.getElementById('t8_res').innerHTML = `<strong>Wierzchołek paraboli W:</strong> (${p}, ${q})<br><strong>Kierunek ramion:</strong> ${a < 0 ? 'w dół (a < 0)' : 'w górę (a > 0)'}`;
+            if (isNaN(q)) return;
+            document.getElementById('t8_res').innerHTML = `<strong>Zbiór wartości (ramiona w górę):</strong> [${q}, +∞)`;
         }
         
     </script>

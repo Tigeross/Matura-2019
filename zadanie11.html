@@ -486,52 +486,38 @@
         }
 
 
-        
-        
-        
-        
-        
         /* Complete Mobile & Universal Responsive System */
-        *, *::before, *::after {
-            box-sizing: border-box !important;
-        }
-
         html, body {
             overflow-x: hidden !important;
             width: 100% !important;
-            margin: 0;
-            padding: 0;
             -webkit-text-size-adjust: 100%;
         }
 
-        img, video, iframe, canvas, svg {
+        img {
             max-width: 100% !important;
             height: auto !important;
+            display: block;
+            margin: 0 auto;
         }
 
         .container {
             width: 100% !important;
-            max-width: 950px;
-            margin: 0 auto;
-            padding: 1.5rem 1rem;
             box-sizing: border-box;
         }
 
-        .card, .task-box, .step-body, .math-highlight, .formula-card, .feedback-box, .calc-result {
-            word-wrap: break-word !important;
-            overflow-wrap: break-word !important;
-            box-sizing: border-box !important;
-            max-width: 100% !important;
+        .card {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            box-sizing: border-box;
         }
 
         /* Mobile Adjustments for Tablets and Phones (< 768px) */
         @media (max-width: 768px) {
             body {
-                padding: 0.5rem 0.25rem !important;
+                padding: 0.75rem 0.5rem !important;
             }
 
             .container {
-                padding: 0.75rem 0.5rem !important;
                 gap: 1rem !important;
             }
 
@@ -547,7 +533,7 @@
             }
 
             h1 {
-                font-size: 1.4rem !important;
+                font-size: 1.5rem !important;
                 line-height: 1.3 !important;
             }
 
@@ -556,144 +542,129 @@
             }
 
             .card {
-                padding: 1rem 0.75rem !important;
+                padding: 1.15rem 0.85rem !important;
                 border-radius: 16px !important;
             }
 
             .card-header {
-                margin-bottom: 0.85rem !important;
-                padding-bottom: 0.5rem !important;
+                margin-bottom: 1rem !important;
+                padding-bottom: 0.65rem !important;
                 gap: 0.5rem !important;
             }
 
             .card-icon {
-                width: 32px !important;
-                height: 32px !important;
-                font-size: 1rem !important;
-                border-radius: 8px !important;
+                width: 34px !important;
+                height: 34px !important;
+                font-size: 1.05rem !important;
+                border-radius: 10px !important;
             }
 
             .card-title {
-                font-size: 1.05rem !important;
+                font-size: 1.1rem !important;
             }
 
             .task-box {
-                font-size: 0.98rem !important;
-                padding: 0.85rem !important;
-                border-radius: 0 8px 8px 0 !important;
+                font-size: 1rem !important;
+                padding: 1rem !important;
+                border-radius: 0 10px 10px 0 !important;
             }
 
             .options-grid {
                 grid-template-columns: 1fr !important;
-                gap: 0.6rem !important;
+                gap: 0.65rem !important;
             }
 
             .option-btn {
-                padding: 0.75rem 0.85rem !important;
-                font-size: 0.92rem !important;
+                padding: 0.85rem !important;
+                font-size: 0.95rem !important;
                 min-height: 48px !important; /* iOS Touch Target */
-                word-break: break-word;
             }
 
             .option-letter {
                 width: 28px !important;
                 height: 28px !important;
-                font-size: 0.85rem !important;
+                font-size: 0.9rem !important;
             }
 
-            /* Sleek Horizontal Scroll Navbar for Mobile */
             .task-nav {
-                display: flex !important;
-                flex-wrap: nowrap !important;
-                overflow-x: auto !important;
-                white-space: nowrap !important;
-                padding: 0.5rem 0.4rem !important;
-                gap: 0.35rem !important;
-                max-height: none !important;
+                padding: 0.6rem 0.4rem !important;
+                gap: 0.3rem !important;
+                max-height: 140px !important;
+                overflow-y: auto !important;
                 -webkit-overflow-scrolling: touch;
-                scrollbar-width: thin;
             }
 
             .task-nav-link {
-                flex-shrink: 0 !important;
-                padding: 0.35rem 0.7rem !important;
-                font-size: 0.78rem !important;
+                padding: 0.3rem 0.6rem !important;
+                font-size: 0.75rem !important;
             }
 
-            /* Horizontal Scroll Tabs for Mobile */
             .tabs-nav {
-                display: flex !important;
-                flex-wrap: nowrap !important;
-                overflow-x: auto !important;
-                white-space: nowrap !important;
-                gap: 0.35rem !important;
+                gap: 0.3rem !important;
                 padding-bottom: 0.4rem !important;
-                -webkit-overflow-scrolling: touch;
             }
 
             .tab-btn {
-                flex-shrink: 0 !important;
                 padding: 0.45rem 0.75rem !important;
                 font-size: 0.82rem !important;
             }
 
             .step-item {
-                gap: 0.65rem !important;
-                margin-bottom: 1rem !important;
+                gap: 0.75rem !important;
+                margin-bottom: 1.15rem !important;
             }
 
             .step-number {
-                width: 26px !important;
-                height: 26px !important;
-                font-size: 0.8rem !important;
+                width: 28px !important;
+                height: 28px !important;
+                font-size: 0.85rem !important;
             }
 
             .step-title {
-                font-size: 0.95rem !important;
+                font-size: 1rem !important;
             }
 
             .step-desc {
-                font-size: 0.9rem !important;
+                font-size: 0.92rem !important;
             }
 
             .calc-form {
                 grid-template-columns: 1fr !important;
-                gap: 0.65rem !important;
+                gap: 0.75rem !important;
             }
 
             .calc-form input, .calc-form select, .open-task-input input {
                 font-size: 16px !important; /* Prevents auto-zoom on iOS Safari */
-                padding: 0.6rem 0.75rem !important;
+                padding: 0.65rem 0.75rem !important;
             }
 
             .calc-btn {
                 padding: 0.75rem !important;
-                font-size: 0.92rem !important;
+                font-size: 0.95rem !important;
             }
 
             .math-highlight, .formula-card {
-                padding: 0.6rem 0.75rem !important;
-                font-size: 0.9rem !important;
+                padding: 0.65rem 0.85rem !important;
+                font-size: 0.92rem !important;
             }
         }
 
         /* Extra Small Screens (< 400px) */
         @media (max-width: 400px) {
             h1 {
-                font-size: 1.25rem !important;
+                font-size: 1.3rem !important;
             }
 
             .task-box {
-                font-size: 0.92rem !important;
+                font-size: 0.95rem !important;
             }
 
             .option-btn {
-                font-size: 0.88rem !important;
+                font-size: 0.9rem !important;
             }
         }
-
         /* ABSOLUTELY NO SCROLLBARS OR ARROWS ON MATHJAX FORMULAS */
-        mjx-container, mjx-container *, .MathJax, .MathJax_Display {
+        mjx-container, mjx-container * {
             overflow: visible !important;
             overflow-x: visible !important;
             overflow-y: visible !important;
@@ -703,7 +674,6 @@
 
         mjx-container::-webkit-scrollbar, 
         mjx-container *::-webkit-scrollbar,
-        .MathJax::-webkit-scrollbar,
         .MathJax_Display::-webkit-scrollbar {
             display: none !important;
             width: 0 !important;
@@ -712,6 +682,10 @@
 
         mjx-container[display="true"] {
             display: block !important;
+            margin: 0.75em 0 !important;
+            text-align: center !important;
+            max-width: 100% !important;
+        }
 
     </style>
 </head>
@@ -758,8 +732,8 @@
         <!-- Header -->
         <header>
             <span class="badge">Matura z Matematyki • Zadanie 11</span>
-            <h1>Ciąg Geometryczny i Suma S4</h1>
-            <p>Wyznaczanie ilorazu $q$ oraz sumy pierwszych wyrazów</p>
+            <h1>Ciąg Arytmetyczny i Suma S8</h1>
+            <p>Obliczenie sumy $S_8$ z danych wyrazów $a_1 = 7$ oraz $a_8 = -49$</p>
         </header>
 
         <!-- Task Card -->
@@ -770,7 +744,7 @@
             </div>
 
             <div class="task-box">
-                Zadanie 11. (0–1)<br>W ciągu geometrycznym $(a_n)$, określonym dla $n \ge 1$, dane są $a_1 = 3$ i $a_2 = 12$. Wtedy suma $S_4$ czterech pierwszych wyrazów tego ciągu jest równa:
+                Zadanie 11. (0–1)<br>W ciągu arytmetycznym $(a_n)$, określonym dla $n \ge 1$, dane są dwa wyrazy: $a_1 = 7$ i $a_8 = -49$. Suma ośmiu początkowych wyrazów tego ciągu jest równa:
             </div>
 
             <div class="task-image-preview">
@@ -780,19 +754,19 @@
             <div class="options-grid" id="optionsGrid">
                 <button class="option-btn" onclick="checkAnswer('A')">
                     <span class="option-letter">A</span>
-                    <span>$255$</span>
+                    <span>$-168$</span>
                 </button>
                 <button class="option-btn" onclick="checkAnswer('B')">
                     <span class="option-letter">B</span>
-                    <span>$\frac{255}{4}$</span>
+                    <span>$-189$</span>
                 </button>
                 <button class="option-btn" onclick="checkAnswer('C')">
                     <span class="option-letter">C</span>
-                    <span>$\frac{255}{12}$</span>
+                    <span>$-21$</span>
                 </button>
                 <button class="option-btn" onclick="checkAnswer('D')">
                     <span class="option-letter">D</span>
-                    <span>$765$</span>
+                    <span>$-42$</span>
                 </button>
             </div>
             <div class="feedback-box" id="feedbackBox"></div>
@@ -807,43 +781,26 @@
 
 
             <div class="tabs-nav">
-                <button class="tab-btn active" onclick="switchTab('m1_11')">Metoda 1: Obliczenie wyrazów i zsumowanie (Główna)</button>
-                <button class="tab-btn" onclick="switchTab('m2_11')">Metoda 2: Wzór na sumę Sn</button>
+                <button class="tab-btn active" onclick="switchTab('m1_11')">Metoda 1: Wzór na sumę Sn z a1 i an (Główna)</button>
             </div>
             <div class="tab-content active" id="m1_11">
                 <div class="step-item">
                     <div class="step-number">1</div>
                     <div class="step-body">
-                        <div class="step-title">Wyznaczenie ilorazu ciągu $q$</div>
-                        <div class="step-desc">$$q = \frac{a_2}{a_1} = \frac{12}{3} = 4$$</div>
+                        <div class="step-title">Wzór na sumę $n$ pierwszych wyrazów ciągu arytmetycznego</div>
+                        <div class="step-desc">$$S_n = \frac{a_1 + a_n}{2} \cdot n$$</div>
                     </div>
                 </div>
                 <div class="step-item">
                     <div class="step-number">2</div>
                     <div class="step-body">
-                        <div class="step-title">Obliczenie kolejnych wyrazów</div>
-                        <div class="step-desc">$$a_1 = 3$$
-                        $$a_2 = 12$$
-                        $$a_3 = 12 \cdot 4 = 48$$
-                        $$a_4 = 48 \cdot 4 = 192$$</div>
-                    </div>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">3</div>
-                    <div class="step-body">
-                        <div class="step-title">Zsumowanie czterech wyrazów</div>
-                        <div class="step-desc">$$S_4 = 3 + 12 + 48 + 192 = 255$$</div>
-                        <div class="math-highlight">$$\mathbf{S_4 = 255}$$
+                        <div class="step-title">Podstawienie danych dla $n = 8$</div>
+                        <div class="step-desc">
+                            $$S_8 = \frac{a_1 + a_8}{2} \cdot 8 = \frac{7 + (-49)}{2} \cdot 8$$
+                            $$S_8 = \frac{-42}{2} \cdot 8 = -21 \cdot 8 = -168$$
+                        </div>
+                        <div class="math-highlight">$$\mathbf{S_8 = -168}$$
                         $$\text{Poprawna odpowiedź to A}$$</div>
-                    </div>
-                </div>
-            </div>
-            <div class="tab-content" id="m2_11">
-                <div class="step-item">
-                    <div class="step-number">1</div>
-                    <div class="step-body">
-                        <div class="step-title">Zastosowanie wzoru na $S_4$</div>
-                        <div class="step-desc">$$S_4 = a_1 \cdot \frac{1 - q^4}{1 - q} = 3 \cdot \frac{1 - 4^4}{1 - 4} = 3 \cdot \frac{1 - 256}{-3} = 255$$</div>
                     </div>
                 </div>
             </div>
@@ -860,8 +817,8 @@
 
             <div class="formulas-grid">
                 <div class="formula-card">
-                    <div class="formula-name" style="color:#ef4444;">Pułapka: Błędy znaku przy dzieleniu przez 1-q</div>
-                    <div>W mianowniku wzoru jest $1 - q = 1 - 4 = -3$. Minus w liczniku i mianowniku skracają się dając dodatni wynik $255$.</div>
+                    <div class="formula-name" style="color:#ef4444;">Pułapka: Błędy znaku przy dodawaniu liczby ujemnej</div>
+                    <div>Pamiętaj: $7 + (-49) = -42$. Częsty błąd rachunkowy to napisanie $+42$ lub pomylenie z dzieleniem przez 2.</div>
                 </div>
             </div>
         
@@ -877,12 +834,8 @@
 
             <div class="formulas-grid">
                 <div class="formula-card">
-                    <div class="formula-name">Iloraz ciągu geometrycznego</div>
-                    <div>$$q = \frac{a_{n+1}}{a_n}$$</div>
-                </div>
-                <div class="formula-card">
-                    <div class="formula-name">Suma n wyrazów ciągu geometrycznego</div>
-                    <div>$$S_n = a_1 \cdot \frac{1 - q^n}{1 - q}$$</div>
+                    <div class="formula-name">Suma ciągu arytmetycznego</div>
+                    <div>$$S_n = \frac{a_1 + a_n}{2} \cdot n$$</div>
                 </div>
             </div>
         
@@ -897,10 +850,9 @@
 
 
             <form class="calc-form" onsubmit="calcTask11(event)">
-                <div class="input-group"><label>Wyraz a1:</label><input type="number" id="t11_a1" value="3"></div>
-                <div class="input-group"><label>Wyraz a2:</label><input type="number" id="t11_a2" value="12"></div>
-                <div class="input-group"><label>Ilość wyrazów n:</label><input type="number" id="t11_n" value="4"></div>
-                <button type="submit" class="calc-btn">Oblicz Sumę Sn Ciągu Geometrycznego</button>
+                <div class="input-group"><label>a1:</label><input type="number" id="t11_a1" value="7"></div>
+                <div class="input-group"><label>a8:</label><input type="number" id="t11_a8" value="-49"></div>
+                <button type="submit" class="calc-btn">Oblicz S8</button>
             </form>
             <div class="calc-result" id="t11_res">Wprowadź dane i kliknij przycisk.</div>
         
@@ -934,11 +886,11 @@
             if (opt === 'A') {
                 if (selectedBtn) selectedBtn.classList.add('correct');
                 feedbackBox.className = 'feedback-box active correct';
-                feedbackBox.innerHTML = '✨ <strong>Doskonale!</strong> Odpowiedź A ($255$) jest prawidłowa. $q = 4$, wyrazy to $3, 12, 48, 192$, ich suma to $255$.';
+                feedbackBox.innerHTML = '✨ <strong>Doskonale!</strong> Odpowiedź A ($-168$) jest prawidłowa. $S_8 = \\frac{7 + (-49)}{2} \\cdot 8 = -21 \\cdot 8 = -168$.';
             } else {
                 if (selectedBtn) selectedBtn.classList.add('wrong');
                 feedbackBox.className = 'feedback-box active wrong';
-                feedbackBox.innerHTML = `❌ Odpowiedź ${opt} jest niepoprawna. Prawidłowa odpowiedź to <strong>A ($255$)</strong>. Dodaj cztery pierwsze wyrazy.`;
+                feedbackBox.innerHTML = `❌ Odpowiedź ${opt} jest niepoprawna. Prawidłowa odpowiedź to <strong>A ($-168$)</strong>. Wstaw $a_1=7$ i $a_8=-49$ do wzoru na $S_8$.`;
             }
             if (window.MathJax) MathJax.typesetPromise([feedbackBox]);
         }
@@ -946,12 +898,10 @@
         function calcTask11(e) {
             e.preventDefault();
             const a1 = parseFloat(document.getElementById('t11_a1').value);
-            const a2 = parseFloat(document.getElementById('t11_a2').value);
-            const n = parseInt(document.getElementById('t11_n').value);
-            if (isNaN(a1) || isNaN(a2) || isNaN(n) || a1 === 0 || n <= 0) return;
-            const q = a2 / a1;
-            const Sn = a1 * (1 - Math.pow(q, n)) / (1 - q);
-            document.getElementById('t11_res').innerHTML = `<strong>Iloraz q:</strong> ${q}<br><strong>Suma ${n} wyrazów Sn:</strong> ${Sn}`;
+            const a8 = parseFloat(document.getElementById('t11_a8').value);
+            if (isNaN(a1) || isNaN(a8)) return;
+            const s8 = ((a1 + a8) / 2) * 8;
+            document.getElementById('t11_res').innerHTML = `<strong>Suma S8:</strong> ${s8}`;
         }
         
     </script>
